@@ -43,8 +43,4 @@ Windows 95/98 是外观描述。未分发来源不明的 RetroWindowsGUI PNG 素
 不宣称已经在所有电脑实测。扫描型 PDF、复杂排版、受 DRM 保护或损坏文件的支持取决于上游引擎；不提供 DRM 移除。
 程序未签名；Windows 可能根据下载来源显示未知发布者提示。发布页附 SHA256SUMS.txt，可用 PowerShell `Get-FileHash 文件名 -Algorithm SHA256` 核对。
 
-## 发布到 GitHub
 
-源码目录内容上传到代码仓库，运行 ZIP 上传到 **Releases**，不要把展开的 runtime 或个人 Data 提交到 Git。
-同时上传源码 ZIP、依赖源码归档、SHA256SUMS.txt，并保留全部许可及来源说明。
-详见交付目录中的「GitHub发布说明.md」。本地打包不会自动上传 GitHub。
