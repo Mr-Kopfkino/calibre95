@@ -1,0 +1,27 @@
+[
+  {
+    "upstream_path": "hunspell-1.7.2/COPYING",
+    "notice_file": "0001-COPYING.txt",
+    "sha256": "640d90f6ee401241ff62834d0d1b33f83049e99b8bfdfa04ed1b0a1635dde3e7"
+  },
+  {
+    "upstream_path": "hunspell-1.7.2/COPYING.LESSER",
+    "notice_file": "0002-COPYING.LESSER.txt",
+    "sha256": "7c6699c75f87b52bdc542db26d6b1b92892577cda46e20eceb79e2790a1c291b"
+  },
+  {
+    "upstream_path": "hunspell-1.7.2/COPYING.MPL",
+    "notice_file": "0003-COPYING.MPL.txt",
+    "sha256": "53692a2ed6c6a2c6ec9b32dd0b820dfae91e0a1fcdf625ca9ed0bdf8705fcc4f"
+  },
+  {
+    "upstream_path": "hunspell-1.7.2/license.hunspell",
+    "notice_file": "0004-license.hunspell.txt",
+    "sha256": "3f7ddd07c296edbfe0a47c7bcc82038ad347a2c4f672345b24f95c624db68513"
+  },
+  {
+    "upstream_path": "hunspell-1.7.2/license.myspell",
+    "notice_file": "0005-license.myspell.txt",
+    "sha256": "dcda061adeed22b26f276c01ec374f930789ae0d684e5aa8f8be309dd680ff20"
+  }
+]

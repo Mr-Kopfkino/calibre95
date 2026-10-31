@@ -1,0 +1,17 @@
+[
+  {
+    "upstream_path": "openssl-3.1.7/LICENSE.txt",
+    "notice_file": "0001-LICENSE.txt.txt",
+    "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a"
+  },
+  {
+    "upstream_path": "openssl-3.1.7/external/perl/Text-Template-1.56/LICENSE",
+    "notice_file": "0002-LICENSE.txt",
+    "sha256": "9837f05336ef3cbacb6a96e1672a0426d81ad01191f214b8d48e22ca62338181"
+  },
+  {
+    "upstream_path": "openssl-3.1.7/util/perl/OpenSSL/copyright.pm",
+    "notice_file": "0003-copyright.pm.txt",
+    "sha256": "04213b69dbebc8ba0dd8a6216af1d9422f9b63619c1cf2f1d8aa107b83bbb608"
+  }
+]

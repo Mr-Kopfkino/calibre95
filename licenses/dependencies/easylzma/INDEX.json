@@ -1,0 +1,12 @@
+[
+  {
+    "upstream_path": "lloyd-easylzma-1753f61/README",
+    "notice_file": "0001-header-notice.txt",
+    "sha256": "20fd74a522927811e91d1a4d1623e7844174a6f2bd15581bd1f96a230630ad8c"
+  },
+  {
+    "upstream_path": "lloyd-easylzma-1753f61/src/README",
+    "notice_file": "0002-header-notice.txt",
+    "sha256": "6bb28b6288deb70decfa49323c1852c05438960151286f838f55a7ca14d58e26"
+  }
+]

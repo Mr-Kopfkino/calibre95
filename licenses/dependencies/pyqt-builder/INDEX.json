@@ -1,0 +1,12 @@
+[
+  {
+    "upstream_path": "pyqtbuild/bundle/qt_wheel_distinfo/LICENSE",
+    "notice_file": "0001-LICENSE.txt",
+    "sha256": "2004ee3ef8282a85f7dbd035dfacf63cf03d569537bc08655ffeb140ea3671c5"
+  },
+  {
+    "upstream_path": "PyQt_builder-1.16.4.dist-info/LICENSE",
+    "notice_file": "0002-LICENSE.txt",
+    "sha256": "3859cfca971e429d6b79bdfeb1dc9e43aa9592f7295bf28fdd62824097909383"
+  }
+]

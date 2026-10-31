@@ -1,0 +1,373 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Kovid Goyal
+# This file is distributed under the same license as the calibre package.
+# 
+# Translators:
+# alex ford <543024658@qq.com>, 2017
+# Nimbly <holoword@outlook.com>, 2023
+# Nimbly <holoword@outlook.com>, 2023
+# Kevin Jin <kevin.defan@gmail.com>, 2016
+# tony shen <anthanny@hotmail.com>, 2023-2024
+# william zhou <lonelygoneby@qq.com>, 2019
+msgid ""
+msgstr ""
+"Project-Id-Version: calibre\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-13 15:20+0000\n"
+"PO-Revision-Date: 2014-06-17 08:34+0000\n"
+"Last-Translator: tony shen <anthanny@hotmail.com>, 2023-2024\n"
+"Language-Team: Chinese (China) (http://app.transifex.com/calibre/calibre/language/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:4
+msgid "Creating AZW3 • EPUB • MOBI catalogs"
+msgstr "创建AZW3 、 EPUB 、 MOBI目录 "
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:6
+msgid ""
+"calibre's Create catalog feature enables you to create a catalog of your "
+"library in a variety of formats. This help file describes cataloging options"
+" when generating a catalog in AZW3, EPUB and MOBI formats."
+msgstr "创建目录功能让你可以用多种格式去构建你的书库。该帮助文件描述生成AZW3, EPUB和MOBI格式目录时的选项。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:13
+msgid "Selecting books to catalog"
+msgstr "添加图书到目录"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:15
+msgid ""
+"If you want *all* of your library cataloged, remove any search or filtering "
+"criteria in the main window. With a single book selected, all books in your "
+"library will be candidates for inclusion in the generated catalog. "
+"Individual books may be excluded by various criteria; see the "
+":ref:`excluded_genres` section below for more information."
+msgstr "如果你需要*所有*书库目录，删除主窗口中的任何搜索或过滤条件。选择一本书后，您书库中的所有图书都将成为包含在生成的目录中的候选图书。个别书籍可能会因各种条件而被排除在外；有关详细信息，请参阅下面的 :ref:`excluded_genres` 部分。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:17
+msgid ""
+"If you want only *some* of your library cataloged, you have two options:"
+msgstr "如果只需要*一些*你的书库目录，你有两个选择："
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:19
+msgid ""
+"Create a multiple selection of the books you want cataloged. With more than "
+"one book selected in calibre's main window, only the selected books will be "
+"cataloged."
+msgstr "选择多本需要创建目录的书籍。如果在 calibre 的主窗口中选择了不止一本书籍，则只会对所选书籍进行创建。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:20
+msgid ""
+"Use the Search field or the Tag browser to filter the displayed books. Only "
+"the displayed books will be cataloged."
+msgstr "使用搜索字段或者标签浏览器来过滤展示的书籍。只使用展示的书籍创建目录。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:22
+msgid ""
+"To begin catalog generation, select the menu item :guilabel:`Convert books >"
+" Create a catalog of the books in your calibre library`. You may also add a "
+":guilabel:`Create catalog` button to a toolbar in :guilabel:`Preferences > "
+"Interface > Toolbars & menus` for easier access to the Generate catalog "
+"dialog."
+msgstr "要开始生成目录，选择菜单项：guilabel：`转换书籍 > 在您的 calibre 书库中创建书籍目录`。 您还可以将 :guilabel:`创建目录` 按钮添加到 :guilabel:`首选项 > 界面 > 工具栏与菜单` 以便更轻松地访问 创建目录 对话框。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst-1
+msgid "Catalog options"
+msgstr "书目选项"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:28
+msgid ""
+"In :guilabel:`Catalog options`, select **AZW3, EPUB or MOBI** as the Catalog"
+" format. In the :guilabel:`Catalog title` field, provide a name that will be"
+" used for the generated catalog. If a catalog of the same name and format "
+"already exists, it will be replaced with the newly-generated catalog."
+msgstr "在操作界面“目录选项”中，选择**AZW3、EPUB或MOBI**作为目录格式。在“目录标题”字段中，提供将用于生成目录的名称。如果已经存在具有相同名称和格式的目录，则会将其替换为新生成的目录。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst-1
+msgid "Catalog: send to device automatically option"
+msgstr "目录：自动发送到设备选项"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:34
+msgid ""
+"Enabling :guilabel:`Send catalog to device automatically` will download the "
+"generated catalog to a connected device upon completion."
+msgstr "启用选项`自动将目录发送到设备`将在完成后将生成的目录下载到已连接的设备。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:37
+msgid "Included sections"
+msgstr "包含章节"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst-1
+msgid "Included sections in catalog"
+msgstr "目录中包含的章节"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:43
+msgid ""
+"Sections enabled by a checkmark will be included in the generated catalog:"
+msgstr "复选标记启用的部分将包括在生成的目录中："
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:45
+msgid ""
+":guilabel:`Authors` - all books, sorted by author, presented in a list "
+"format. Non-series books are listed before series books."
+msgstr "“作者” -按作者排序的所有书籍，以列表格式呈现。非系列书籍列在系列书籍之前。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:46
+msgid ""
+":guilabel:`Titles` - all books, sorted by title, presented in a list format."
+msgstr "“名称” - 所有图书按书名分类，以列表形式呈现。 "
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:47
+msgid ""
+":guilabel:`Series` - all books that are part of a series, sorted by series, "
+"presented in a list format."
+msgstr "“系列” - 属于系列的所有图书，按系列排序，以列表形式呈现。 "
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:48
+msgid ""
+":guilabel:`Genres` - individual genres presented in a list, sorted by Author"
+" and Series."
+msgstr "“类型” - 各个图书的流派类型以列表的形式呈现，按作者和系列排序。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:49
+msgid ""
+":guilabel:`Recently Added` - all books, sorted in reverse chronological "
+"order. List includes books added in the last 30 days, then a month-by-month "
+"listing of added books."
+msgstr "“最近添加” - 所有书籍，按时间倒序排列。列表包括最近30天内添加的图书，然后按月列出添加的图书。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:50
+msgid ""
+":guilabel:`Descriptions` - detailed description page for each book, "
+"including a cover thumbnail and comments. Sorted by author, with non-series "
+"books listed before series books."
+msgstr "“概述” - 每本书的详细描述页面，包括封面缩略图和评论。按作者排序，非系列书籍列在系列书籍之前。 "
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:53
+msgid "Prefixes"
+msgstr "前缀"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst-1
+msgid "Prefix rules"
+msgstr "前缀规则"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:59
+msgid ""
+"Prefix rules allow you to add a prefix to book listings when certain "
+"criteria are met. For example, you might want to mark books you've read with"
+" a checkmark, or books on your wishlist with an X."
+msgstr "前缀规则允许您在满足特定条件时向预订列表添加前缀。例如，你可能想要用复选标记标记你读过的书，或者用X标记你愿望清单上的书。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:61
+msgid ""
+"The checkbox in the first column enables the rule. :guilabel:`Name` is a "
+"rule name that you provide. :guilabel:`Field` is either :guilabel:`Tags` or "
+"a custom column from your library. :guilabel:`Value` is the content of "
+":guilabel:`Field` to match. When a prefix rule is satisfied, the book will "
+"be marked with the selected :guilabel:`Prefix`."
+msgstr "第一列中的复选框将启用该规则。`名称`是您提供的规则名称。“字段”是“标记”或书库中的自定义列。“值”是要匹配的“字段”的内容。当满足前缀规则时，书籍将被标记为选定的“前缀”。 "
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:63
+msgid "Three prefix rules have been specified in the example above:"
+msgstr "上面的示例中指定了三个前缀规则："
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:65
+msgid ""
+":guilabel:`Read book` specifies that a book with any date in a custom column"
+" named :guilabel:`Last read` will be prefixed with a checkmark symbol."
+msgstr "“阅读图书”指定在名称为“上次阅读”的自定义列中包含任何日期的书籍将带有复选标记符号作为前缀。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:66
+msgid ""
+":guilabel:`Wishlist` item specifies that any book with a "
+":guilabel:`Wishlist` tag will be prefixed with an X symbol."
+msgstr "“Wishlist”项指定任何带有“Wishllist”标记的书籍都将以X符号为前缀。 "
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:67
+msgid ""
+":guilabel:`Library` books specifies that any book with a value of True (or "
+"Yes) in a custom column :guilabel:`Available in Library` will be prefixed "
+"with a double arrow symbol."
+msgstr "“书库” 图书指定自定义列“书库中的可用图书”中值为True(或是)的任何图书都将带有双箭头符号前缀。 "
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:69
+msgid ""
+"The first matching rule supplies the prefix. Disabled or incomplete rules "
+"are ignored."
+msgstr "第一个匹配规则提供前缀。已禁用或不完整的规则将被忽略。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:72
+msgid "Excluded books"
+msgstr "排除书籍"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst-1
+msgid "Excluded books in catalog"
+msgstr "目录中排除的图书"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:78
+msgid "Exclusion rules allow you to specify books that will not be cataloged."
+msgstr "排除规则允许您指定不会编目的图书。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:80
+msgid ""
+"The checkbox in the first column enables the rule. :guilabel:`Name` is a "
+"rule name that you provide. :guilabel:`Field` is either :guilabel:`Tags` or "
+"a custom column in your library. :guilabel:`Value` is the content of "
+":guilabel:`Field` to match. When an exclusion rule is satisfied, the book "
+"will be excluded from the generated catalog."
+msgstr "第一列中的复选框可启用该规则。“Name”是您提供的规则名称。“Field”可以是“Tags”，也可以是库中的自定义列。“Value”是要匹配的“Field”的内容。当满足排除规则时，图书将从生成的目录中排除。 "
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:82
+msgid "Two exclusion rules have been specified in the example above:"
+msgstr "上面的示例中指定了两个排除规则："
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:84
+msgid ""
+"The :guilabel:`Catalogs` rule specifies that any book with a "
+":guilabel:`Catalog` tag will be excluded from the generated catalog."
+msgstr "“Catalogs”规则指定任何带有“Catalogs”标签的图书都将从生成的目录中排除。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:85
+msgid ""
+"The :guilabel:`Archived` Books rule specifies that any book with a value of "
+":guilabel:`Archived` in the custom column :guilabel:`Status` will be "
+"excluded from the generated catalog."
+msgstr "“已存档”图书规则指定自定义列“状态”中值为“已存档”的任何图书都将从生成的目录中排除。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:87
+msgid ""
+"All rules are evaluated for every book. Disabled or incomplete rules are "
+"ignored."
+msgstr "所有规则都会针对每本书进行评估。禁用或不完整的规则将被忽略。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:92
+msgid "Excluded genres"
+msgstr "排除类型"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst-1
+msgid "Excluded genres in catalog"
+msgstr "目录中排除的流派"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:98
+msgid ""
+"When the catalog is generated, tags in your database are used as genres. For"
+" example, you may use the tags ``Fiction`` and ``Nonfiction``. These tags "
+"become genres in the generated catalog, with books listed under their "
+"respective genre lists based on their assigned tags. A book will be listed "
+"in every genre section for which it has a corresponding tag."
+msgstr "生成目录时，数据库中的标记将用作流派。例如，您可以使用标签“小说”和“非小说”。这些标签成为生成目录中的流派，书籍根据其指定的标签列在各自的流派列表下。一本书将被列在每一个有相应标签的流派部分。 "
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:100
+msgid ""
+"You may be using certain tags for other purposes, perhaps a + to indicate a "
+"read book, or a bracketed tag like ``[Amazon Freebie]`` to indicate a book's"
+" source. The :guilabel:`Excluded genres` regex allows you to specify tags "
+"that you don't want used as genres in the generated catalog. The default "
+"exclusion regex pattern ``\\[.+\\]\\+`` excludes any tags of the form "
+"``[tag]``, as well as excluding ``+``, the default tag for read books, from "
+"being used as genres in the generated catalog."
+msgstr "您可能会出于其他目的使用某些标签，也许用 + 来表示已读的书，或者用方括号括起来的标签（例如“[Amazon Freebie]”）来表示书籍的来源。 “排除的流派”正则表达式允许您指定不希望在生成的目录中用作流派的标签。 默认排除正则表达式模式``\\[.+\\]\\+``排除任何形式为``[tag]``的标签，并排除``+``（阅读书籍的默认标签） 在生成的目录中用作流派。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:102
+msgid ""
+"You can also use an exact tag name in a regex. For example, ``[Amazon "
+"Freebie]`` or ``[Project Gutenberg]``. If you want to list multiple exact "
+"tags for exclusion, put a pipe (vertical bar) character between them: "
+"``[Amazon Freebie]|[Project Gutenberg]``."
+msgstr "您也可以在正则表达式中使用精确的标记名。例如，“[亚马逊免费赠品]”或“[古腾堡计划]”。如果要列出多个精确的标签以进行排除，请在它们之间放一个竖线（竖线）字符：“[亚马逊免费赠品]|[古腾堡项目]”。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:104
+msgid ""
+":guilabel:`Results of regex` shows you which tags will be excluded when the "
+"catalog is built, based on the tags in your database and the regex pattern "
+"you enter. The results are updated as you modify the regex pattern."
+msgstr "“正则表达式结果”根据数据库中的标签和您输入的正则表达式模式，显示在构建目录时哪些标签将被排除。当您修改正则表达式模式时，结果会更新。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:107
+msgid "Other options"
+msgstr "其他选项"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst-1
+msgid "Other options for catalog"
+msgstr "目录的其他选项"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:113
+msgid ""
+":guilabel:`Catalog cover` specifies whether to generate a new cover or use "
+"an existing cover. It is possible to create a custom cover for your catalogs"
+" - see :ref:`custom_catalog_covers` for more information. If you have "
+"created a custom cover that you want to reuse, select :guilabel:`Use "
+"existing cover`. Otherwise, select :guilabel:`Generate new cover`."
+msgstr "“目录封面”指定是生成新封面还是使用现有封面。可以为您的目录创建自定义封面-有关详细信息，请参阅“custom_catalog_covers”。如果您已经创建了想要重复使用的自定义封面，请选择`使用现有封面`。否则，选择`生成新封面`。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:115
+msgid ""
+":guilabel:`Extra Description note` specifies a custom column's contents to "
+"be inserted into the Description page, next to the cover thumbnail. For "
+"example, you might want to display the date you last read a book using a "
+":guilabel:`Last Read` custom column. For advanced use of the Description "
+"note feature, see `this post in the calibre forum "
+"<https://www.mobileread.com/forums/showpost.php?p=1335767&postcount=395>`_."
+msgstr "“Extra Description Note”指定要插入到封面缩略图旁边的描述页中的自定义列的内容。例如，您可能想要使用“Last Read”自定义列显示上次阅读一本书的日期。有关描述笔记功能的高级用法，请参阅Calibre论坛中的“此帖子<https://www.mobileread.com/forums/showpost.php?p=1335767&postcount=395>”_。 "
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:117
+msgid ""
+":guilabel:`Thumb width` specifies a width preference for cover thumbnails "
+"included with Descriptions pages. Thumbnails are cached to improve "
+"performance. To experiment with different widths, try generating a catalog "
+"with just a few books until you've determined your preferred width, then "
+"generate your full catalog. The first time a catalog is generated with a new"
+" thumbnail width, performance will be slower, but subsequent builds of the "
+"catalog will take advantage of the thumbnail cache."
+msgstr "“缩略图宽度”指定描述页面中包含的封面缩略图的宽度首选项。缩略图被缓存以提高性能。要尝试不同的宽度，请尝试生成一个只有几本书的目录，直到您确定了首选宽度，然后生成完整的目录。第一次生成具有新缩略图宽度的目录时，性能会较慢，但后续构建的目录将利用缩略图缓存。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:119
+msgid ""
+":guilabel:`Merge with comments` specifies a custom column whose content will"
+" be non-destructively merged with the comments metadata during catalog "
+"generation. For example, you might have a custom column :guilabel:`Author "
+"bio` that you'd like to append to the comments metadata. You can choose to "
+"insert the custom column contents *before or after* the comments section, "
+"and optionally separate the appended content with a horizontal rule "
+"separator. Eligible custom column types include ``text, comments, and "
+"composite``."
+msgstr "`与评论合并`指定自定义列，其内容将在目录生成过程中与评论元数据进行非破坏性合并。例如，您可能有一个自定义列“Author bio”，您希望将其附加到注释元数据中。您可以选择在备注部分*之前或之后*插入自定义列内容，并可以选择使用水平标尺分隔符分隔追加的内容。符合条件的自定义列类型包括“文本、注释和复合”。 "
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:124
+msgid "Custom catalog covers"
+msgstr "自定义目录封面"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:128
+msgid ""
+"|cc| With the `Generate Cover plugin "
+"<https://www.mobileread.com/forums/showthread.php?t=124219>`_ installed, you"
+" can create custom covers for your catalog. To install the plugin, go to "
+":guilabel:`Preferences > Advanced > Plugins > Get new plugins`."
+msgstr "|cc| 安装“生成封面插件<https://www.mobileread.com/forums/showthread.php?t=124219>“后，您可以为您的目录创建自定义封面。要安装插件，请进入`首选项>高级>插件>获取新插件`。 "
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:126
+msgid "cc"
+msgstr "cc"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:132
+msgid "Additional help resources"
+msgstr "其他帮助资源"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:134
+msgid ""
+"For more information on calibre's Catalog feature, see the MobileRead forum "
+"sticky `Creating Catalogs - Start here "
+"<https://www.mobileread.com/forums/showthread.php?t=118556>`_, where you can"
+" find information on how to customize the catalog templates, and how to "
+"submit a bug report."
+msgstr "有关Calibre的Catalog功能的更多信息，请参见MobileRead论坛粘滞的`创建目录-从这里开始<https://www.mobileread.com/forums/showthread.php?t=118556>`_，您可以在这里找到如何定制目录模板以及如何提交错误报告的信息。"
+
+#: ../../__w/calibre/calibre/manual/catalogs.rst:136
+msgid ""
+"To ask questions or discuss calibre's Catalog feature with other users, "
+"visit the MobileRead forum `Library Management "
+"<https://www.mobileread.com/forums/forumdisplay.php?f=236>`_."
+msgstr "如需提问或与其他用户讨论Calibre的目录功能，请访问MobileRead论坛`书库管理<https://www.mobileread.com/forums/forumdisplay.php?f=236>`_。"

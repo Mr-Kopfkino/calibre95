@@ -1,0 +1,22 @@
+[
+  {
+    "upstream_path": "libpng-1.6.40/LICENSE",
+    "notice_file": "0001-LICENSE.txt",
+    "sha256": "5c0bb4b05b1354ae7c173532b6702ea68b611047ff9b91c4d3af77da39c195d9"
+  },
+  {
+    "upstream_path": "libpng-1.6.40/contrib/gregbook/COPYING",
+    "notice_file": "0002-COPYING.txt",
+    "sha256": "d6cb0e9e560f51085556949a84af12b79a00f10ab8b66c752537faf7cd665572"
+  },
+  {
+    "upstream_path": "libpng-1.6.40/contrib/gregbook/LICENSE",
+    "notice_file": "0003-LICENSE.txt",
+    "sha256": "b6a03c1803eb58ffb1f1278d5c7d4096c4c116e66dce8a7553e8c77d163c3438"
+  },
+  {
+    "upstream_path": "libpng-1.6.40/contrib/pngminus/LICENSE.txt",
+    "notice_file": "0004-LICENSE.txt.txt",
+    "sha256": "eeb50cca0bf0537aeeef00874e1e22f0de50cb035f5db37e36036dc9b8218e8d"
+  }
+]

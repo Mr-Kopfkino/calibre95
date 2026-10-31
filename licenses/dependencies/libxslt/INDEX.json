@@ -1,0 +1,32 @@
+[
+  {
+    "upstream_path": "libxslt-1.1.39/Copyright",
+    "notice_file": "0001-Copyright.txt",
+    "sha256": "7e48e290b6bfccc2ec1b297023a1d77f2fd87417f71fbb9f50aabef40a851819"
+  },
+  {
+    "upstream_path": "libxslt-1.1.39/COPYING",
+    "notice_file": "0002-COPYING.txt",
+    "sha256": "7e48e290b6bfccc2ec1b297023a1d77f2fd87417f71fbb9f50aabef40a851819"
+  },
+  {
+    "upstream_path": "libxslt-1.1.39/tests/docbook/doc/copyright.html",
+    "notice_file": "0003-copyright.html.txt",
+    "sha256": "2603fdfb55d284663aa262c04ec740d1f00ef7f4fec565170e18d78e8992e8a6"
+  },
+  {
+    "upstream_path": "libxslt-1.1.39/tests/docbook/dtd/simple/3.1.7.1/COPYRIGHT",
+    "notice_file": "0004-COPYRIGHT.txt",
+    "sha256": "66ea6d01c5eb87efbb48748157e1f440e4193a4333f92078431dbe0b8ba47564"
+  },
+  {
+    "upstream_path": "libxslt-1.1.39/tests/docbook/dtd/simple/4.1.2.4/COPYRIGHT",
+    "notice_file": "0005-COPYRIGHT.txt",
+    "sha256": "ccd62010471aeec715e14bbf5f33bf3d3ea090e5b5f57ebbbcfb61b13dbf91d6"
+  },
+  {
+    "upstream_path": "libxslt-1.1.39/tests/docbook/dtd/3.1.7/COPYRIGHT",
+    "notice_file": "0006-COPYRIGHT.txt",
+    "sha256": "0bee12b76c0229ef2098650db83ab88fc60f75f60230cb5fb49af96e58cfa59a"
+  }
+]

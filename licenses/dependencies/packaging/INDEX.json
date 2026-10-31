@@ -1,0 +1,17 @@
+[
+  {
+    "upstream_path": "packaging-23.1.dist-info/LICENSE",
+    "notice_file": "0001-LICENSE.txt",
+    "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+  },
+  {
+    "upstream_path": "packaging-23.1.dist-info/LICENSE.APACHE",
+    "notice_file": "0002-LICENSE.APACHE.txt",
+    "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+  },
+  {
+    "upstream_path": "packaging-23.1.dist-info/LICENSE.BSD",
+    "notice_file": "0003-LICENSE.BSD.txt",
+    "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+  }
+]

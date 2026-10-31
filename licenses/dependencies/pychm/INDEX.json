@@ -1,0 +1,12 @@
+[
+  {
+    "upstream_path": "pychm-0.8.6/LICENSE",
+    "notice_file": "0001-LICENSE.txt",
+    "sha256": "1f7b8b0a4a738829214290dc5b3e9353222f64433e58ed1e04733bee0fe9315d"
+  },
+  {
+    "upstream_path": "pychm-0.8.6/COPYING",
+    "notice_file": "0002-COPYING.txt",
+    "sha256": "669cd20e1d23a23737c7d50e22fc80053ccd94e624920479f8618b0606b022fe"
+  }
+]

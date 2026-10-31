@@ -1,0 +1,17 @@
+[
+  {
+    "upstream_path": "apsw-3.43.0.0/LICENSE",
+    "notice_file": "0001-LICENSE.txt",
+    "sha256": "c666d069dca72d6d5135d5628cc70f5ad77a50d28cf10e75bb22dce40c55b490"
+  },
+  {
+    "upstream_path": "apsw-3.43.0.0/doc/copyright.html",
+    "notice_file": "0002-copyright.html.txt",
+    "sha256": "790362a94f0fff0783796b81945275b10d54b41a69765cd4c3d3416c9d0a3f99"
+  },
+  {
+    "upstream_path": "apsw-3.43.0.0/doc/_sources/copyright.rst.txt",
+    "notice_file": "0003-copyright.rst.txt.txt",
+    "sha256": "474153b693ab9fea8e99689da673ca8feea935dfdcab2b0449a11d9565902535"
+  }
+]

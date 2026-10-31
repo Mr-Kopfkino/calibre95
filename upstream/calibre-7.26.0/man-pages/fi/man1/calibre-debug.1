@@ -1,0 +1,196 @@
+.\" Man page generated from reStructuredText.
+.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.TH "CALIBRE-DEBUG" "1" "helmikuuta 14, 2025" "7.26.0" "calibre"
+.SH NAME
+calibre-debug \- calibre-debug
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibre\-debug {options]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Erilaisia komentoriviliittymiä, jotka ovat hyödyllisiä calibren virheenkorjauksessa. Ilman vaihtoehtoja,
+tämä komento käynnistää sulautetun Python\-tulkin. Voit myös ajaa pääohjelman
+calibre graafisen käyttöliittymän, calibre E\-kirjan katseluohjelman ja calibre\-editorin virheenkorjaustilassa.
+.sp
+Se sisältää myös rajapintoja erilaisiin calibren osiin, joissa ei ole
+omia komentorivityökaluja, kuten fonttien alustus, E\-kirjan diff\-työkalu ja niin edelleen.
+.sp
+Voit myös käyttää \fBcalibre\-debug\fP\-ohjelmaa itsenäisten skriptien suorittamiseen. Käytä sitä näin:
+.INDENT 0.0
+.INDENT 3.5
+\fBcalibre\-debug\fP \-e myscript.py \fB\-\-\fP \fB\-\-option1\fP \fB\-\-option2\fP file1 file2 ...
+.UNINDENT
+.UNINDENT
+.sp
+Kaikki \fB\-\-\fP jälkeinen siirretään skriptille. Voit myös käyttää \fBcalibre\-debug\fP
+shebangina skripteissä, esimerkiksi näin:
+.INDENT 0.0
+.INDENT 3.5
+#!/usr/bin/env \-S \fBcalibre\-debug\fP \-e \fB\-\-\fP \-\-
+.UNINDENT
+.UNINDENT
+.sp
+Aina kun annat \fBcalibre\-debug\fP:lle argumentteja, joissa on välilyöntejä, sulje argumentit lainausmerkkeihin. Esimerkiksi: \(dq/some path/with spaces\(dq
+.SH [VALINNAT]
+.INDENT 0.0
+.TP
+.B \-\-add\-simple\-plugin
+Lisää yksinkertainen laajennus (eli laajennus, joka koostuu vain .py tiedostosta) määrittämällä laajennuskoodin sisältävän py\-tiedoston polku.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-command, \-c
+Suorita Python\-koodi.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-debug\-device\-driver, \-d
+Laitteen tunnistamisen vianmääritys
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-default\-programs
+Lisää/Poistaa calibren Windows oletusohjelmiin/\-sta. \fI\%\-\-default\-programs\fP = \fB(register|unregister)\fP
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-diff
+Suorita calibre diff\-työkalu. Esimerkiksi: calibre\-debug \fI\%\-\-diff\fP file1 file2
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-edit\-book
+Käynnistä calibren \fB\(dq\fPKirjan muokkaus\fB\(dq\fP \-työkalu virheenkorjaustilassa.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-exec\-file, \-e
+Suorita tiedoston Python\-koodi.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-explode\-book, \-x
+Pura kirja määritettyyn kansioon. Käyttö: \-x file.epub output_dir Vie kirjan HTML\-tiedostojen ja metadata kokoelmana, jota voit muokata tavallisilla HTML\-muokkaustyökaluilla. Toimii EPUB\-, AZW3\-, HTMLZ\- ja DOCX\-tiedostojen kanssa.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-export\-all\-calibre\-data
+Vie kaikki calibre\-tiedot (kirjat/asetukset/laajennukset). Normaalisti sinulta kysytään vientikansiota ja vietäviä kirjastoja. Voit myös ohittaa kysymykset määrittämällä ne komentoriviargumenteiksi. Käytä absoluuttisia polkuja vientikansiossa ja kirjastoissa. Erityistä avainsanaa \fB\(dq\fPall\fB\(dq\fP voidaan käyttää kaikkien kirjastojen viemiseen. Esimerkkejä:    calibre\-debug \fI\%\-\-export\-all\-calibre\-data\fP # interaktiiviseen käyttöön   calibre\-debug \fI\%\-\-export\-all\-calibre\-data\fP /path/to/empty/export/folder /path/to/library/folder1 /path/to/library2   calibre\-debug \fI\%\-\-export\-all\-calibre\-data\fP /export/folder all # vie kaikki tunnetut kirjastot
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-fix\-multiprocessing
+Sisäiseen käyttöön
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-gui, \-g
+Käynnistä GUI vianmääritys aktivoituna. Vianmääritys tulostaa virtoihin stdout ja stderr.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-gui\-debug
+Suorita graafinen käyttöliittymä virheenkorjauskonsolilla kirjautumalla määritettyyn polkuun. Käytä vain sisäiseen käyttöön \-g\-vaihtoehtoa graafisen käyttöliittymän suorittamiseen virheenkorjaustilassa
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-help, \-h
+näytä tämä ohjeviesti ja poistu
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-implode\-book, \-i
+Kasaa aikaisemmin räjäytetty kirja. Käyttö: \-i vientikansio tiedosto.epub Tuo kirjan vientikansion tiedostoista. Kansion sisällön tulee olla aikaisemmin luotu \fB\-\-explode_book\-komennolla\fP\&. Huomaa myös, että tiedostotyypin on oltava sama kuin lähdetiedoston.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-import\-calibre\-data
+Tuo aikaisemmin vietyjä calibre\-tietoja
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-inspect\-mobi, \-m
+Tutki MOBI\-tiedostoja osoitetuissa poluissa
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-paths
+Tulosta hakemistopolut, joita tarvitaan calibre\-ympäristön määrittelyyn
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-run\-plugin, \-r
+Suorita laajennus, joka tarjoaa komentorivikäyttöliittymän. Esimerkiksi: calibre\-debug \-r \fB\(dq\fPPlugin name\fB\(dq\fP \fB\-\-\fP file1 \fB\-\-option1\fP Kaikki \fB\-\-\fP jälkeen oleva välitetään laajennukselle argumentteina.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-run\-test, \-t
+Suorita nimetyt testit. Käytä erityistä arvoa \fB\(dq\fPall\fB\(dq\fP kaikkien testien suorittamiseen. Jos testin nimi alkaa pisteellä, sen oletetaan olevan moduulin nimi. Jos testin nimi alkaa @\-merkillä, sen oletetaan olevan luokan nimi.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-run\-without\-debug
+Älä käytä DEBUG\-lippua asetettuna
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-shutdown\-running\-calibre, \-s
+Pakottaa käynnissä olevien calibre\-instanssien sammumisen. Huomaa, että tämä pakottaa kaikkien käynnissä olevien prosessien päättämisen, joten käytä varoen.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-subset\-font, \-f
+Tiivistä määritetty fontti. Käyttö \fB\-\-\fP valinnan jälkeen, jotta se siirtyy fontinpoimintaohjelmaan.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-test\-build
+Testaa buildin binäärimoduulit
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-version
+näytä ohjelman versionumero ja poistu
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-viewer, \-w
+Käynnistä E\-kirjan katseluohjelma virheenkorjaustilassa
+.UNINDENT
+.SH AUTHOR
+Kovid Goyal
+.SH COPYRIGHT
+Kovid Goyal
+.\" Generated by docutils manpage writer.
+.

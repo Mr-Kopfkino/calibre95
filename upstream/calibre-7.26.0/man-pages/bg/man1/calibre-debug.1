@@ -1,0 +1,197 @@
+.\" Man page generated from reStructuredText.
+.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.TH "CALIBRE-DEBUG" "1" "февруари 14, 2025" "7.26.0" "calibre"
+.SH NAME
+calibre-debug \- calibre-debug
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibre\-debug [options]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Различни интерфейси на командния ред, полезни за дебъг в calibre. Без опции,
+тази команда стартира вграден интерпретатор на Python. Може също да стартирате основния
+calibre GUI, четеца за е\-книги на calibre и редакторът на calibre в дебъг режим.
+.sp
+Също така съдържа интерфейси към различни битове от calibre, които нямат
+специални инструменти за команден ред, като поднабор на шрифтове, инструмент за разлики на е\-книги и
+т.н.
+.sp
+Може също да използвате \fBcalibre\-debug\fP за изпълнение на самостоятелни скриптове. За това, използвайте по следния начин:
+.INDENT 0.0
+.INDENT 3.5
+\fBcalibre\-debug\fP \-e myscript.py \fB\-\-\fP \fB\-\-option1\fP \fB\-\-option2\fP file1 file2 ...
+.UNINDENT
+.UNINDENT
+.sp
+Всичко след \fB\-\-\fP се предава на скрипта. Може също да използвате \fBcalibre\-debug\fP
+като shebang в скриптове, като това:
+.INDENT 0.0
+.INDENT 3.5
+#!/usr/bin/env \-S \fBcalibre\-debug\fP \-e \fB\-\-\fP \-\-
+.UNINDENT
+.UNINDENT
+.sp
+Винаги, когато предавате аргументи на \fBcalibre\-debug\fP, които имат интервали в тях, затворете аргументите в кавички. Например: \(dq/some path/with spaces\(dq
+.SH ОБЩИ НАСТРОЙКИ
+.INDENT 0.0
+.TP
+.B \-\-add\-simple\-plugin
+Добавяне на прост плъгин (напр. плъгин, състоящ се само от .py файл), чрез определяне на пътя до .py файла съдържащ кода.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-command, \-c
+Изпълняване на python код.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-debug\-device\-driver, \-d
+Засичане на дебъг устройство
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-default\-programs
+Дерегистрирай calibre от програмите по подразбиране на Windows \fI\%\-\-default\-programs\fP = \fB(register|unregister)\fP
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-diff
+Стартиране на calibre diff инструмент. Например: calibre\-debug \fI\%\-\-diff\fP file1 file2
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-edit\-book
+Стартирай calibre книжен редактор в режим дебъгване.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-exec\-file, \-e
+Изпълни python кода във файла.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-explode\-book, \-x
+Взривете книгата в указаната папка. В употреба: \-x file.epub output_dir Експортира книгата като колекция от HTML файлове и метаданни, които може да редактирате с помощта на стандартни инструменти за редактиране на HTML. Работи с EPUB, AZW3, HTMLZ и DOCX файлове.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-export\-all\-calibre\-data
+Експорт на всички calibre данни (книги/настройки/плъгини). Обикновено ще бъдете помолени за експортната папка и библиотеките за експорт. Може също да ги посочите като аргументи на командния ред, за да пропуснете въпросите. Използвайте абсолютни пътища за експортната папка и библиотеките. Специалната ключова дума \fB\(dq\fPall\fB\(dq\fP може да се използва за експортиране на всички библиотеки. Примери:    calibre\-debug \fI\%\-\-export\-all\-calibre\-data\fP  # за интерактивна употреба   calibre\-debug \fI\%\-\-export\-all\-calibre\-data\fP /path/to/empty/export/folder /path/to/library/folder1 /path/to/library2   calibre\-debug \fI\%\-\-export\-all\-calibre\-data\fP /export/folder all  # експортирайте всички известни библиотеки
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-fix\-multiprocessing
+За вътрешна употреба
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-gui, \-g
+Стартирай GUI с активиран дебъгер. Резултатът излиза в stdout и stderr.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-gui\-debug
+Стартирай GUI с дебъгер конзола и запис към определен път. Само за вътрешно ползване, използвай опция \-g за стартиране на GUI в режим дебъгер.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-help, \-h
+Покажи това помощно съобщение и излез
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-implode\-book, \-i
+Имплодиране на избухнала преди това книга. В употреба: \-i output_dir file.epub Внася книгата от файловете в output_dir които трябва да са били създадени от предишно обаждане до \fI\%\-\-explode\-book\fP\&. Не забравяйте да укажете същия тип файл, какъвто е използван при взривяване.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-import\-calibre\-data
+Импортирай по\-рано експортирани calibre данни
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-inspect\-mobi, \-m
+Преглеждане на MOBI файла(\-овете) в определен път(ища).
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-paths
+Показване на пътищата, необходими за настройване на средата за работа на Calibre
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-run\-plugin, \-r
+Стартирайте плъгин, който предоставя интерфейс на командния ред. Например: calibre\-debug \-r \fB\(dq\fPPlugin name\fB\(dq\fP \fB\-\-\fP file1 \fB\-\-option1\fP Всичко след \fB\-\-\fP ще бъде предадено на плъгина като аргументи.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-run\-test, \-t
+Изпълнете посочените тестове. Използвайте специалната стойност \fB\(dq\fPall\fB\(dq\fP, за да изпълните всички тестове. Ако името на теста започва с точка, предполага се, че е име на модул. Ако името на теста започва с @, предполага се, че е име на категория.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-run\-without\-debug
+Не стартирайте със зададен флаг DEBUG
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-shutdown\-running\-calibre, \-s
+Накарай екземпляр на работещ calibre, ако има такъв, да бъде изключен. Имайте предвид, че ако в него се изпълняват задания, те ще бъдат мълчаливо прекратени, така че използвайте с внимание.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-subset\-font, \-f
+Подзадайте указания шрифт. Използвайте \fB\-\-\fP след тази опция, за да премине опция към програма за поднастройка на шрифта.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-test\-build
+Тест на двоични модули в компилация
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-version
+покажи версия на програмата и излез
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-viewer, \-w
+Стартирай четеца в режим дебъгване
+.UNINDENT
+.SH AUTHOR
+Kovid Goyal
+.SH COPYRIGHT
+Kovid Goyal
+.\" Generated by docutils manpage writer.
+.

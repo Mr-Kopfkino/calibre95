@@ -1,0 +1,18 @@
+{
+  "platform": "Windows x64",
+  "compiler": "MSVC 14.44.35207",
+  "flags": [
+    "/O2",
+    "/MT",
+    "/std:c11"
+  ],
+  "runtime_fft": "Existing FFmpeg 6.1.2 avutil-58.dll (loaded by absolute path by Python host)",
+  "sha256": {
+    "app/native/cava95.dll": "4ea02246a6a0e61d940c1e0dc167a114f9bb7db6f50eb516e9b1faf137676ac4",
+    "source/cava-reference/cavacore.c": "ffbc166829b87701f39ee77326a2e03cd12ed5e7d857453efe41684b968b9494",
+    "source/cava-reference/cavacore.h": "718e88d76f501b2f96eb35aa9ca07a23092a537c3fcb7486a0507859190e00e9",
+    "source/spectrum/cava/cava95.c": "1b599b943401387d4a85bc030150004b00112820263095f52cb0dd33d8337c73",
+    "source/spectrum/cava/fft_adapter.c": "a07fbfe7ecb2a17dececd7e3a3ce89469a791245ac79b2bb1610444f3f26f124",
+    "source/spectrum/cava/fftw3.h": "034af545e04c92c4d57cc4af19a44e9549a8dab9484bf2ee8211e24be86483e2"
+  }
+}

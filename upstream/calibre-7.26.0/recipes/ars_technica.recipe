@@ -1,0 +1,104 @@
+#!/usr/bin/env python
+__license__ = 'GPL v3'
+__copyright__ = '2008-2012, Darko Miletic <darko.miletic at gmail.com>'
+'''
+arstechnica.com
+'''
+
+import re
+
+from calibre.web.feeds.news import BasicNewsRecipe
+
+
+def classes(classes):
+    q = frozenset(classes.split(' '))
+    return dict(attrs={
+        'class': lambda x: x and frozenset(x.split()).intersection(q)})
+
+
+class ArsTechnica(BasicNewsRecipe):
+    title = u'Ars Technica'
+    language = 'en'
+    __author__ = 'Darko Miletic, Sujata Raman, Alexis Rohou, Tom Sparks'
+    description = 'Ars Technica: Serving the technologist for 1.2 decades'
+    publisher = 'Conde Nast Publications'
+    oldest_article = 5
+    max_articles_per_feed = 100
+    no_stylesheets = True
+    encoding = 'utf-8'
+    use_embedded_content = False
+    remove_empty_feeds = True
+    ignore_duplicate_articles = {'url', 'title'}
+    masthead_url = 'https://upload.wikimedia.org/wikipedia/commons/5/51/Ars_Technica_logo_%282016%29.svg'
+    extra_css             = '''
+        body {font-family: Arial,sans-serif}
+        .heading{font-family: "Times New Roman",serif}
+        .byline{font-weight: bold; line-height: 1em; font-size: 0.625em; text-decoration: none}
+        img{display: block}
+        .caption-text{font-size:small; font-style:italic}
+        .caption-byline{font-size:small; font-style:italic; font-weight:bold}
+        .video, .page-numbers, .story-sidebar { display: none }
+        .image { display: block }
+    '''
+
+    recipe_specific_options = {
+        'days': {
+            'short': 'Oldest article to download from this news source. In days ',
+            'long': 'For example, 0.5, gives you articles from the past 12 hours',
+            'default': str(oldest_article)
+        }
+    }
+
+    def __init__(self, *args, **kwargs):
+        BasicNewsRecipe.__init__(self, *args, **kwargs)
+        d = self.recipe_specific_options.get('days')
+        if d and isinstance(d, str):
+            self.oldest_article = float(d)
+
+    keep_only_tags = [
+        dict(itemprop=['article-header', 'article-body']),
+        classes('main post-meta article-guts standalone'),
+    ]
+
+    remove_tags = [
+        classes('xf_thread_iframe_wrapper topnav-sections nav-previous nav-next ars-gallery-caption-credit'
+                ' ars-gallery-caption-text ars-gallery-caption-arrow font-impact sr-only author-mini-bio'
+                ' taboola-container comments site-header site-footer video corner-info article-expander'
+                ' left-column related-stories article-social text-settings-dropdown-story intro-image'),
+        dict(name=['object', 'link', 'embed', 'iframe', 'meta']),
+        dict(id=['social-left', 'article-footer-wrap']),
+        dict(name='nav', attrs={'class': 'subheading'}),
+    ]
+    remove_attributes = ['lang', 'style']
+
+    # Feed are found here: [url]http://arstechnica.com/rss-feeds/[/url]
+    feeds = [
+            ('Ars Technica', 'https://arstechnica.com/feed/'),
+            ('Features', 'https://arstechnica.com/feautes/feed/'),
+            ('Technology Lab', 'https://arstechnica.com/information-technology/feed/'),
+            ('Gear &amp; Gadgets', 'https://arstechnica.com/gadgets/feed/'),
+            ('Culture', 'https://arstechnica.com/cuture/feed/'),
+            ('Health', 'https://arstechnica.com/health/feed/'),
+            ('Policy', 'https://arstechnica.com/tech-policy/feed/'),
+            ('Security', 'https://arstechnica.com/security/feed/'),
+            ('Infinite Loop', 'https://arstechnica.com/tag/apple/feed/'),
+            ('Opposable Thumbs', 'https://arstechnica.com/gaming/feed/'),
+            ('Scientific Method', 'https://arstechnica.com/science/feed/'),
+            ('Cars Technica', 'https://arstechnica.com/cars/feed/'),
+            ('Staff', 'https://arstechnica.com/staff/feed/'),
+            ('AI', 'https://arstechnica.com/staff/ai/feed/'),
+            ('Space', 'https://arstechnica.com/space/feed/'),
+    ]
+
+    recursions = 1
+
+    def is_link_wanted(self, url, tag):
+        return re.search(r'/[0-9]/$', url) is not None
+
+    def postprocess_html(self, soup, first_fetch):
+        if not first_fetch:
+            for x in soup.findAll(itemprop=['headline', 'description']):
+                x.extract()
+            for x in soup.findAll(**classes('post-meta')):
+                x.extract()
+        return soup

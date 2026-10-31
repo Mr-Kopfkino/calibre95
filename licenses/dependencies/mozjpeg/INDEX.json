@@ -1,0 +1,12 @@
+[
+  {
+    "upstream_path": "mozjpeg-4.1.4/LICENSE.md",
+    "notice_file": "0001-LICENSE.md.txt",
+    "sha256": "60c756742db3ad1913304e8b13f0e86e22e51adb50cc0b3333c163f7e45ceec1"
+  },
+  {
+    "upstream_path": "mozjpeg-4.1.4/release/License.rtf",
+    "notice_file": "0002-License.rtf.txt",
+    "sha256": "933e1427ec78050c76396182fd9819a23fef58c17e997b67581852167be971db"
+  }
+]

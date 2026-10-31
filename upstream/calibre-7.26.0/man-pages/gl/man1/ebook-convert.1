@@ -1,0 +1,629 @@
+.\" Man page generated from reStructuredText.
+.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.TH "EBOOK-CONVERT" "1" "febreiro 14, 2025" "7.26.0" "calibre"
+.SH NAME
+ebook-convert \- ebook-convert
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+ebook\-convert ficheiro_entrada ficheiro_saída [opcións]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Converte un libro electrónico dun formato a outro.
+.sp
+input_file é a entrada e output_file é a saída. Ambos deben especificarse como os dous primeiros argumentos do comando.
+.sp
+O formato de saída do libro electrónico dedícase a partir da extensión do ficheiro output_file. ficheiro_saída tamén pode ter o formato especial .EXT onde EXT é a extensión do ficheiro de saída. Neste caso, o nome do ficheiro de saída deriva do nome do ficheiro de entrada. Teña en conta que os nomes de ficheiros non deben comezar cun guión. Finalmente, se output_file non ten extensión, entón trátase como un cartafol e escríbese nese cartafol un «libro electrónico aberto» (OEB) composto por ficheiros HTML. Estes ficheiros son os ficheiros que normalmente se pasarían ao complemento de saída.
+.sp
+Despois de especificar o ficheiro de entrada e saída, pode personalizar a conversión especificando varias opcións. As opcións dispoñibles dependen dos tipos de ficheiros de entrada e saída. Para obter axuda sobre eles, especifique o ficheiro de entrada e saída e despois use a opción \-h.
+.sp
+Para a documentación completa do sistema de conversión consulte
+\fI\%E\-book conversion\fP
+.sp
+Sempre que lle pases argumentos a \fBebook\-convert\fP que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.sp
+As opcións e os valores predeterminados das opcións cambian dependendo de ambos
+formatos de entrada e saída, polo que sempre debes comprobar con:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+ebook\-convert myfile.input_format myfile.output_format \-h
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+A continuación móstranse as opcións que son comúns a todas as conversións, seguidas da
+opcións específicas para cada formato de entrada e saída.
+.INDENT 0.0
+.IP \(bu 2
+\fI\%OPCIÓNS DE ENTRADA\fP
+.IP \(bu 2
+\fI\%OPCIÓNS DE SAÍDA\fP
+.IP \(bu 2
+\fI\%APARENCIA\fP
+.IP \(bu 2
+\fI\%PROCESAMENTO HEURÍSTICO\fP
+.IP \(bu 2
+\fI\%BUSCAR E SUBSTITUÍR\fP
+.IP \(bu 2
+\fI\%DETECCIÓN DA ESTRUTURA\fP
+.IP \(bu 2
+\fI\%ÍNDICE\fP
+.IP \(bu 2
+\fI\%METADATOS\fP
+.IP \(bu 2
+\fI\%DEPURACIÓN\fP
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-help, \-h
+mostrar esta mensaxe de axuda e saír
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-input\-profile
+Especificar o perfil de entrada. O perfil de entrada dálle información ao sistema de conversión sobre como interpretar os distintos datos do documento de entrada. Por exemplo, as lonxitudes dependentes da resolución (en píxeles). As opcións son: cybookg3, cybook_opus, default, hanlinv3, hanlinv5, illiad, irexdr1000, irexdr800, kindle, msreader, mobipocket, nook, sony, sony300, sony900
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-list\-recipes
+Lista os nomes das receitas integradas. Podes crear un libro electrónico a partir dunha receita integrada como esta: ebook\-convert «Recipe Name.recipe» output.epub
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-output\-profile
+Especifique o perfil de saída. O perfil de saída indica ao sistema de conversión como optimizar o documento creado para o dispositivo especificado. Nalgúns casos, pódese usar un perfil de saída para optimizar a saída dun dispositivo en particular, pero isto raramente é necesario. As opcións son:cybookg3, cybook_opus, default, hanlinv3, hanlinv5, illiad, ipad, ipad3, irexdr1000, irexdr800, jetbook5, kindle, kindle_dx, kindle_fire, kindle_oasis, kindle_pw, kindle_pw3, kindle_scribe, kindle_voyage, kobo, msreader, mobipocket, nook, nook_color, nook_hd_plus, pocketbook_inkpad3, pocketbook_lux, pocketbook_hd, pocketbook_900, pocketbook_pro_912, galaxy, sony, sony300, sony900, sony\-landscape, sonyt3, tablet, generic_eink, generic_eink_large, generic_eink_hd
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-version
+mostrar o número de versión do programa e saír
+.UNINDENT
+.SH OPCIÓNS DE ENTRADA
+.sp
+Opcións para controlar o procesamento do ficheiro de entrada mobi
+.INDENT 0.0
+.TP
+.B \-\-input\-encoding
+Especificar a codificación de caracteres do documento de entrada. Se se establece esta opción, substituirá calquera codificación declarada no propio documento. En particular é útil para documentos sen codificación declarada ou con erros na declaración da codificación.
+.UNINDENT
+.SH OPCIÓNS DE SAÍDA
+.sp
+Opcións para controlar o procesamento da saída epub
+.INDENT 0.0
+.TP
+.B \-\-dont\-split\-on\-page\-breaks
+Desactiva a división nos saltos de páxina. Normalmente, os ficheiros de entrada divídense automaticamente en cada salto de páxina en dous ficheiros. Isto dá un libro electrónico de saída que se pode analizar máis rápido e con menos recursos. Non obstante, a división é lenta e se o ficheiro fonte contén un número moi grande de saltos de páxina, debería desactivar a división nos saltos de páxina.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-epub\-flatten
+Esta opción é necesaria soamente se pretende usar o EPUB con FBReaderJ. Con esta opción simplificarase o sistema de ficheiros dentro do EPUB, poñendo todos os ficheiros no nivel superior.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-epub\-inline\-toc
+Inserir un índice na liña que aparecerá como parte do contido do libro pincipal.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-epub\-max\-image\-size
+O tamaño máximo da imaxe (ancho x alto). Un valor de none significa usar o tamaño da pantalla do perfil de saída. Un valor de profile significa que non se especifica un tamaño máximo. Por exemplo, un valor de 100x200 fará que todas as imaxes se cambien de tamaño para que a súa anchura non sexa superior a 100 píxeles e a súa altura non sexa superior a 200 píxeles. Teña en conta que isto só afecta o tamaño dos ficheiros de imaxe actuais. Calquera imaxe pode renderizarse cun tamaño diferente dependendo do estilo que se lle aplique no documento.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-epub\-toc\-at\-end
+Poña a táboa de contidos inserida ao final do libro en lugar do comezo.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-epub\-version
+A versión do ficheiro EPUB que se vai xerar. EPUB 2 é o máis compatible, só usa EPUB 3 se sabes que realmente o necesitas.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-extract\-to
+Extrae o contido do ficheiro xerado EPUBno cartafol especificado. O contido do cartafol elimínase primeiro, polo que teña coidado.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-flow\-size
+Divide todos os ficheiros HTML máis grandes que este tamaño (en KB). Isto é necesario xa que a maioría dos lectores de EPUB non poden manexar ficheiros de gran tamaño. O valor predeterminado de 260KB é o tamaño necesario para Adobe Digital Editions. Establécese en 0 para desactivar a división en función do tamaño.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-no\-default\-epub\-cover
+Normalmente, se o ficheiro de entrada non ten capa e non especifica unha, xerarase unha capa co título, autores, etc. Esta opción desactiva a xeración desta capa.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-no\-svg\-cover
+Non usar un SVG para a capa dun libro. Debe usar esta opción se o EPUB vai ser empregado nun dispositivo que non é compatible con SVG, como o iPhone ou de JetBook Lite. Sen esta opción, cada dispositivo amosará a capa como unha páxina en branco.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-preserve\-cover\-aspect\-ratio
+Ao empregar unha capa en branco, esta opción implicará que a capa escalarase a toda a área da pantalla dispoñíbel mais manterá a relación de aspecto. Isto implica que pode ter bordos en branco aos lados ou na parte superior e inferior, mais a imaxe non pode estar distorsionada. Sen esta opción, a imaxe pode distorsionarse, mais non terá bordos.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-pretty\-print
+Se está especificado, o complemento de saída tratará de crear unha saída o máis lexíbel posíbel. Pode non funcionar no caso dalgúns complementos de saída.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-toc\-title
+Título para calquera táboa de contidos en liña xerada.
+.UNINDENT
+.SH APARENCIA
+.sp
+Opcións para controlar o aspecto da saída
+.INDENT 0.0
+.TP
+.B \-\-asciiize
+Translitera os caracteres Unicode a unha representación ASCII. Use con coidado porque isto substituirá os caracteres Unicode por ASCII. Por exemplo, substituirá «Pelé» por «Pele». Ademais, teña en conta que nos casos nos que hai varias representacións dun carácter (caracteres compartidos por chinés e xaponés, por exemplo) empregarase a representación baseada na linguaxe da interface de calibre actual.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-base\-font\-size
+O tamaño da fonte base en pts. Todos os tamaños de letra do libro producido serán reescalados en función deste tamaño. Escollendo un tamaño maior podes facer que as fontes da saída sexan máis grandes e viceversa. De xeito predeterminado, cando o valor é cero, escóllese o tamaño da fonte base en función do perfil de saída que escolleches.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-change\-justification
+Cambiar a xustificación do texto. O valor «esquerda» fai que o texto xustificado na orixe quede aliñado  á esquerda (non xustificado). O valor «xustificar» fai que o texto non xustificado quede xustificado. O valor «orixinal» (o predeterminado) non altera a xustificación do ficheiro fonte. Teña en conta que non todos os formatos de saída admiten xustificación.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-disable\-font\-rescaling
+Desactivar o redimensionamento dos tamaños de letra.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-embed\-all\-fonts
+Incrustar todos os tipos de letra a que se fai referencia no documento de entrada pero que aínda non están incrustados. Isto buscará no teu sistema os tipos de letra e, se se atopan, incorporaranse. A incrustación só funcionará se o formato ao que estás convertendo admite fontes incrustadas, como EPUB, AZW3, DOCX ou PDF. Asegúrese de ter a licenza adecuada para incorporar os tipos de letra utilizados neste documento.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-embed\-font\-family
+Inserir a familia de fontes especificada no libro. Isto especifica a fonte «base» utilizada para o libro. Se o documento de entrada especifica as súas propias fontes, poden substituír esta fonte base. Podes usar a opción de información de estilo de filtro para eliminar fontes do documento de entrada. Teña en conta que a incorporación de fontes só funciona con algúns formatos de saída, principalmente EPUB, AZW3 e DOCX.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-expand\-css
+Por defecto, calibre usará a forma abreviada para varias propiedades CSS como marxe, recheo, bordo, etc. Esta opción fará que use o formulario expandido completo no seu lugar. Teña en conta que CSS sempre se expande cando se xeran ficheiros EPUB co perfil de saída definido nun dos perfís de Nook xa que o Nook non pode xestionar CSS abreviado.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-extra\-css
+Tanto a ruta dunha folla de estilo CSS como CSS directo. Este CSS será anexado ás regras de estilo do ficheiro orixinal, de modo que poida usarse para sobreescribir aquelas regras.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-filter\-css
+Unha lista separada por comas de propiedades CSS que se eliminarán de todas as regras de estilo CSS. Isto é útil se a presenza dalgunha información de estilo impide que se anule no teu dispositivo. Por exemplo: fonte\-familia, cor, marxe\-esquerda, marxe\-dereita
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-font\-size\-mapping
+Correspondencia entre os tamaños de letra de CSS e tamaños en pt. Un exemplo podería ser 12,12,14,16,18,20,22,24. Estas son as correspondencias para os tamaños de xx\-small a xx\-large, e o último tamaño para letras enormes. O algoritmo para ampliar ou reducir o texto emprega estes tamaños para determinar o tamaño de letra de maneira intelixente. Por omisión, o valor é usar unha correspondencia baseada no perfil de saída seleccionado.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-insert\-blank\-line
+Inserir unha liña en branco entre parágrafos. Non funciona se o ficheiro de orixe non define parágrafos (etiquetas <p> ou <div>).
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-insert\-blank\-line\-size
+Establece a altura das liñas en branco inseridas (en em). A altura das liñas entre parágrafos será o dobre do valor establecido aquí.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-keep\-ligatures
+Conserva as ligaduras presentes no documento de entrada. Unha ligadura é un carácter combinado dun par de caracteres como ff, fi, fl et cetera. A maioría dos lectores non teñen soporte para ligaduras nas súas fontes predeterminadas, polo que é improbable que se representen correctamente. Por defecto, gauge converterá unha ligadura no par de caracteres normais correspondente. Teña en conta que aquí as ligaduras significan só ligaduras Unicode, non ligaduras creadas mediante CSS ou estilos de fonte. Esta opción conservaraos no seu lugar.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-line\-height
+A altura de liña en pt. Controla o espazo entre liñas consecutivas de texto. Só se lle aplica a elementos que non definen a súa propia altura de liña. Na maioría dos casos, a opción de altura de liña mínima é máis útil. De modo predeterminado, non se modifica a altura da liña.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-linearize\-tables
+Algúns documentos mal deseñados usan táboas para controlar a disposición do texto na páxina. Cando se converten estes documentos adoitan dar lugar a texto que se sae da páxina e outros problemas. Esta opción extrae o contido das táboas e  preséntao de maneira lineal.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-margin\-bottom
+Establece a marxe inferior en pts. O predeterminado é %dpredeterminado. Establecer isto a menos de cero fará que non se estableza ningunha marxe (conservarase a configuración da marxe no documento orixinal). Nota: os formatos orientados á páxina, como PDF e DOCX, teñen a súa propia configuración de marxes que teñen prioridade.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-margin\-left
+Establece a marxe esquerda en pts. O predeterminado é %d predeterminado. Establecer isto a menos de cero fará que non se estableza ningunha marxe (conservarase a configuración da marxe no documento orixinal). Nota: os formatos orientados á páxina, como PDF e DOCX, teñen a súa propia configuración de marxes que teñen prioridade.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-margin\-right
+Establece a marxe dereita en pts. O predeterminado é %dpredeterminado. Establecer isto a menos de cero fará que non se estableza ningunha marxe (conservarase a configuración da marxe no documento orixinal). Nota: os formatos orientados á páxina, como PDF e DOCX, teñen a súa propia configuración de marxes que teñen prioridade.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-margin\-top
+Establece a marxe superior en pts. O predeterminado é %dpredeterminado. Establecer isto a menos de cero fará que non se estableza ningunha marxe (conservarase a configuración da marxe no documento orixinal). Nota: os formatos orientados á páxina, como PDF e DOCX, teñen a súa propia configuración de marxes que teñen prioridade.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-minimum\-line\-height
+A altura mínima da liña, como porcentaxe do tamaño de tipo de letra do elemento calculado. Calibre asegurará que cada elemento teña esta altura de liña como mínimo, malia o que indique o documento de entrada. Asignar 0 para desactivar. De modo predeterminado é 120%. Utiliza esta opción preferentemente á especificación directa da altura de liña, non sendo que saiba o que está a facer. Por exemplo, pode conseguir texto con «dobre espazo» asignándolle un valor de 240.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-remove\-paragraph\-spacing
+Retirar o espazo entre parágrafos. Tamén estabelece o sangrado na primeira liña de cada parágrafo de 1,5em. A retirada do espazo non funciona se o ficheiro de orixe non define parágrafos (etiquetas <p> o <div>).
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-remove\-paragraph\-spacing\-indent\-size
+Cando calibre elimina liñas en branco entre parágrafos, establece automaticamente unha sangría de parágrafo para garantir que os parágrafos se poidan distinguir facilmente. Esta opción controla o ancho desa sangría (en em). Se estableces este valor negativo, úsase a sangría especificada no documento de entrada, é dicir, o calibre non cambia a sangría.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-smarten\-punctuation
+Converte comiñas simples, trazos e elipses aos seus equivalentes tipograficamente correctos. Para obter máis información, consulte \X'tty: link https://daringfireball.net/projects/smartypants'\fI\%https://daringfireball.net/projects/smartypants\fP\X'tty: link'\&.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-subset\-embedded\-fonts
+Subconxunta todas as fontes incrustadas. Cada tipo de letra incrustado redúcese para conter só os glifos utilizados neste documento. Isto diminúe o tamaño dos ficheiros de fontes. Útil se está incorporando un tipo de letra especialmente grande con moitos glifos sen usar.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-transform\-css\-rules
+Ruta a un ficheiro que contén regras para transformar os estilos CSS deste libro. O xeito máis sinxelo de crear un ficheiro deste tipo é usar o asistente para crear regras na GUI de calibre. Accede a el na sección «Aspecto e sensación\->Transformar estilos» do diálogo de conversión. Unha vez creadas as regras, pode usar o botón «Exportar» para gardalas nun ficheiro.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-transform\-html\-rules
+Ruta a un ficheiro que contén regras para transformar o HTML deste libro. O xeito máis sinxelo de crear un ficheiro deste tipo é usar o asistente para crear regras na GUI de calibre. Accede a el na sección «Aspecto e sensación\->Transformar HTML» do diálogo de conversión. Unha vez creadas as regras, pode usar o botón «Exportar» para gardalas nun ficheiro.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-unsmarten\-punctuation
+Converte citas, trazos e elipses elegantes aos seus equivalentes sinxelos.
+.UNINDENT
+.SH PROCESAMENTO HEURÍSTICO
+.sp
+Modificar o texto e a estrutura do documento utilizando patróns habituais. Empregue \-\-enable\-heuristics para activar. As accións individuais pódense desactivar coas opcións \-\-disable\-
+.nf
+*
+.fi
+\&.
+.INDENT 0.0
+.TP
+.B \-\-disable\-dehyphenate
+Analiza as palabras con guión en todo o documento. O propio documento se usa coma un dicionario para determinar se cada guión se debe manter ou eliminarse.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-disable\-delete\-blank\-paragraphs
+Eliminar do documento os parágrafos baleiros que hai entre outros parágrafos
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-disable\-fix\-indents
+Converter os sangrados creados a partir de varios espazos duros en sangrados de CSS.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-disable\-format\-scene\-breaks
+Os marcadores de salto de escena aliñados á esquerda están aliñados ao centro. Substitúe os saltos de escena suaves que usan varias liñas en branco por regras horizontais.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-disable\-italicize\-common\-cases
+Buscar palabras e patróns que habitualmente estean en cursiva e poñelos en cursiva.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-disable\-markup\-chapter\-headings
+Detectar cabeceiras e subcabeceiras de capítulos sen formato e convertilas en etiquetas h2 e h3. Esta configuración non creará un índice, pero pódese utilizar xunto coa detección de estrutura para crear uno.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-disable\-renumber\-headings
+Busca secuencias de etiquetas <h1> ou <h2>. As etiquetas renumeran para evitar que de dividan os ficheiros en medio dunha cabeceira de capítulo.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-disable\-unwrap\-lines
+Unir liñas baseándose na puntuación e noutros indicios de formato.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-heuristics
+Activar o procesamento heurístico. Esta opción debe estar activada para que se poida realizar calquera tipo de procesametno heurístico.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-html\-unwrap\-factor
+Escala para determinar a lonxitude para unir liñas. Os valores correctos son números decimais entre 0 e 1. O valor predeterminado é 0.4, un pouco menos da metade da liña. Se soamente unhas poucas liñas do documento necesitan unirse, debería reducir o valor
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-replace\-scene\-breaks
+Substituír saltos de escea polo texto especificado. De maneira predeterminada úsase o texto existente no documento de entrada.
+.UNINDENT
+.SH BUSCAR E SUBSTITUÍR
+.sp
+Modificar o texto do documento e a estrutura usando patróns definidos.
+.INDENT 0.0
+.TP
+.B \-\-search\-replace
+Ruta a un ficheiro que contén buscar e substituír expresións regulares. O ficheiro debe conter liñas alternas de expresión regular seguidas dun patrón de substitución (que pode ser unha liña baleira). A expresión regular debe estar na sintaxe regex de Python e o ficheiro debe estar codificado en UTF\-8.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-sr1\-replace
+Texto de substitución para o texto encontrado con sr1\-search.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-sr1\-search
+Patrón de busca (expresión regular) que se substituirá por sr1\-replace.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-sr2\-replace
+Texto de substitución para o texto atopado con sr2\-search.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-sr2\-search
+Patrón de busca (expresión regular) que se substituirá por sr2\-replace.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-sr3\-replace
+Texto de substitución para o texto atopado con sr3\-search.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-sr3\-search
+Patrón de busca (expresión regular) que se substituirá por sr3\-replace.
+.UNINDENT
+.SH DETECCIÓN DA ESTRUTURA
+.sp
+Control de autodetección de estrutura de documento.
+.INDENT 0.0
+.TP
+.B \-\-add\-alt\-text\-to\-img
+Cando unha <img> etiqueta non ten atributo alt, comprobe o ficheiro de imaxe asociado para ver os metadatos que especifiquen texto alternativo e utilízao para cubrir o atributo alt. O atributo alt é usado polos lectores de pantalla para axudar aos discapacitados visuais.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-chapter
+Unha expresión XPath para detectar títulos de capítulos. O predeterminado é considerar <h1>ou<h2> etiquetas que conteñan as palabras «capítulo», «libro», «sección», «prólogo», «epílogo» ou «parte» como títulos de capítulo, así como calquera etiqueta que teña class=\fB\(dq\fPchapter\fB\(dq\fP\&. A expresión utilizada debe avaliarse como unha lista de elementos. Para desactivar a detección de capítulos, use a expresión «/». Consulte o Titorial de XPath no Manual de usuario de calibre para obter máis axuda sobre o uso desta función.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-chapter\-mark
+Especificar como marcar os capítulos detectados. Un valor «pagebreak» inserirá un salto de páxina antes de cada capítulo. Un valor de «rule» inserirá unha liña antes de cada capítulo. «both» marcará os capítulos cun salto de páxina e unha liña en branco. «none» desactivará o marcado de capítulos e un valor de «both» usará ambos saltos de páxina e liñas para marcar capítulos.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-disable\-remove\-fake\-margins
+Algúns documentos especifican as marxes de páxina engadindo marxes á esquerda e dereita de cada parágrafo, Calibre intentará detectar e eliminar estas marxes. Ás veces isto pode ocasionar que se eliminen marxes que deberían manterse. En tal caso, pode desactivar a eliminación.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-insert\-metadata
+Insira os metadatos do libro ao comezo do libro. Isto é útil se o teu lector de libros electrónicos non admite mostrar/buscar metadatos directamente.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-page\-breaks\-before
+Unha expresión XPath. Os saltos de páxina insírense antes dos elementos especificados. Para desactivar use a expresión: /
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-prefer\-metadata\-cover
+Usar a capa detectada no ficheiro de orixe mellor que a capa especificada.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-remove\-first\-image
+Elimina a primeira imaxe do libro electrónico de entrada. Útil se o documento de entrada ten unha imaxe de portada que non se identifica como portada. Neste caso, se estableces unha portada en calibre, o documento de saída acabará con dúas imaxes de portada se non especificas esta opción.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-start\-reading\-at
+Unha expresión XPath para detectar a localización do documento na que comezar a ler. Algúns programas de lectura de libros electrónicos (o máis destacado o Kindle) usan esta localización como a posición na que abrir o libro. Consulte o tutorial de XPath no Manual de usuario de calibre para obter máis axuda sobre o uso desta función.
+.UNINDENT
+.SH ÍNDICE
+.sp
+Controla a xeración automática do Índice. De modo predeterminado, se o ficheiro orixe ten unha táboa de contidos, usarase esta preferentemente respecto da xerada automaticamente.
+.INDENT 0.0
+.TP
+.B \-\-duplicate\-links\-in\-toc
+Ao crear un índice a partir de ligazóns no documento de entrada, permita entradas duplicadas, é dicir. permiten máis dunha entrada co mesmo texto, sempre que apunten a unha localización diferente.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-level1\-toc
+Expresión XPath que especifica todas as etiquetas que se deben engadir á táboa de contidos no nivel un. Se se especifica isto, terá prioridade sobre outras formas de detección automática. Consulte o Titorial XPath no Manual de usuario de calibre para obter exemplos.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-level2\-toc
+Expresión XPath que especifica todas as etiquetas que se deben engadir á táboa de contidos no nivel dous. Cada entrada engádese baixo unha entrada do nivel anterior. Consulte o Titorial XPath no Manual de usuario de calibre para obter exemplos.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-level3\-toc
+Expresión XPath que especifica todas as etiquetas que se deben engadir á táboa de contidos no nivel tres. Cada entrada engádese baixo a entrada de nivel dous anterior. Consulte o Titorial XPath no Manual de usuario de calibre para obter exemplos.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-toc\-links
+Número máximo de ligazóns que se incluirán no Índice de contidos. O valor 0 desactiva a opción. Valor predeterminado: 50. Só se engadirán ligazóns no IdC se se detecta un número de capítulos menor que o estabelecido como limiar.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-no\-chapters\-in\-toc
+Non engadir os capítulos autodetectados á táboa de contidos.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-toc\-filter
+Retirar entradas do Índice de contidos (IdC) con títulos que se corresponden coa expresión regular especificada. As entradas correspondentes e todas as subordinadas serán retiradas.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-toc\-threshold
+Se se detecta menos deste número de capítulos, entón engádense ligazóns ao Índice de contidos. Valor predeterminado: 6
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-use\-auto\-toc
+Normalmente, se o ficheiro de orixe ten un Índice de contidos, úsase este en vez do autoxerado. Con esta opción sempre se usará o autoxerado.
+.UNINDENT
+.SH METADATOS
+.sp
+As opcións para asignar metadatos na saída
+.INDENT 0.0
+.TP
+.B \-\-author\-sort
+Texto que se usará para ordenación por autor.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-authors
+Estabelecer os autores. Se hai varios autores deben separarse por «&».
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-book\-producer
+Definir o produtor do libro.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-comments
+Establece a descrición do libro electrónico.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-cover
+Estabelecer a capa desde o ficheiro ou o URL especificado
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-isbn
+Definir o ISBN do libro.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-language
+Definir o idioma.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-pubdate
+Establece a data de publicación (suponse que está na zona horaria local, a menos que se especifique explícitamente a zona horaria)
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-publisher
+Establece o editor de libros electrónicos.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-rating
+Estabelecer a valoración. Debe ser un número entre 1 e 5.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-read\-metadata\-from\-opf, \-\-from\-opf, \-m
+Ler metadatos do ficheiro OPF especificado. Os metadatos destes ficheiro sobreescribiran calquera metadato do ficheiro de orixe.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-series
+Establece a serie á que pertence este libro electrónico.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-series\-index
+Estabelecer a posición que ocupa o libro nesta colectánea.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-tags
+Estabelecer etiquetas para o libro. Debe ser unha lista separada por comas.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-timestamp
+Establece a marca de tempo do libro (xa non se usa en ningún lugar)
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-title
+Definir o título.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-title\-sort
+A versión do título que se usará para ordenación.
+.UNINDENT
+.SH DEPURACIÓN
+.sp
+Opción para axudar coa depuración da conversión
+.INDENT 0.0
+.TP
+.B \-\-debug\-pipeline, \-d
+Garda a saída das diferentes etapas da canalización de conversión no cartafol especificado. Útil se non está seguro en que fase do proceso de conversión se está a producir un erro.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-verbose, \-v
+Nivel de verbosidade. Especifique varias veces para unha maior verbosidade. Especificalo dúas veces dará lugar a unha verbosidade completa, unha vez media e cero veces a menos verbosidade.
+.UNINDENT
+.SH AUTHOR
+Kovid Goyal
+.SH COPYRIGHT
+Kovid Goyal
+.\" Generated by docutils manpage writer.
+.

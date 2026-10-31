@@ -1,0 +1,9 @@
+{
+  "project": "FFmpeg",
+  "version": "6.1.2",
+  "source": "https://github.com/FFmpeg/FFmpeg/tree/n6.1.2",
+  "archive": "https://codeload.github.com/FFmpeg/FFmpeg/tar.gz/refs/tags/n6.1.2",
+  "archive_sha256": "9cbefd67b7e4fffde3846699ec03324b7ef789a81c2e9b1059e93719b5b8d189",
+  "purpose": "Headers matching the existing FFmpeg 6.1.2 runtime; no FFmpeg binaries were replaced.",
+  "generated_file": "libavutil/avconfig.h: Windows x64 little-endian, fast unaligned access"
+}

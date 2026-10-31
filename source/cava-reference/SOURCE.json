@@ -1,0 +1,33 @@
+{
+  "upstream": "https://github.com/karlstav/cava",
+  "commit": "d272bb61d28a2e91217e927a1f099670290f59e0",
+  "retrieved": "2026-10-30",
+  "license": "MIT",
+  "files": [
+    {
+      "path": "cavacore.c",
+      "git_blob": "e85e3419165477aa1cdb6a798aa4dbf8fb570d2c",
+      "url": "https://github.com/karlstav/cava/blob/d272bb61d28a2e91217e927a1f099670290f59e0/cavacore.c",
+      "sha256": "ffbc166829b87701f39ee77326a2e03cd12ed5e7d857453efe41684b968b9494"
+    },
+    {
+      "path": "cavacore.h",
+      "git_blob": "6e0f0978d3f64dc6f1bf97ab1f7214da93e63b3e",
+      "url": "https://github.com/karlstav/cava/blob/d272bb61d28a2e91217e927a1f099670290f59e0/cavacore.h",
+      "sha256": "718e88d76f501b2f96eb35aa9ca07a23092a537c3fcb7486a0507859190e00e9"
+    },
+    {
+      "path": "CAVACORE.md",
+      "git_blob": "b3f5225a18f7f8e8da0a134254d2c4754b34385f",
+      "url": "https://github.com/karlstav/cava/blob/d272bb61d28a2e91217e927a1f099670290f59e0/CAVACORE.md",
+      "sha256": "ea5d612bd7d1da14d8acb091e424eb021b639ab0e8d08aa06051f2304a1e16d5"
+    },
+    {
+      "path": "LICENSE",
+      "git_blob": "d3f3d12541b375dc34d4cb3bac49443b6d78b23e",
+      "url": "https://github.com/karlstav/cava/blob/d272bb61d28a2e91217e927a1f099670290f59e0/LICENSE",
+      "sha256": "71bb3ae8c4dcaf2702a76bb5fddddfb2992e474c9c8ea53d2e2d2306b1a97920"
+    }
+  ],
+  "adaptation": "Unmodified upstream cavacore.c/h compiled with original calibre95 FFTW-subset adapter backed by the existing FFmpeg 6.1.2 avutil-58.dll. No FFTW binary or code is included."
+}

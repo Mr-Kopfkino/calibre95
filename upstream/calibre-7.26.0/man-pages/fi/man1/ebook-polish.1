@@ -1,0 +1,141 @@
+.\" Man page generated from reStructuredText.
+.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.TH "EBOOK-POLISH" "1" "helmikuuta 14, 2025" "7.26.0" "calibre"
+.SH NAME
+ebook-polish \- ebook-polish
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+ebook\-polish [options] input_file [output_file]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Kirjojen viimeistelyssä on kyse täydellisyyden saavuttamisesta
+huolella tehtyihin e\-kirjoihisi.
+.sp
+Kirjojen viimeistely pyrkii minimoimaan e\-kirjasi sisäiseen koodiin tehtävät muutokset.
+Toisin kuin muuntaminen, se ei latista CSS:ää, nimeä tiedostoja uudelleen, muuta fonttia
+fonttikokoja, säädä marginaaleja jne. Jokainen toiminto suorittaa vain vähimmäismäärän
+muutoksia, jotka tarvitaan halutun vaikutuksen aikaansaamiseksi.
+.sp
+Työkalua kannattaa käyttää e\-kirjan luomisprosessin viimeisenä vaiheena.
+.sp
+Huomaa, että viimeistely toimii vain AZW3 tai EPUB\-muotoisille tiedostoille.
+.sp
+Aina kun annat \fBebook\-polish\fP:lle argumentteja, joissa on välilyöntejä, sulje argumentit lainausmerkkeihin. Esimerkiksi: \(dq/some path/with spaces\(dq
+.SH [VALINNAT]
+.INDENT 0.0
+.TP
+.B \-\-add\-soft\-hyphens, \-H
+Lisää tavutusvihje kaikkiin kirjan sanoihin. Tämä mahdollistaa kirjan esittämisen paremmin, kun teksti on tasattu, lukulaitteissa, jotka eivät tue tavutusta.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-compress\-images, \-i
+Pakkaa kirjan kuvat häviöttömästi tiedostokoon pienentämiseksi vaikuttamatta kuvan laatuun.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-cover, \-c
+Polku kansikuvaan. Muuttaa e\-kirjassa määritetyn kansikuvan. Jos kantta ei ole tai kantta ei ole tunnistettu oikein, lisää uuden kannen.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-download\-external\-resources, \-d
+Download external resources such as images, stylesheets, etc. that point to URLs instead of files in the book. All such resources will be downloaded and added to the book so that the book no longer references any external resources.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-embed\-fonts, \-e
+Upota kaikki fontit, joihin asiakirjassa viitataan ja joita ei ole jo upotettu. Tämä skannaa tietokoneen fontit, ja jos ne löytyvät, ne upotetaan asiakirjaan. Varmista, että sinulla on asianmukainen lisenssi tässä asiakirjassa käytettyjen fonttien upottamiseen.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-help, \-h
+näytä tämä ohjeviesti ja poistu
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-jacket, \-j
+Lisää kirjan alkuun \fB\(dq\fPkirjan päällyspaperi\fB\(dq\fP, joka sisältää kaikki kirjan metadatat , kuten otsikko, tagit, tekijät, sarjat ja kommentit, jne. Kaikki aiemmat päällyspaperit korvataan.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-opf, \-o
+Polku OPF\-tiedostoon. Kirjan metadata päivitetään OPF\-tiedostosta.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-remove\-jacket
+Poista aiemmin lisätty kirjan päällyspaperi.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-remove\-soft\-hyphens
+Poista tavutusvihjeet kaikesta kirjan tekstistä.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-remove\-unused\-css, \-u
+Poista kaikki käyttämättömät CSS\-säännöt tyylitaulukoista ja <style> \-tageista. Joissakin kirjoissa jotka on luotu tuotantomalleista, saattaa olla suuri määrä ylimääräisiä CSS\-sääntöjä jotka eivät vastaa varsinaista sisältöä. Nämä ylimääräiset säännöt voivat hidastaa lukijoita jotka joutuvat jäsentämään ne kaikki.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-smarten\-punctuation, \-p
+Muunna tavallisen tekstin viivat, ellipsit, lainausmerkit, moniväliviivat jne. niiden  typografisesti oikeiksi vastineiksi. Huomaa, että algoritmi voi joskus tuottaa virheellisiä tuloksia, erityisesti kun kyseessä ovat yksittäiset lainausmerkit supistuksen alussa.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-subset\-fonts, \-f
+Fonttien tiivistäminen tarkoittaa upotetun fontin pienentämistä siten, että se sisältää vain kyseisen fontin kirjassa käytetyt merkit. Tämä pienentää fonttitiedostojen kokoa huomattavasti (fontin puolittaminen puoleen) (tiedostokokojen puolittaminen on yleistä). Esimerkiksi jos kirjassa käytetään tiettyä fonttia otsikoissa, niin tiivistäminen pienentää kyseisen fontin niin, että se sisältää vain kirjan varsinaisissa otsikoissa esiintyvät merkit. Tai jos kirjassa on fontin lihavoitu ja kursivoitu versio, mutta lihavoitu ja kursivoitu teksti on suhteellisen harvinaista tai sitä ei ole lainkaan, niin sitten lihavoidut ja kursivoidut fontit voidaan joko pienentää vain muutamiin merkkeihin tai kokonaan poistaa. Ainut haittapuoli fonttien tiivistämisessä on, että jos myöhemmässä vaiheessa päätät lisätä kirjoihisi lisää tekstiä, uusi lisätty teksti ei välttämättä kuulu tiivistetyn fontin joukkoon.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-upgrade\-book, \-U
+Päivitä kirjan sisäisiä rakenteita, jos mahdollista. Esimerkiksi, päivittää EPUB 2 \-kirjat EPUB 3 \-kirjoiksi.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-verbose
+Näytä perusteellisempi raportti, hyödyksi virheenetsinnässä.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-version
+näytä ohjelman versionumero ja poistu
+.UNINDENT
+.SH AUTHOR
+Kovid Goyal
+.SH COPYRIGHT
+Kovid Goyal
+.\" Generated by docutils manpage writer.
+.

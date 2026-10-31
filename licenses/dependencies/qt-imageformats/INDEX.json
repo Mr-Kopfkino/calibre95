@@ -1,0 +1,12 @@
+[
+  {
+    "upstream_path": "qtimageformats-everywhere-src-6.7.2/src/3rdparty/libtiff/COPYRIGHT",
+    "notice_file": "0001-COPYRIGHT.txt",
+    "sha256": "fbd6fed7938541d2c809c0826225fc85e551fdbfa8732b10f0c87e0847acafd7"
+  },
+  {
+    "upstream_path": "qtimageformats-everywhere-src-6.7.2/src/3rdparty/libwebp/COPYING",
+    "notice_file": "0002-COPYING.txt",
+    "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf"
+  }
+]

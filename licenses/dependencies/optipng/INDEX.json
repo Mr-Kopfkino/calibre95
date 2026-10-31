@@ -1,0 +1,27 @@
+[
+  {
+    "upstream_path": "optipng-0.7.7/LICENSE.txt",
+    "notice_file": "0001-LICENSE.txt.txt",
+    "sha256": "0d7d70c267700f931268ea668a432a642fe673416783885d24844262aa036ee6"
+  },
+  {
+    "upstream_path": "optipng-0.7.7/src/libpng/contrib/gregbook/COPYING",
+    "notice_file": "0002-COPYING.txt",
+    "sha256": "d6cb0e9e560f51085556949a84af12b79a00f10ab8b66c752537faf7cd665572"
+  },
+  {
+    "upstream_path": "optipng-0.7.7/src/libpng/contrib/gregbook/LICENSE",
+    "notice_file": "0003-LICENSE.txt",
+    "sha256": "b6a03c1803eb58ffb1f1278d5c7d4096c4c116e66dce8a7553e8c77d163c3438"
+  },
+  {
+    "upstream_path": "optipng-0.7.7/src/libpng/LICENSE",
+    "notice_file": "0004-LICENSE.txt",
+    "sha256": "a247c24f82bacf0403fe2f3d5550493a91cdb575fe7036b764bda8cacf3efd9c"
+  },
+  {
+    "upstream_path": "optipng-0.7.7/src/zlib/contrib/dotzlib/LICENSE_1_0.txt",
+    "notice_file": "0005-LICENSE_1_0.txt.txt",
+    "sha256": "36266a8fd073568394cb81cdb2b124f7fdae2c64c1a7ed09db34b4d22efa2951"
+  }
+]

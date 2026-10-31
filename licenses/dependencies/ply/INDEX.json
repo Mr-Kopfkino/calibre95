@@ -1,0 +1,17 @@
+[
+  {
+    "upstream_path": "ply/cpp.py",
+    "notice_file": "0001-header-notice.txt",
+    "sha256": "ee90582fd45c7714a4ce16441e9fb5908cf11076c53466228c33631f3f0c265f"
+  },
+  {
+    "upstream_path": "ply/lex.py",
+    "notice_file": "0002-header-notice.txt",
+    "sha256": "2ec69a1b9bd0a899147e634ab1d7f0f37420b2e94fa46e5eb2fc13a11f828d0f"
+  },
+  {
+    "upstream_path": "ply/yacc.py",
+    "notice_file": "0003-header-notice.txt",
+    "sha256": "fd612c15701aa7faa0525f29592c73ada02c262b3636482461da88283bfde9a0"
+  }
+]

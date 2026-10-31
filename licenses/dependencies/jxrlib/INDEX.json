@@ -1,0 +1,18 @@
+[
+  {
+    "upstream_path": "jxrlib-0.2.4/README.md",
+    "notice_file": "0001-header-notice.txt",
+    "sha256": "2b12aec2bbede5e303f3db65ad924cd046d27a56bfed5076dac319e785ec9fb7"
+  },
+  {
+    "upstream_path": "jxrlib-0.2.4/doc/readme.txt",
+    "notice_file": "0002-header-notice.txt",
+    "sha256": "d1167771539a7d1d7af77c772b9b6ab95af6d0c91d6e817d5223c221fbf7a12c"
+  },
+  {
+    "upstream_path": "jxrlib-0.2.4/common/include/guiddef.h",
+    "notice_file": "0003-COPYRIGHT-Microsoft.txt",
+    "sha256": "5e760cae5bbb1ec1288d29f551461bcd15e4d598b7a65b124212305a6c2582b0",
+    "extraction": "leading original comment only"
+  }
+]

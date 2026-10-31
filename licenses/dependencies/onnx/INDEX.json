@@ -1,0 +1,37 @@
+[
+  {
+    "upstream_path": "onnxruntime-1.19.0/LICENSE",
+    "notice_file": "0001-LICENSE.txt",
+    "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c"
+  },
+  {
+    "upstream_path": "onnxruntime-1.19.0/dockerfiles/LICENSE-IMAGE.txt",
+    "notice_file": "0002-LICENSE-IMAGE.txt.txt",
+    "sha256": "ca180cdd0ec6f4ca68db0488ba79e7db666e26ea1e49db15c3b2a3b8381442fd"
+  },
+  {
+    "upstream_path": "onnxruntime-1.19.0/rust/LICENSE-APACHE",
+    "notice_file": "0003-LICENSE-APACHE.txt",
+    "sha256": "f4d2c773ac92765f2f2b2f4cae3b0710b6fb4293ddc555d8f8a011ada12e84f3"
+  },
+  {
+    "upstream_path": "onnxruntime-1.19.0/rust/LICENSE-MIT",
+    "notice_file": "0004-LICENSE-MIT.txt",
+    "sha256": "acda9cba15b9c7e0663718fdc8bd8e1cbbc142545da187d84c7e8e2a6146e76e"
+  },
+  {
+    "upstream_path": "onnxruntime-1.19.0/winml/test/collateral/images/LICENSE.md",
+    "notice_file": "0005-LICENSE.md.txt",
+    "sha256": "00ccbe927675ce8c8841c2d8849886d9e5e1160d982277d90fde7807f2a4aabb"
+  },
+  {
+    "upstream_path": "onnxruntime-1.19.0/winml/test/collateral/models/LICENSE.md",
+    "notice_file": "0006-LICENSE.md.txt",
+    "sha256": "949addf0d4269f3d397bb85cee8660c4999eea1ca42db7144e5f0ff0f82aaa51"
+  },
+  {
+    "upstream_path": "onnxruntime-1.19.0/winml/test/scenario/models/LICENSE.md",
+    "notice_file": "0007-LICENSE.md.txt",
+    "sha256": "0703b52991ed9054dbc4a141ff6b64989d39f4904709f2e29b2ff94776129215"
+  }
+]

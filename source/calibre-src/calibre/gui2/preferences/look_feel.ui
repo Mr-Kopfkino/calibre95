@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1096</width>
+    <height>791</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="1">
+    <widget class="ScrollingTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="MainInterfaceTab" name="main_interface_tab">
+      <attribute name="icon">
+       <iconset resource="../../../../resources/images.qrc">
+        <normaloff>:/images/lt.png</normaloff>:/images/lt.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>&amp;Main interface</string>
+      </attribute>
+     </widget>
+     <widget class="CoverGridTab" name="cover_grid_tab">
+      <attribute name="icon">
+       <iconset resource="../../../../resources/images.qrc">
+        <normaloff>:/images/grid.png</normaloff>:/images/grid.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Cover &amp;grid</string>
+      </attribute>
+     </widget>
+     <widget class="BookDetailsTab" name="book_details_tab">
+      <attribute name="icon">
+       <iconset resource="../../../../resources/images.qrc">
+        <normaloff>:/images/book.png</normaloff>:/images/book.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>&amp;Book details</string>
+      </attribute>
+     </widget>
+     <widget class="EditMetadataTab" name="edit_metadata_tab">
+      <attribute name="icon">
+       <iconset resource="../../../../resources/images.qrc">
+        <normaloff>:/images/edit_input.png</normaloff>:/images/edit_input.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Edit &amp;metadata</string>
+      </attribute>
+     </widget>
+     <widget class="QTabWidget" name="tag_browser_tab">
+      <attribute name="icon">
+       <iconset resource="../../../../resources/images.qrc">
+        <normaloff>:/images/tags.png</normaloff>:/images/tags.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>&amp;Tag browser</string>
+      </attribute>
+      <widget class="TbDisplayTab" name="tb_display_tab">
+       <attribute name="title">
+        <string>Di&amp;splay</string>
+       </attribute>
+      </widget>
+      <widget class="TbPartitioningTab" name="tb_partioning_tab">
+       <attribute name="title">
+        <string>&amp;Partitioning and collapsing</string>
+       </attribute>
+      </widget>
+      <widget class="TbHierarchyTab" name="tb_hierarchy_tab">
+       <attribute name="title">
+        <string>&amp;Hierarchy and searching</string>
+       </attribute>
+      </widget>
+      <widget class="TbIconRulesTab" name="tb_icon_browser_tab">
+       <attribute name="title">
+        <string>Val&amp;ue icon rules viewer</string>
+       </attribute>
+      </widget>
+     </widget>
+     <widget class="CoverView" name="cover_view">
+      <attribute name="icon">
+       <iconset resource="../../../../resources/images.qrc">
+        <normaloff>:/images/cover_flow.png</normaloff>:/images/cover_flow.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Cover &amp;browser</string>
+      </attribute>
+     </widget>
+     <widget class="QuickviewTab" name="quickview_tab">
+      <attribute name="icon">
+       <iconset resource="../../../../resources/images.qrc">
+        <normaloff>:/images/quickview.png</normaloff>:/images/quickview.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>&amp;Quickview</string>
+      </attribute>
+     </widget>
+     <widget class="ColumnColorRules" name="edit_rules">
+      <attribute name="icon">
+       <iconset resource="../../../../resources/images.qrc">
+        <normaloff>:/images/format-fill-color.png</normaloff>:/images/format-fill-color.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Column &amp;coloring</string>
+      </attribute>
+     </widget>
+     <widget class="ColumnIconRules" name="icon_rules">
+      <attribute name="icon">
+       <iconset resource="../../../../resources/images.qrc">
+        <normaloff>:/images/icon_choose.png</normaloff>:/images/icon_choose.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Column &amp;icons</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QListWidget" name="sections_view">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ScrollingTabWidget</class>
+   <extends>QTabWidget</extends>
+   <header>calibre/gui2/widgets2.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ConfigWidgetBase</class>
+   <extends>QWidget</extends>
+   <header>calibre/gui2/preferences/look_feel_tabs.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MainInterfaceTab</class>
+   <extends>ConfigWidgetBase</extends>
+   <header>calibre/gui2/preferences/look_feel_tabs/main_interface.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CoverGridTab</class>
+   <extends>ConfigWidgetBase</extends>
+   <header>calibre/gui2/preferences/look_feel_tabs/cover_grid.h</header>
+  </customwidget>
+  <customwidget>
+   <class>BookDetailsTab</class>
+   <extends>ConfigWidgetBase</extends>
+   <header>calibre/gui2/preferences/look_feel_tabs/book_details.h</header>
+  </customwidget>
+  <customwidget>
+   <class>EditMetadataTab</class>
+   <extends>ConfigWidgetBase</extends>
+   <header>calibre/gui2/preferences/look_feel_tabs/edit_metadata.h</header>
+  </customwidget>
+  <customwidget>
+   <class>TbDisplayTab</class>
+   <extends>ConfigWidgetBase</extends>
+   <header>calibre/gui2/preferences/look_feel_tabs/tb_display.h</header>
+  </customwidget>
+  <customwidget>
+   <class>TbPartitioningTab</class>
+   <extends>ConfigWidgetBase</extends>
+   <header>calibre/gui2/preferences/look_feel_tabs/tb_partitioning.h</header>
+  </customwidget>
+  <customwidget>
+   <class>TbIconRulesTab</class>
+   <extends>ConfigWidgetBase</extends>
+   <header>calibre/gui2/preferences/look_feel_tabs/tb_icon_rules.h</header>
+  </customwidget>
+  <customwidget>
+   <class>TbHierarchyTab</class>
+   <extends>ConfigWidgetBase</extends>
+   <header>calibre/gui2/preferences/look_feel_tabs/tb_hierarchy.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CoverView</class>
+   <extends>ConfigWidgetBase</extends>
+   <header>calibre/gui2/preferences/look_feel_tabs/cover_view.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QuickviewTab</class>
+   <extends>ConfigWidgetBase</extends>
+   <header>calibre/gui2/preferences/look_feel_tabs/quickview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ColumnColorRules</class>
+   <extends>ConfigWidgetBase</extends>
+   <header>calibre/gui2/preferences/look_feel_tabs.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ColumnIconRules</class>
+   <extends>ConfigWidgetBase</extends>
+   <header>calibre/gui2/preferences/look_feel_tabs.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../../../resources/images.qrc"/>
+ </resources>
+</ui>

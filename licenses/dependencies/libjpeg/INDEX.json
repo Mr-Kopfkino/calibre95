@@ -1,0 +1,12 @@
+[
+  {
+    "upstream_path": "libjpeg-turbo-3.0.0/LICENSE.md",
+    "notice_file": "0001-LICENSE.md.txt",
+    "sha256": "60c756742db3ad1913304e8b13f0e86e22e51adb50cc0b3333c163f7e45ceec1"
+  },
+  {
+    "upstream_path": "libjpeg-turbo-3.0.0/release/License.rtf",
+    "notice_file": "0002-License.rtf.txt",
+    "sha256": "d26120ab237f87dea10aa4fa7fd4243cadffd26e54eb2f3903d5fb0f8ed336b2"
+  }
+]

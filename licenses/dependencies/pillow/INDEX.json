@@ -1,0 +1,32 @@
+[
+  {
+    "upstream_path": "Pillow-10.0.1/LICENSE",
+    "notice_file": "0001-LICENSE.txt",
+    "sha256": "0fdb68ffb39062553be40be4e6eaea9700b4f5e870a720ae86b8925d67613ddd"
+  },
+  {
+    "upstream_path": "Pillow-10.0.1/Tests/fonts/DejaVuSans/LICENSE.txt",
+    "notice_file": "0002-LICENSE.txt.txt",
+    "sha256": "db9144d0031e97654fe748d9b488716f05f7c205211583bc959604c6b21a975e"
+  },
+  {
+    "upstream_path": "Pillow-10.0.1/Tests/fonts/LICENSE.txt",
+    "notice_file": "0003-LICENSE.txt.txt",
+    "sha256": "525c7b8312efac21a7ead3a0cb5f03e047b0b4c44d64fedb1b9805186f403e76"
+  },
+  {
+    "upstream_path": "Pillow-10.0.1/Tests/icc/LICENSE.txt",
+    "notice_file": "0004-LICENSE.txt.txt",
+    "sha256": "de84b030323e120a2f485ba4fd1677dcea660fbb04156920189909158441bc98"
+  },
+  {
+    "upstream_path": "Pillow-10.0.1/docs/COPYING",
+    "notice_file": "0005-COPYING.txt",
+    "sha256": "d7680ae33faf9886187df402fb0db1da61fdc769cedbd0084f88d63e1760d09e"
+  },
+  {
+    "upstream_path": "Pillow-10.0.1/src/thirdparty/raqm/COPYING",
+    "notice_file": "0006-COPYING.txt",
+    "sha256": "f75d910a294fd6882e319c90a028d150eca07206f15327cc83629ce28f75a303"
+  }
+]

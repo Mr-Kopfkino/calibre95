@@ -1,0 +1,22 @@
+[
+  {
+    "upstream_path": "qtshadertools-everywhere-src-6.7.2/src/3rdparty/SPIRV-Cross/COPYRIGHT.txt",
+    "notice_file": "0001-COPYRIGHT.txt.txt",
+    "sha256": "afe3458e2431963def8b2c1520d342566725a07b46344aa34c5d327531bf2873"
+  },
+  {
+    "upstream_path": "qtshadertools-everywhere-src-6.7.2/src/3rdparty/SPIRV-Cross/LICENSE",
+    "notice_file": "0002-LICENSE.txt",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "upstream_path": "qtshadertools-everywhere-src-6.7.2/src/3rdparty/glslang/COPYRIGHT.txt",
+    "notice_file": "0003-COPYRIGHT.txt.txt",
+    "sha256": "7a0986b241205c038dcea76b343dd9b7030a424b644a7d59585200824831dae8"
+  },
+  {
+    "upstream_path": "qtshadertools-everywhere-src-6.7.2/src/3rdparty/glslang/LICENSE.txt",
+    "notice_file": "0004-LICENSE.txt.txt",
+    "sha256": "adb783e734e906d1f46db5df29991dbde84bdb0ceab502ac2febb44fe3c2b5f4"
+  }
+]

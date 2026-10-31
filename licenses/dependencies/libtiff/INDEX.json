@@ -1,0 +1,22 @@
+[
+  {
+    "upstream_path": "tiff-4.6.0/doc/html-prebuilt/_sources/project/license.rst.txt",
+    "notice_file": "0001-license.rst.txt.txt",
+    "sha256": "02e86af3b805e0f2075ebb5ac512831f6ab2a97ddeb186de076c418956418ba1"
+  },
+  {
+    "upstream_path": "tiff-4.6.0/doc/html-prebuilt/project/license.html",
+    "notice_file": "0002-license.html.txt",
+    "sha256": "74d1c171344853a4cf52f2d8711857e84ea7b8f0b48b54f5e1eea0a988a5a955"
+  },
+  {
+    "upstream_path": "tiff-4.6.0/doc/project/license.rst",
+    "notice_file": "0003-license.rst.txt",
+    "sha256": "02e86af3b805e0f2075ebb5ac512831f6ab2a97ddeb186de076c418956418ba1"
+  },
+  {
+    "upstream_path": "tiff-4.6.0/LICENSE.md",
+    "notice_file": "0004-LICENSE.md.txt",
+    "sha256": "0780558a8bfba0af1160ec1ff11ade4f41c0d7deafd6ecfc796b492a788e380d"
+  }
+]

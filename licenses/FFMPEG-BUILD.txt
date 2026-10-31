@@ -1,0 +1,10 @@
+FFmpeg 6.1.2 as shipped in calibre95's calibre 7.26.0 Windows runtime.
+The following was queried directly from runtime/app/bin/avcodec-60.dll:
+
+avcodec_license(): GPL version 2 or later
+avcodec_configuration():
+--prefix=installed --toolchain=msvc --enable-shared --disable-static --arch=x86_64 --enable-asm --enable-gpl --disable-programs
+
+Original source: https://www.ffmpeg.org/releases/ffmpeg-6.1.2.tar.xz
+SHA-256: 3b624649725ecdc565c903ca6643d41f33bd49239922e45c9b1442c63dca4e38
+Full original license texts are in dependencies/ffmpeg/ and in that source archive.

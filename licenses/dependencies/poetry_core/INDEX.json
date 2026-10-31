@@ -1,0 +1,52 @@
+[
+  {
+    "upstream_path": "poetry/core/_vendor/attrs/LICENSE",
+    "notice_file": "0001-LICENSE.txt",
+    "sha256": "882115c95dfc2af1eeb6714f8ec6d5cbcabf667caff8729f42420da63f714e9f"
+  },
+  {
+    "upstream_path": "poetry/core/_vendor/jsonschema/COPYING",
+    "notice_file": "0002-COPYING.txt",
+    "sha256": "4f92a015a13c4d1a040bef018aa13430b4f1bc73b41b16bb846c346766de7439"
+  },
+  {
+    "upstream_path": "poetry/core/_vendor/lark/LICENSE",
+    "notice_file": "0003-LICENSE.txt",
+    "sha256": "8263e5652d07cecb3adadf05140b65e70cfa169ecec5f520fe1671479ce12a83"
+  },
+  {
+    "upstream_path": "poetry/core/_vendor/packaging/LICENSE",
+    "notice_file": "0004-LICENSE.txt",
+    "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+  },
+  {
+    "upstream_path": "poetry/core/_vendor/packaging/LICENSE.APACHE",
+    "notice_file": "0005-LICENSE.APACHE.txt",
+    "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+  },
+  {
+    "upstream_path": "poetry/core/_vendor/packaging/LICENSE.BSD",
+    "notice_file": "0006-LICENSE.BSD.txt",
+    "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+  },
+  {
+    "upstream_path": "poetry/core/_vendor/pyrsistent/LICENSE.mit",
+    "notice_file": "0007-LICENSE.mit.txt",
+    "sha256": "3ea56753cbd0cc897d3f4414a902f5694991db7c1b3abb8230216381185f9112"
+  },
+  {
+    "upstream_path": "poetry/core/_vendor/tomli/LICENSE",
+    "notice_file": "0008-LICENSE.txt",
+    "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+  },
+  {
+    "upstream_path": "poetry/core/spdx/license.py",
+    "notice_file": "0009-license.py.txt",
+    "sha256": "db2db899b52bb43abf3230c25779e03f4afa874b63dc203e498a9551ef27b229"
+  },
+  {
+    "upstream_path": "poetry_core-1.7.0.dist-info/LICENSE",
+    "notice_file": "0010-LICENSE.txt",
+    "sha256": "f1978133782b90f4733bc308ddb19267c3fe04797c88d9ed3bc219032495a982"
+  }
+]

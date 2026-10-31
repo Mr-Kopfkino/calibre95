@@ -1,0 +1,12 @@
+[
+  {
+    "upstream_path": "piper-phonemize-bfc2e7549957829b0227c66a305d11cc88167bda/LICENSE.md",
+    "notice_file": "0001-LICENSE.md.txt",
+    "sha256": "13746d509d74e55ea2265fbef204bb7cdbf84a8315b0207e988326cb54387028"
+  },
+  {
+    "upstream_path": "piper-phonemize-bfc2e7549957829b0227c66a305d11cc88167bda/licenses/uni-algo/LICENSE.md",
+    "notice_file": "0002-LICENSE.md.txt",
+    "sha256": "c55648b02873556d6ab2de14938998101fda3a0f293337542af9196435def318"
+  }
+]

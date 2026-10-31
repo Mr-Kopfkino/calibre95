@@ -1,0 +1,12 @@
+[
+  {
+    "upstream_path": "xxhash-3.3.0/LICENSE",
+    "notice_file": "0001-LICENSE.txt",
+    "sha256": "f8e9ef00c78be4d2da526b2c37e4099c920c7fe0b9d943bf0daeb2efc30a3a5b"
+  },
+  {
+    "upstream_path": "xxhash-3.3.0/deps/xxhash/LICENSE",
+    "notice_file": "0002-LICENSE.txt",
+    "sha256": "6ffedbc0f7878612d2b23589f1ff2ab15633e1df7963a5d9fc750ec5500c7e7a"
+  }
+]

@@ -1,0 +1,191 @@
+.\" Man page generated from reStructuredText.
+.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.TH "CALIBRE-DEBUG" "1" "febreiro 14, 2025" "7.26.0" "calibre"
+.SH NAME
+calibre-debug \- calibre-debug
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibre\-debug [opcións]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Varias interfaces de liña de comandos útiles para depurar calibre. Sen opcións,
+este comando inicia un intérprete de Python incorporado. Tamén pode executar o principal
+calibre GUI, o visor de libros electrónicos calibre e o editor calibre no modo de depuración.
+.sp
+Tamén contén interfaces para varios bits de calibre que non teñen
+ferramentas de liña de comandos dedicadas, como a subconfiguración de fontes, a ferramenta de diferenza de libros electrónicos, etc
+on.
+.sp
+Tamén pode usar \fBcalibre\-debug\fP para executar scripts autónomos. Para iso úsao así:
+.sp
+\fBcalibre\-debug\fP \-e myscript.py \fB\-\-\fP \fB\-\-option1\fP \fB\-\-option2\fP file1 file2 ...
+.sp
+Todo despois do \fB\-\-\fP pásase ao guión. Tamén pode usar \fBcalibre\-debug\fP
+como un shebang nos guións, así:
+.sp
+#!/usr/bin/env \-S \fBcalibre\-debug\fP \-e \fB\-\-\fP \-\-
+.sp
+Sempre que lle pases argumentos a \fBcalibre\-debug\fP que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.SH [OPCIÓNS]
+.INDENT 0.0
+.TP
+.B \-\-add\-simple\-plugin
+Engada un complemento simple (por exemplo un complemento que consista nun só ficheiro .py), indicando a ruta ao ficheiro py que contén o código do complemento.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-command, \-c
+Executar código python.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-debug\-device\-driver, \-d
+Depurar a detección de dispositivos
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-default\-programs
+(Des)rexistra calibre dende os programas predeterminados de Windows. \fI\%\-\-default\-programs\fP = \fB(register|unregister)\fP
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-diff
+Executar a ferramenta diff de calibre. Por exemplo: calibre\-debug \fI\%\-\-diff\fP file1 file2
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-edit\-book
+Inicie a ferramenta de calibre «Editar libro» no modo de depuración.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-exec\-file, \-e
+Execute o código Python no ficheiro.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-explode\-book, \-x
+Explota o libro no cartafol especificado. Uso: \-x file.epub output_dir Exporta o libro como unha colección de ficheiros HTML e metadatos, que podes editar usando ferramentas de edición HTML estándar. Funciona con ficheiros EPUB, AZW3, HTMLZ e DOCX.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-export\-all\-calibre\-data
+Exporta todos os datos de calibre (libros/configuracións/complementos). Normalmente, pediráselle o cartafol de exportación e as bibliotecas para exportar. Tamén pode especificalos como argumentos da liña de comandos para omitir as preguntas. Use camiños absolutos para o cartafol de exportación e as bibliotecas. A palabra clave especial «todos» pode usarse para exportar todas as bibliotecas. Exemplos:  calibre\-debug \fI\%\-\-export\-all\-calibre\-data\fP # para uso interactivo calibre\-debug \fI\%\-\-export\-all\-calibre\-data\fP /ruta/a/empty/export/carpeta /ruta/a/biblioteca/carpeta1 /ruta/a/biblioteca2 calibre\-debug \fI\%\-\-export\-all\-calibre\-data\fP /export/folder all # exportar todas as bibliotecas coñecidas
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-fix\-multiprocessing
+Para uso interno
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-gui, \-g
+Executar a GUI con depuración habilitada. A saída da depuración envíase a stdout e stderr.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-gui\-debug
+Executar a GUI con unha consola de depuración, rexistrando na ruta indicada. Só para uso interno, utilizar a opción \-g para executar a GUI en modo depuración
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-help, \-h
+mostrar esta mensaxe de axuda e saír
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-implode\-book, \-i
+Implosionar un libro previamente explotado. Uso: \-i output_dir file.epub Importa o libro dos ficheiros de output_dir que debeu ser creado por unha chamada anterior a \fI\%\-\-explode\-book\fP\&. Asegúrese de especificar o mesmo tipo de ficheiro que se utilizou ao explotar.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-import\-calibre\-data
+Importar datos de calibre exportados previamente
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-inspect\-mobi, \-m
+Analizar o ficheiro(s) MOBI na ruta(s) indicada
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-paths
+Mostrar as rutas necesarias para instalar o entorno de calibre
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-run\-plugin, \-r
+Executar un complemento que proporciona unha interface de liña de comandos. Por exemplo: calibre\-debug \-r \fB\(dq\fPNome do complemento\fB\(dq\fP \fB\-\-\fP ficheiro1 \fB\-\-opci\(gaón1 Todo despois do \(ga\fP\-\-\(ga\(ga pasarase ao complemento como argumentos.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-run\-test, \-t
+Executa a(s) proba(s) nomeada(s). Use o valor especial «todos» para executar todas as probas. Se o nome da proba comeza cun punto, suponse que é un nome de módulo. Se o nome da proba comeza por @, suponse que é un nome de categoría.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-run\-without\-debug
+Non executes coa marca DEBUG establecida
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-shutdown\-running\-calibre, \-s
+Apagar unha instancia do Calibre en execución, de existir. Teña en conta que, se existen traballos en execución, estes cancelaranse en silencio, así que hai que utilizala con coidado.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-subset\-font, \-f
+Subconfigure o tipo de letra especificado. Use \fB\-\-\fP despois desta opción para pasar a opción ao programa de subconxunto de fontes.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-test\-build
+Probar os módulos binarios na compilación
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-version
+mostrar o número de versión do programa e saír
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-viewer, \-w
+Executa o visor de libros electrónicos no modo de depuración
+.UNINDENT
+.SH AUTHOR
+Kovid Goyal
+.SH COPYRIGHT
+Kovid Goyal
+.\" Generated by docutils manpage writer.
+.

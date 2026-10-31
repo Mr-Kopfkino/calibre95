@@ -1,0 +1,8 @@
+# calibre95 notices
+
+Copyright (C) calibre95 contributors. Original application changes are distributed under GNU General Public License version 3.
+Copyright and license notices for all upstream files remain with their respective authors; see LICENSE and licenses/.
+
+calibre95 includes modified integration of calibre 7.26.0. It is an independent project, not an official calibre release.
+No upstream project's name or logo implies endorsement. The custom UI is drawn by application code; unlicensed unused PNG reference assets are excluded.
+Bundled Unifont OTF fonts are distributed unchanged. CAVA core retains its original MIT notice. Third-party notices and source instructions accompany this release.

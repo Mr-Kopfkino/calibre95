@@ -1,0 +1,12 @@
+[
+  {
+    "upstream_path": "icu/LICENSE",
+    "notice_file": "0001-LICENSE.txt",
+    "sha256": "0538fe33d79b83c8a008d69507ab1f6825a90a85b403f951998719a2c1fb359b"
+  },
+  {
+    "upstream_path": "icu/license.html",
+    "notice_file": "0002-license.html.txt",
+    "sha256": "5cab655a1c926b7bcc704734cc4863ca174e372fd4bf901a31864d983eb8d162"
+  }
+]

@@ -1,0 +1,406 @@
+{
+  "retrieved": "2026-10-31",
+  "scope": "Official archived Qt 6.7 QtWebEngine licensing and linked third-party license pages. Supplementary documentation, not asserted as an exact generated credits page of this binary.",
+  "files": [
+    {
+      "file": "qtwebengine-licensing.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-licensing.html",
+      "sha256": "5e490916eb9157167cb15a52defa7d6a903301713d9cd6354a3015ae5f8a3b82"
+    },
+    {
+      "file": "qtwebengine-3rdparty-abseil.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-abseil.html",
+      "sha256": "eaedfa50c4ffa9af7c5bf093717d64f32321dafdb34188fcfcf5ada4201caf0b"
+    },
+    {
+      "file": "qtwebengine-3rdparty-alliance-for-open-media-video-codec.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-alliance-for-open-media-video-codec.html",
+      "sha256": "51c219ad69d6449e7f0dc36db019268aee597cca160858e96040befd078aa5bc"
+    },
+    {
+      "file": "qtwebengine-3rdparty-almost-native-graphics-layer-engine.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-almost-native-graphics-layer-engine.html",
+      "sha256": "09d6fb01d2562803dad4ad0aadc231b459d680269bca14047a191c56451c88ae"
+    },
+    {
+      "file": "qtwebengine-3rdparty-android-explicit-synchronization.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-android-explicit-synchronization.html",
+      "sha256": "293cd3b3680436f7ea50dc31f9dd22f67fe994a406277f2068890cf27aefaf2a"
+    },
+    {
+      "file": "qtwebengine-3rdparty-axe-core-accessibility-audit.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-axe-core-accessibility-audit.html",
+      "sha256": "236fcf59061d8af74c30114293cdb81da5543c5b015e00436a96d0308bc3dd2b"
+    },
+    {
+      "file": "qtwebengine-3rdparty-boringssl.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-boringssl.html",
+      "sha256": "829100947fbe7dcf7d79d6288a982e62db6872e9efa21ec9be8de03edab92f1a"
+    },
+    {
+      "file": "qtwebengine-3rdparty-brotli.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-brotli.html",
+      "sha256": "e0d6611ef36c7458cda067676d00176baef4d7dfce8c1a9fbc225a5e3e1fd6b9"
+    },
+    {
+      "file": "qtwebengine-3rdparty-chromium-global.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-chromium-global.html",
+      "sha256": "a85f19840091ea9adb554970d035a19dac97f21fdfadc5e33f74327eed9270b4"
+    },
+    {
+      "file": "qtwebengine-3rdparty-codemirror-6.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-codemirror-6.html",
+      "sha256": "8d9cb3914dd3e1a9fb2e6072925dd2fa3b1f03900f78b71f8fe2144aeabe9243"
+    },
+    {
+      "file": "qtwebengine-3rdparty-compact-encoding-detection.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-compact-encoding-detection.html",
+      "sha256": "4d70e442542dbcc5ecfe808d4ff029083ea7ae8cb42239dbb28a674f9c622e75"
+    },
+    {
+      "file": "qtwebengine-3rdparty-compact-language-detector-v3.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-compact-language-detector-v3.html",
+      "sha256": "133b50dc35fafcc22b29368f769f65ff854e847af449271e8ef60970fc524073"
+    },
+    {
+      "file": "qtwebengine-3rdparty-cpuinfo.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-cpuinfo.html",
+      "sha256": "71fb119bf41b6246944d4505d767f48b3a1ba85985ee955e9cc9f256b53bbd11"
+    },
+    {
+      "file": "qtwebengine-3rdparty-crashpad.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-crashpad.html",
+      "sha256": "152eebb1e33aaed704d5fd799fda6a3adffdb5ac9c1bb729a81f073f45bc90cd"
+    },
+    {
+      "file": "qtwebengine-3rdparty-crc32c.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-crc32c.html",
+      "sha256": "3030f027055bf3b92385ab66b6bfb244817f415230b90ad835c1723ccf15320c"
+    },
+    {
+      "file": "qtwebengine-3rdparty-dav1d-is-an-av1-decoder.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-dav1d-is-an-av1-decoder.html",
+      "sha256": "b43160b3ea631fe5b707a2aeefd421d1225b640a62266cf73d417d844d7538ab"
+    },
+    {
+      "file": "qtwebengine-3rdparty-dawn.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-dawn.html",
+      "sha256": "b369f44b91d04ac65f3962ec9465c0e922f63c880f43b41f5d741546fa6ca749"
+    },
+    {
+      "file": "qtwebengine-3rdparty-devtools-frontend.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-devtools-frontend.html",
+      "sha256": "005a86d9502e33aecca2c169802eca026bd31c06cea268d666c09f4d49c3e4e4"
+    },
+    {
+      "file": "qtwebengine-3rdparty-dynamic-annotations.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-dynamic-annotations.html",
+      "sha256": "069486bd3732d5d977276c2585be64fbd122c00dd95e8f4f94a10ef8e4ed0492"
+    },
+    {
+      "file": "qtwebengine-3rdparty-emoji-segmenter.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-emoji-segmenter.html",
+      "sha256": "843c780bca547f593e256a91866ee349d2579974b2334c94f1a8efc97797497d"
+    },
+    {
+      "file": "qtwebengine-3rdparty-expat-xml-parser.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-expat-xml-parser.html",
+      "sha256": "a0b8dfa4b1dac017f98ef50aa0b4cc0a3ade68eaaa05dc8e27ae3b9fab0b4b5f"
+    },
+    {
+      "file": "qtwebengine-3rdparty-ffmpeg.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-ffmpeg.html",
+      "sha256": "aaed532f8e2a00ecdfc088ef0995a01444313329972863551e2c21b9bdc4b1b3"
+    },
+    {
+      "file": "qtwebengine-3rdparty-fiat-crypto-synthesizing-correct-by-construction-code-for-cryptographic-primitives.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-fiat-crypto-synthesizing-correct-by-construction-code-for-cryptographic-primitives.html",
+      "sha256": "5069364d43f4390f32297ead48d069a37688e9fc3ef836889506dcac0ead4f37"
+    },
+    {
+      "file": "qtwebengine-3rdparty-flac.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-flac.html",
+      "sha256": "12daeefbe9dd838b6d94fb9dfbd561edb4135fedc5fde16da733ffe8a51c4fc3"
+    },
+    {
+      "file": "qtwebengine-3rdparty-flatbuffers.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-flatbuffers.html",
+      "sha256": "9407ce41e6a9682e817a8d1fa3a8d076d76e090ba247934a0541a3de69509977"
+    },
+    {
+      "file": "qtwebengine-3rdparty-fontconfig.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-fontconfig.html",
+      "sha256": "d6496483545d02d16410e3770f25e2a3441b1f1cb8f8b3e326acf07884fd06b5"
+    },
+    {
+      "file": "qtwebengine-3rdparty-fp16.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-fp16.html",
+      "sha256": "40b750ae522a6d3a286a0b7167d8ddff5cdc0b5f377f29b587cb79eef7a70641"
+    },
+    {
+      "file": "qtwebengine-3rdparty-fxdiv.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-fxdiv.html",
+      "sha256": "8217477269e3c852ffebf10f494556dbb1e70629013dd4dfa9b572edb5efdcf9"
+    },
+    {
+      "file": "qtwebengine-3rdparty-google-double-conversion.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-google-double-conversion.html",
+      "sha256": "bea0a41afb13945931f561192bc33d2dd69d74ee4dc3d375e0845e511c0d0d7f"
+    },
+    {
+      "file": "qtwebengine-3rdparty-google-glog-x27-s-symbolization-library.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-google-glog-x27-s-symbolization-library.html",
+      "sha256": "84deacd8c312a581505433c1e908364d81087c0dbbf9f8b0dfef2721fe114677"
+    },
+    {
+      "file": "qtwebengine-3rdparty-harfbuzz-ng.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-harfbuzz-ng.html",
+      "sha256": "4269be78bf4d02c471ae3f64ce04fca03f65e32392d4c596560eed29d901b135"
+    },
+    {
+      "file": "qtwebengine-3rdparty-headers-for-the-windows-10-webauthn-api-webauthn-dll.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-headers-for-the-windows-10-webauthn-api-webauthn-dll.html",
+      "sha256": "0369d4ab5245e1cc252d480a036741f9251ebf765ed389ea61b91d89f910cd39"
+    },
+    {
+      "file": "qtwebengine-3rdparty-highway-c-library-for-simd.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-highway-c-library-for-simd.html",
+      "sha256": "a2e34cd4d85a5c1f7472069447f8ff002038593676cacd192c5270104c9a57f1"
+    },
+    {
+      "file": "qtwebengine-3rdparty-hunspell.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-hunspell.html",
+      "sha256": "fe541eba912fc3eb7478c6c86930b084222b3fc24682050d16bab343b075d032"
+    },
+    {
+      "file": "qtwebengine-3rdparty-icu.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-icu.html",
+      "sha256": "6562e915aba835ff62f897455b443aaab13323e21ab94e185b253bfd43662c49"
+    },
+    {
+      "file": "qtwebengine-3rdparty-inspector-protocol.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-inspector-protocol.html",
+      "sha256": "f9faa09c84945b6e3eeb7cc648f5fbd26bb98d034a373ef38d4b951c98570b9d"
+    },
+    {
+      "file": "qtwebengine-3rdparty-ipcz.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-ipcz.html",
+      "sha256": "c65095f0373f98010b7718f23a523a4877ff27bd21bdf2fc4d72a8d63a1d7927"
+    },
+    {
+      "file": "qtwebengine-3rdparty-jsoncpp.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-jsoncpp.html",
+      "sha256": "c42907649e1e98562a3d6763c56a89ec660910aa30fa8448126cd8d21525b298"
+    },
+    {
+      "file": "qtwebengine-3rdparty-libavif-library-for-extracting-metadata-from-avif-files.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-libavif-library-for-extracting-metadata-from-avif-files.html",
+      "sha256": "d4149886c28955637fbb6f51fef4f877347cbc5bc9ee035ba6934d3588795e38"
+    },
+    {
+      "file": "qtwebengine-3rdparty-libevent.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-libevent.html",
+      "sha256": "ca2d8fadbd4527122a3a35f846f5a81f0aa67aa1c4b360a14d68a319343d7278"
+    },
+    {
+      "file": "qtwebengine-3rdparty-libgav1.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-libgav1.html",
+      "sha256": "66a546e651490eac65214d2fafad0eca1b8f54d08ee876a9768c90484c8426e0"
+    },
+    {
+      "file": "qtwebengine-3rdparty-libpng.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-libpng.html",
+      "sha256": "dd286c6fb20822c543ee6ad3f92d69b1b3b9644f36f4ec2e81203d4ad7b58dcb"
+    },
+    {
+      "file": "qtwebengine-3rdparty-libsrtp.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-libsrtp.html",
+      "sha256": "3004922d497b53fb74c8f5765c60cf5a031d4415c62e3d08fbea951723c57e52"
+    },
+    {
+      "file": "qtwebengine-3rdparty-libvpx.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-libvpx.html",
+      "sha256": "744982785d8fd1e74a986133a4b4180bf069f56876e8cb01bf6ddb4cf38f344e"
+    },
+    {
+      "file": "qtwebengine-3rdparty-libxml.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-libxml.html",
+      "sha256": "dae1833e7787424ced217d6c24cee6e978f29706a42842a6bd537b5f26b76cf6"
+    },
+    {
+      "file": "qtwebengine-3rdparty-libxslt.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-libxslt.html",
+      "sha256": "833a6b66b869f8d33568d25d8d6761ee3ca08bb0ea610357c19dfa515f2e27f7"
+    },
+    {
+      "file": "qtwebengine-3rdparty-libyuv.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-libyuv.html",
+      "sha256": "49c7648f3c8254a8bcfa8c4432b65e56d4fe0f899a3316babaa650a8f48d592b"
+    },
+    {
+      "file": "qtwebengine-3rdparty-lighthouse.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-lighthouse.html",
+      "sha256": "be0ab6f8dd728a875ab9b6d8321f7f8b5bea594e9211a5db1bdd6da4a482b1e2"
+    },
+    {
+      "file": "qtwebengine-3rdparty-material-color-utilities.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-material-color-utilities.html",
+      "sha256": "1b7f73429f19aad45f1c945b97e710e94f39586a4aeee033a5ae46c97954289b"
+    },
+    {
+      "file": "qtwebengine-3rdparty-mesa-headers.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-mesa-headers.html",
+      "sha256": "80818196ffc1fe5f42e494ebbe29dde895f274864e8cfc329b45d5864d317033"
+    },
+    {
+      "file": "qtwebengine-3rdparty-modp-base64-decoder.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-modp-base64-decoder.html",
+      "sha256": "eb85e9d02d2aaad5ef6d305c229ec8e64a9977d859be3adacf84bd0f097cb61c"
+    },
+    {
+      "file": "qtwebengine-3rdparty-one-euro-filter.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-one-euro-filter.html",
+      "sha256": "53d24fa4f24fde9b6a31d26d8669003d53a5f1abad3f8467596e2329eb621f04"
+    },
+    {
+      "file": "qtwebengine-3rdparty-opus.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-opus.html",
+      "sha256": "9b9d4a2ebe4739f6e7098ceae49b237fb7ca527462c2ec0ace1b16baf34e2508"
+    },
+    {
+      "file": "qtwebengine-3rdparty-ots-opentype-sanitizer.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-ots-opentype-sanitizer.html",
+      "sha256": "1f22bd7577d00be4a335b1c52e5b58798708d0fa56b29fe0ca7aec641e7f4b18"
+    },
+    {
+      "file": "qtwebengine-3rdparty-pdfium.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-pdfium.html",
+      "sha256": "3ff969efc66f8b55643809625f76975d5b5711351e927b30b8fc04b7fb490952"
+    },
+    {
+      "file": "qtwebengine-3rdparty-perfetto.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-perfetto.html",
+      "sha256": "2a79c0caede42e17d0d93acdf5669322d4573c5d70a33c8136fd4f7d4eb48201"
+    },
+    {
+      "file": "qtwebengine-3rdparty-pffft-a-pretty-fast-fft.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-pffft-a-pretty-fast-fft.html",
+      "sha256": "aa5ab21d2ef4e1c08a90b9b7de2f4d19a27d56f35cbb05f079cfa5f514795099"
+    },
+    {
+      "file": "qtwebengine-3rdparty-protocol-buffers.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-protocol-buffers.html",
+      "sha256": "05514c558622b3f8405b57f3ebc889c8d02da9163d994e5d50706a5cf1362b81"
+    },
+    {
+      "file": "qtwebengine-3rdparty-pthreadpool.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-pthreadpool.html",
+      "sha256": "2e8755d9b51b24c088764eb6142ce18bfec839d0825a2981f9e284d17fd2fdfa"
+    },
+    {
+      "file": "qtwebengine-3rdparty-re2-an-efficient-principled-regular-expression-library.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-re2-an-efficient-principled-regular-expression-library.html",
+      "sha256": "4076e484a687ac46af559b1a52f7ac2d5546b92d3a950690f658dc97e2c8e1f2"
+    },
+    {
+      "file": "qtwebengine-3rdparty-recurrent-neural-network-for-audio-noise-reduction.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-recurrent-neural-network-for-audio-noise-reduction.html",
+      "sha256": "0d1987708fcbbd4c90de3edd1623c22021c5c24fb0ba9ddb49bcfb2ff92ffbb1"
+    },
+    {
+      "file": "qtwebengine-3rdparty-snappy-a-fast-compressor-decompressor.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-snappy-a-fast-compressor-decompressor.html",
+      "sha256": "b552d6fc8646ef758c347e93db2373418878c23c214002b902fce2330e6a84b3"
+    },
+    {
+      "file": "qtwebengine-3rdparty-sqlite.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-sqlite.html",
+      "sha256": "3061b318d425b1adb074657afcdb5ca978c3e8433d96720db9e5f32851d67e0a"
+    },
+    {
+      "file": "qtwebengine-3rdparty-the-chromium-project.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-the-chromium-project.html",
+      "sha256": "2adc03ccbe6f8410c5048a7b44c170ed1e81b81fef919b414669b49678e28c51"
+    },
+    {
+      "file": "qtwebengine-3rdparty-the-incremental-distributed-point-functions-library.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-the-incremental-distributed-point-functions-library.html",
+      "sha256": "b0e596bd0cfe9c1e1c96f7c353e419a00aa5a08adff267f9ab4fe2b959d01469"
+    },
+    {
+      "file": "qtwebengine-3rdparty-v8-fork-of-fdlibm.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-v8-fork-of-fdlibm.html",
+      "sha256": "85ce470dbd81eadb98b32103288c05939d67be8c1b20deee9edad5efaa1aa655"
+    },
+    {
+      "file": "qtwebengine-3rdparty-volk-meta-loader-for-vulkan-api.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-volk-meta-loader-for-vulkan-api.html",
+      "sha256": "937003eea16ffd1cf69bf55f335a7618a96a9672dc61af8add26d3d372e9095c"
+    },
+    {
+      "file": "qtwebengine-3rdparty-vulkan-deps.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-vulkan-deps.html",
+      "sha256": "75af1c3f0248092d9ccd649f145c9a758858e70555b08c5837aed48f6534f421"
+    },
+    {
+      "file": "qtwebengine-3rdparty-vulkanmemoryallocator.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-vulkanmemoryallocator.html",
+      "sha256": "25f4d4237d878291201ef24c9fe536e7c89adf42d6d780b8894d47abfafc06fa"
+    },
+    {
+      "file": "qtwebengine-3rdparty-webkit.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-webkit.html",
+      "sha256": "b8333825d346df153935eebdbb1706cba67ccbefd03bacadd9c8b6449477a383"
+    },
+    {
+      "file": "qtwebengine-3rdparty-webm-container-parser-and-writer.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-webm-container-parser-and-writer.html",
+      "sha256": "a6aa1332f2511ddbcbefbfda5967176cd5910a7ba68583098aee3fae6c7e9048"
+    },
+    {
+      "file": "qtwebengine-3rdparty-webp-image-encoder-decoder.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-webp-image-encoder-decoder.html",
+      "sha256": "a8127a836984264ee02343fd37655c0fb3b9ddbe61cc9d857f3fa8943cdb0b55"
+    },
+    {
+      "file": "qtwebengine-3rdparty-webrtc.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-webrtc.html",
+      "sha256": "120b90594edac2d75b57745ff9ba3a361e906118a7928888aca39a8dcc237719"
+    },
+    {
+      "file": "qtwebengine-3rdparty-woff2.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-woff2.html",
+      "sha256": "46f09c4aaf65e6add99f596e189cd85a462f823ecde0de62a176369e5a6761c7"
+    },
+    {
+      "file": "qtwebengine-3rdparty-wuffs-wrangling-untrusted-file-formats-safely.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-wuffs-wrangling-untrusted-file-formats-safely.html",
+      "sha256": "a4293f12fc4fb0ba46462eacdc225585eb002c0b484eb5e1643d5243281dc536"
+    },
+    {
+      "file": "qtwebengine-3rdparty-xdg-mime.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-xdg-mime.html",
+      "sha256": "838a11d3f1fee1cddf69e9ea4e4bfc5478045bfa1ac2290d4443672ab22b9379"
+    },
+    {
+      "file": "qtwebengine-3rdparty-xdg-user-dirs.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-xdg-user-dirs.html",
+      "sha256": "7ecaac490302efbe36f5b0cc98a80a17c76710627f81f124e199c3f5635411cc"
+    },
+    {
+      "file": "qtwebengine-3rdparty-xnnpack.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-xnnpack.html",
+      "sha256": "643ddbcef9752c8a938a2d6dadfeb074d47e25cc786a37327d99ad5b1f685c56"
+    },
+    {
+      "file": "qtwebengine-3rdparty-zlib.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-zlib.html",
+      "sha256": "abdf74669420773a83e34aa216d3b981abad3d47f330fcb44a919331d3970776"
+    },
+    {
+      "file": "qtwebengine-3rdparty-zstandard.html",
+      "url": "https://doc.qt.io/archives/qt-6.7/qtwebengine-3rdparty-zstandard.html",
+      "sha256": "5cb04c81e6ed4b54e820f9cc4b649caa261144659f6e0b9673594f6e3c17ab7b"
+    }
+  ]
+}

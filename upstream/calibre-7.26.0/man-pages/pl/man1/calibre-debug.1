@@ -1,0 +1,197 @@
+.\" Man page generated from reStructuredText.
+.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.TH "CALIBRE-DEBUG" "1" "lutego 14, 2025" "7.26.0" "calibre"
+.SH NAME
+calibre-debug \- calibre-debug
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibre\-debug [opcje]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Różne interfejsy wiersza poleceń przydatne do debugowania calibre. Bez opcji,
+to polecenie uruchamia osadzony interpreter Pythona. Możesz także uruchomić main
+calibre GUI, przeglądarka e\-booków calibre i edytor calibre w trybie debugowania.
+.sp
+Zawiera również interfejsy do różnych bitów calibre, których nie ma
+dedykowane narzędzia wiersza poleceń, takie jak ustawianie podrzędnych czcionek, narzędzie do porównywania e\-booków i tak dalej
+na.
+.sp
+Możesz także użyć \fBcalibre\-debug\fP do uruchamiania samodzielnych skryptów. Aby to zrobić, użyj go w ten sposób:
+.INDENT 0.0
+.INDENT 3.5
+\fBcalibre\-debug\fP \-e myscript.py \fB\-\-\fP \fB\-\-option1\fP \fB\-\-option2\fP file1 file2 ...
+.UNINDENT
+.UNINDENT
+.sp
+Wszystko po \fB\-\-\fP jest przekazywane do skryptu. Możesz także użyć \fBcalibre\-debug\fP
+jako shebang w skryptach, jak to:
+.INDENT 0.0
+.INDENT 3.5
+#!/usr/bin/env \-S \fBcalibre\-debug\fP \-e \fB\-\-\fP \-\-
+.UNINDENT
+.UNINDENT
+.sp
+Ilekroć przekazujesz argumenty do \fBcalibre\-debug\fP, które zawierają spacje, ujmuj je w cudzysłowy. Na przykład: \(dq/some path/with spaces\(dq
+.SH [OPCJE]
+.INDENT 0.0
+.TP
+.B \-\-add\-simple\-plugin
+Dodaj prostą wtyczkę (tj. wtyczkę, składającą się wyłącznie z pliku .py), podając ścieżkę do pliku py, zawierającego kod programu.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-command, \-c
+Uruchom kod Pythona.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-debug\-device\-driver, \-d
+Debuguj wykrycie urządzenia
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-default\-programs
+(Wy)rejestruj calibre z domyślnych programów Windows. \fI\%\-\-default\-programs\fP = \fB(register|unregister)\fP
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-diff
+Uruchom narzędzie porównywania calibre. Np: calibre\-debug \fI\%\-\-diff\fP plik1 plik2
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-edit\-book
+Uruchom narzędzie calibre „Edytuj książkę” w trybie debugowania.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-exec\-file, \-e
+Uruchom kod Pythona w pliku.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-explode\-book, \-x
+Rozbij książkę do określonego folderu. Użycie: \-x plik.epub katalog_wyjściowy Eksportuje książkę jako zbiór plików HTML i metadanych, które można edytować za pomocą standardowych narzędzi do edycji HTML. Działa z plikami EPUB, AZW3, HTMLZ i DOCX.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-export\-all\-calibre\-data
+Wyeksportuj wszystkie dane calibre (książki/ustawienia/wtyczki). Zwykle zostaniesz poproszony o podanie folderu eksportu i bibliotek do wyeksportowania. Można również określić je jako argumenty wiersza poleceń, aby pominąć pytania. Użyj bezwzględnych ścieżek dla folderu eksportu i bibliotek. Specjalne słowo kluczowe \fB\(dq\fPall\fB\(dq\fP może być użyte do wyeksportowania wszystkich bibliotek. Przykłady:  calibre\-debug \fI\%\-\-export\-all\-calibre\-data\fP # for interactive use calibre\-debug \fI\%\-\-export\-all\-calibre\-data\fP /path/to/empty/export/folder /path/to/library/folder1 /path/to/library2 calibre\-debug \fI\%\-\-export\-all\-calibre\-data\fP /export/folder all # export all known libraries
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-fix\-multiprocessing
+Tylko do użytku wewnętrznego
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-gui, \-g
+Uruchom GUI w trybie debugowania. Komunikaty są kierowane na standardowe wyjście (stdout i stderr).
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-gui\-debug
+Uruchom z konsolą debugowania i zapisywaniem logu we wskazanej ścieżce. Wyłącznie dla programistów, użyj opcji \-g aby uruchomić GUI w trybie debugowania
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-help, \-h
+wyświetla ten tekst pomocy i kończy działanie
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-implode\-book, \-i
+Łączenie wcześniej podzielonej książki Użycie: \-i katalog_wyjsciowy plik.epub Importuje książkę z plików znajdujących się w katalog_wyjsciowy, który został utworzony przez wcześniejsze wywołanie \fI\%\-\-explode\-book\fP\&. Pamiętaj aby wybrać taki sam typ pliku jak podczas dzielenia książki.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-import\-calibre\-data
+Importuj uprzednio eksportowane dane
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-inspect\-mobi, \-m
+Sprawdź plik(i) w podanym katalogu
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-paths
+Wyświetl ścieżki niezbędne do ustawienia środowiska calibre
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-run\-plugin, \-r
+Uruchom wtyczkę, która udostępnia interfejs wiersza poleceń. Na przykład: calibre\-debug \-r \fB\(dq\fPNazwa wtyczki\fB\(dq\fP \fB\-\-\fP file1 \fB\-\-option1\fP Wszystko po \fB\-\-\fP zostanie przekazane do wtyczki jako argumenty.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-run\-test, \-t
+Uruchom nazwane testy. Użyj specjalnej wartości „all”, aby uruchomić wszystkie testy. Jeśli nazwa testu zaczyna się od kropki, zakłada się, że jest to nazwa modułu. Jeśli nazwa testu zaczyna się od @, zakłada się, że jest to nazwa kategorii.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-run\-without\-debug
+Nie uruchamiaj z ustawioną flagą DEBUG
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-shutdown\-running\-calibre, \-s
+Powoduje zamknięcie wszystkich uruchomionych instancji calibre. Należy pamiętać, że wszystkie niezakończone zadania zostaną przerwane więc należy używać tego przełącznika ostrożnie.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-subset\-font, \-f
+Zredukuj określoną czcionkę. Użycie \fB\-\-\fP po tej opcji należy podać parametry przekazywane do programu redukującego czcionki.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-test\-build
+Testuj moduły binarne w buildzie
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-version
+wyświetla wersję programu i kończy działanie
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-viewer, \-w
+Uruchom podgląd książek w trybie debugowania
+.UNINDENT
+.SH AUTHOR
+Kovid Goyal
+.SH COPYRIGHT
+Kovid Goyal
+.\" Generated by docutils manpage writer.
+.

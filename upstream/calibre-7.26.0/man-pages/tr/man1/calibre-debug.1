@@ -1,0 +1,192 @@
+.\" Man page generated from reStructuredText.
+.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.TH "CALIBRE-DEBUG" "1" "Şubat 14, 2025" "7.26.0" "calibre"
+.SH NAME
+calibre-debug \- calibre-debug
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibre\-debug [seçenekler]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Calibre\(aqde hata ayıklamak için kullanışlı çeşitli komut satırı arayüzleri. Parametreler olmadan
+bu komut, yerleşik bir Python yorumlayıcısını başlatır. Ayrıca
+anacalibre programını, calibre E\-kitap görüntüleyiciyi ve calibre düzenleyiciyi hata ayıklama modunda çalıştırabilirsiniz.
+.sp
+Bunun yanısıra, yazı tipi alt ayarı, e\-kitap fark aracı gibi özel komut satırı araçlarına sahip olmayan
+çeşitli calibre parçaları için arabirimler içerir.
+.sp
+Bağımsız komut dosyaları çalıştırmak için de \fBcalibre\-debug\fP\(aqu kullanabilirsiniz. Bunu yapmak için şu şekilde kullanın:
+.sp
+\fBcalibre\-debug\fP \-e myscript.py \fB\-\-\fP \fB\-\-option1\fP \fB\-\-option2\fP file1 file2 ...\-\-\(aqden sonraki her şey betiğe aktarılır. Ayrıca \fBcalibre\-debug\fP
+komutunu betiklerde şu şekilde kullanabilirsiniz:
+.sp
+#!/usr/bin/env \-S \fBcalibre\-debug\fP \-e \fB\-\-\fP \-\-
+.sp
+Whenever you pass arguments to \fBcalibre\-debug\fP that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.SH [SEÇENEKLER]
+.INDENT 0.0
+.TP
+.B \-\-add\-simple\-plugin
+Basit bir eklenti ekleyin (mesela sadece bir .py dosyası olan). Eklenti kodunu içeren py dosyasının konumunu belirtin.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-command, \-c
+Python kodunu çalıştır.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-debug\-device\-driver, \-d
+Cihaz tarama hata ayıklama çıktısı
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-default\-programs
+Calibre\fB\(aq\fPyi Varsayılan Windows Programlarına ekle(çıkart) \fI\%\-\-default\-programs\fP = \fB(register|unregister)\fP
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-diff
+Calibre fark aracını çalıştır. Mesela: Calibre\-debug \fI\%\-\-diff\fP dosya1 dosya2
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-edit\-book
+Calibre \fB\(dq\fPKitap Düzenleme\fB\(dq\fP aracını hata ayıklama kipinde başlat.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-exec\-file, \-e
+Dosyadaki Python kodunu çalıştır.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-explode\-book, \-x
+Kitabı patlatarak belirtilen klasöre yerleştirin. Kullanım: \-x file.epub çıktı_klasörü Kitabı, standart HTML düzenleme araçlarını kullanarak düzenleyebileceğiniz bir HTML dosyaları ve üstveri koleksiyonu olarak dışa aktarır. EPUB, AZW3, HTMLZ ve DOCX dosyalarıyla çalışır.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-export\-all\-calibre\-data
+Tüm calibre verilerini dışa aktarın (kitaplar/ayarlar/eklentiler). Normalde, dışa aktarma klasörü ve dışa aktarılacak kitaplıklar sorulacaktır. Soruları atlamak için bunları komut satırı argümanları olarak da belirleyebilirsiniz. Dışa aktarma klasörü ve kitaplıkları için mutlak yollar kullanın. Tüm kitaplıkları dışa aktarmak için \fB\(dq\fPall\fB\(dq\fP özel anahtar sözcüğü kullanılabilir. Örnekler:  calibre\-debug \fI\%\-\-export\-all\-calibre\-data\fP # interaktif kullanım için calibre\-debug \fI\%\-\-export\-all\-calibre\-data\fP /yol/boş/çıktı/klasörü /yol/kitaplık/ klasör1 /yol/kitaplık2 calibre\-debug \fI\%\-\-export\-all\-calibre\-data\fP /çıktı/klasör all # bilinen tüm kitaplıkları dışa aktar
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-fix\-multiprocessing
+İç kullanım için
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-gui, \-g
+Arayüzü hata ayıklama etkin olara çalıştır. Hata çıktısı stdout ve stderr üzerine yazılır.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-gui\-debug
+Arayüzü belirtilen konuma günlük kaydı yapan bir hata ayıklama konsolu ile çalıştır. Sadece iç kullanım içindir. Arayüzü hata ayıklama kipinde çalıştırma için \-g seçeneğini kullanın
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-help, \-h
+bu yardım iletisini göster ve çık
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-implode\-book, \-i
+Önceden patlamış bir kitabı içeri yerleştirin. Kullanım: \-i çıktı_dizini dosya.epub Kitabı, \fI\%\-\-explode\-book\fP komutu ile önceden oluşturulmuş olması gereken çıktı_dizini içerisindeki dosyalardan içeri aktarır. Patlatırken kullanılanla aynı dosya türünü belirttiğinizden emin olun.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-import\-calibre\-data
+Önceden dışa aktarılmış Calibre verisini içe aktar
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-inspect\-mobi, \-m
+Belritilen konumlardaki MOBI dosyalarını denetleyin
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-paths
+Calibre ortamını kurmak için zorunlu olan konumların çıktısını ver
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-run\-plugin, \-r
+Komut satırı arabirimi sağlayan bir eklenti çalıştırın. Örneğin: calibre\-debug \-r \fB\(dq\fPEklenti adı\fB\(dq\fP \fB\-\-\fP dosya1 \fB\-\-se\(gaçenek1 \-\-\(ga\fP\(aq
+.nf
+\(ga\(ga
+.fi
+den sonraki her şey eklentiye argüman olarak iletilir.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-run\-test, \-t
+Adlandırılmış test(ler)i çalıştırın. Tüm testleri çalıştırmak için \fB\(dq\fPall\fB\(dq\fP özel değerini kullanın. Test adı bir nokta ile başlıyorsa, bir modül adı olduğu varsayılır. Test adı @ işareti ile başlıyorsa, bir kategori adı olduğu varsayılır.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-run\-without\-debug
+DEBUG bayrağı ayarlanmış şekilde çalıştırmayın
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-shutdown\-running\-calibre, \-s
+Çalışmakta olan bir Calibre oturumu varsa kapanmasını sağlar. Devam etmekte olan işlemler olması halinde uyarı vermeksizin kapatılacağı için dikkatle kullanınız.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-subset\-font, \-f
+Belirtilen yazı tipini alt kümele. Bu seçenekten sonra \fB\-\-\fP kullanarak seçeneği yazı tipi alt kümeleme programına geçirebilirsiniz.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-test\-build
+Derlemede ikili modülleri dene
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-version
+programın sürüm numarasını göster ve çık
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-viewer, \-w
+E\-kitap görüntüleyiciyi hata ayıklama kipinde çalıştır
+.UNINDENT
+.SH AUTHOR
+Kovid Goyal
+.SH COPYRIGHT
+Kovid Goyal
+.\" Generated by docutils manpage writer.
+.

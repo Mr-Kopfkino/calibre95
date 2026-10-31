@@ -1,0 +1,73 @@
+#!/usr/bin/env python
+from __future__ import with_statement
+
+__license__ = 'GPL 3'
+__copyright__ = '2009, Kovid Goyal <kovid@kovidgoyal.net>'
+__docformat__ = 'restructuredtext en'
+
+from datetime import date, timedelta
+
+from calibre.web.feeds.news import BasicNewsRecipe
+
+
+def classes(classes):
+    q = frozenset(classes.split(' '))
+    return dict(attrs={
+        'class': lambda x: x and frozenset(x.split()).intersection(q)})
+
+
+class ChicagoTribune(BasicNewsRecipe):
+
+    title = 'Chicago Tribune'
+    __author__ = 'unkn0wn'
+    description = 'Politics, local and business news from Chicago'
+    language = 'en_US'
+    masthead_url = 'https://www.chicagotribune.com/wp-content/uploads/2023/12/2560px-Chicago_Tribune_Logo.svg-1.png'
+    use_embedded_content = False
+    no_stylesheets = True
+    remove_javascript = True
+    remove_attributes = ['width', 'height', 'style']
+    ignore_duplicate_articles = {'title', 'url'}
+    resolve_internal_links = True
+    extra_css = '''
+        img {display:block; margin:0 auto;}
+        em, blockquote { color:#202020; }
+        .coauthor-avatar-container, .calibre-nuked-tag-figcaption {font-size:small;}
+    '''
+
+    def get_cover_url(self):
+        soup = self.index_to_soup('https://www.frontpages.com/chicago-tribune/')
+        return (
+            'https://www.frontpages.com'
+            + soup.find('img', attrs={'id': 'giornale-img'})['src']
+        )
+
+    keep_only_tags = [
+        classes('headlines header-features coauthor-avatar-container article-body'),
+    ]
+    remove_tags = [
+        dict(name=['aside', 'svg']),
+        classes('wp-remixd-voice-wrapper wp-embedded-content div-gpt-ad-cube_article entry-section'),
+    ]
+
+    def parse_index(self):
+        index = 'https://www.chicagotribune.com/'
+        soup = self.index_to_soup(index)
+        feeds = []
+        tdy = date.today().strftime('/%Y/%m/%d/')
+        yest = (date.today() - timedelta(days=1)).strftime('/%Y/%m/%d/')
+        for a in soup.findAll('a', attrs={'href': lambda x: x and (tdy in x or yest in x)}):
+            if a.find('img'):
+                continue
+            url = a['href'].split('?')[0]
+            title = self.tag_to_string(a)
+            if not title:
+                continue
+            self.log(title, url)
+            feeds.append({'title': title, 'url': url})
+        return [('Articles', feeds)]
+
+    def preprocess_html(self, soup):
+        for img in soup.findAll('img', attrs={'data-src': True}):
+            img['src'] = img['data-src']
+        return soup

@@ -1,0 +1,9 @@
+{
+  "project": "Mutagen",
+  "repository": "https://github.com/quodlibet/mutagen",
+  "tag": "release-1.47.0",
+  "archive": "https://github.com/quodlibet/mutagen/archive/refs/tags/release-1.47.0.zip",
+  "sha256": "3efada35b81dc4056222b8e6932d0cceddc877c6ac349e12ea18316ac05ff25a",
+  "license": "GPL-2.0-or-later",
+  "changes": "Unmodified pure-Python mutagen package; test/CLI assets excluded."
+}

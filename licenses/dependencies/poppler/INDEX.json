@@ -1,0 +1,12 @@
+[
+  {
+    "upstream_path": "poppler-23.08.0/COPYING",
+    "notice_file": "0001-COPYING.txt",
+    "sha256": "ab15fd526bd8dd18a9e77ebc139656bf4d33e97fc7238cd11bf60e2b9b8666c6"
+  },
+  {
+    "upstream_path": "poppler-23.08.0/cmake/modules/COPYING-CMAKE-SCRIPTS",
+    "notice_file": "0002-COPYING-CMAKE-SCRIPTS.txt",
+    "sha256": "46cde7dc11e64c78d650b4851b88f6704b4665ff60f22a1caf68ceb15e217e5b"
+  }
+]

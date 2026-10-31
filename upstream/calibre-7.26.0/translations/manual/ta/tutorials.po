@@ -1,0 +1,28 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Kovid Goyal
+# This file is distributed under the same license as the calibre package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: calibre\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-04 02:10+0000\n"
+"PO-Revision-Date: 2014-06-17 08:36+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Tamil (http://app.transifex.com/calibre/calibre/language/ta/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ta\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../__w/calibre/calibre/manual/tutorials.rst:4
+msgid "Tutorials"
+msgstr "பயிற்சிகள்"
+
+#: ../../__w/calibre/calibre/manual/tutorials.rst:6
+msgid ""
+"Here you will find tutorials to get you started using calibre's more "
+"advanced features, such as XPath and templates."
+msgstr "எக்ஸ்பாத் மற்றும் வார்ப்புருக்கள் போன்ற காலிபரின் மேம்பட்ட அம்சங்களைப் பயன்படுத்தி தொடங்குவதற்கான பயிற்சிகளை இங்கே காணலாம்."

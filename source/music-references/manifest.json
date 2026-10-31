@@ -1,0 +1,105 @@
+{
+  "retrieved_at": "2026-10-30",
+  "files": [
+    {
+      "repo": "captbaritone/webamp",
+      "path": "README.md",
+      "commit": "f5c578bfa5c61d898df190d47e9830d639577724",
+      "commit_date": "2026-10-27T21:00:50Z",
+      "blob_sha": "5242aef4352f1780b150e222ee070b34c1262d3f",
+      "url": "https://github.com/captbaritone/webamp/blob/f5c578bfa5c61d898df190d47e9830d639577724/README.md",
+      "local": "webamp/README.md",
+      "local_sha256": "7bee0ce5539ba294146360316da603372a84c409b77e1b3f758603e5442a177d"
+    },
+    {
+      "repo": "captbaritone/webamp",
+      "path": "LICENSE.txt",
+      "commit": "f5c578bfa5c61d898df190d47e9830d639577724",
+      "commit_date": "2026-10-27T21:00:50Z",
+      "blob_sha": "5a0ece0966cbad171841c815c281d52c1e4d89a0",
+      "url": "https://github.com/captbaritone/webamp/blob/f5c578bfa5c61d898df190d47e9830d639577724/LICENSE.txt",
+      "local": "webamp/LICENSE.txt",
+      "local_sha256": "96c408295303fcca80578f6142fdc7a16d03f29727e28fab8bbb941473a5633f"
+    },
+    {
+      "repo": "captbaritone/webamp",
+      "path": "packages/webamp/js/components/MainWindow/Marquee.tsx",
+      "commit": "f5c578bfa5c61d898df190d47e9830d639577724",
+      "commit_date": "2026-10-27T21:00:50Z",
+      "blob_sha": "b41181025193e001048b577a32c6f6b31520aeb2",
+      "url": "https://github.com/captbaritone/webamp/blob/f5c578bfa5c61d898df190d47e9830d639577724/packages/webamp/js/components/MainWindow/Marquee.tsx",
+      "local": "webamp/packages/webamp/js/components/MainWindow/Marquee.tsx",
+      "local_sha256": "90e40836788562986f65b82224e0c746fbde54c90c16e72c6b883e2e37baf7bd"
+    },
+    {
+      "repo": "captbaritone/webamp",
+      "path": "packages/webamp/js/components/MainWindow/ActionButtons.tsx",
+      "commit": "f5c578bfa5c61d898df190d47e9830d639577724",
+      "commit_date": "2026-10-27T21:00:50Z",
+      "blob_sha": "d29d248df83a04fc4e88f50ed21865ffc2e373c8",
+      "url": "https://github.com/captbaritone/webamp/blob/f5c578bfa5c61d898df190d47e9830d639577724/packages/webamp/js/components/MainWindow/ActionButtons.tsx",
+      "local": "webamp/packages/webamp/js/components/MainWindow/ActionButtons.tsx",
+      "local_sha256": "a75a649318b233208e71f3bcfe7a64c0e013aea5f9f57d737c120afc143dd34f"
+    },
+    {
+      "repo": "captbaritone/webamp",
+      "path": "packages/webamp/js/components/MainWindow/Shuffle.tsx",
+      "commit": "f5c578bfa5c61d898df190d47e9830d639577724",
+      "commit_date": "2026-10-27T21:00:50Z",
+      "blob_sha": "f72ed0819ca58e414da2475026b7b89b52f109ac",
+      "url": "https://github.com/captbaritone/webamp/blob/f5c578bfa5c61d898df190d47e9830d639577724/packages/webamp/js/components/MainWindow/Shuffle.tsx",
+      "local": "webamp/packages/webamp/js/components/MainWindow/Shuffle.tsx",
+      "local_sha256": "b29d7434d3ac9248d7051358bd9a8117f97f1c8e1a1bf7fbdd2cf224cabcd95a"
+    },
+    {
+      "repo": "captbaritone/webamp",
+      "path": "packages/webamp/js/reducers/playlist.ts",
+      "commit": "f5c578bfa5c61d898df190d47e9830d639577724",
+      "commit_date": "2026-10-27T21:00:50Z",
+      "blob_sha": "3a90da9d17e9a55ad4b1e4c7769cbfc1f9e3add4",
+      "url": "https://github.com/captbaritone/webamp/blob/f5c578bfa5c61d898df190d47e9830d639577724/packages/webamp/js/reducers/playlist.ts",
+      "local": "webamp/packages/webamp/js/reducers/playlist.ts",
+      "local_sha256": "854e8e4c1449ef7d3abf54ed1918382eeddaea103c1daba3d881081259d3d34d"
+    },
+    {
+      "repo": "reteps/lrc_kit",
+      "path": "README.md",
+      "commit": "1e1c49d2a6a4288e78947affd2ee1ed8510e22e6",
+      "commit_date": "2024-09-06T04:24:49Z",
+      "blob_sha": "57a04ba5bb460402b0d9ee4109825138627891c0",
+      "url": "https://github.com/reteps/lrc_kit/blob/1e1c49d2a6a4288e78947affd2ee1ed8510e22e6/README.md",
+      "local": "lrc_kit/README.md",
+      "local_sha256": "6c0afa0e7d46095a65026e426c28c9b31b0db4690f963fd9245a1cd806a280be"
+    },
+    {
+      "repo": "reteps/lrc_kit",
+      "path": "LICENSE",
+      "commit": "1e1c49d2a6a4288e78947affd2ee1ed8510e22e6",
+      "commit_date": "2024-09-06T04:24:49Z",
+      "blob_sha": "0b72fc56df62ac53518ead416b277febc6b23c41",
+      "url": "https://github.com/reteps/lrc_kit/blob/1e1c49d2a6a4288e78947affd2ee1ed8510e22e6/LICENSE",
+      "local": "lrc_kit/LICENSE",
+      "local_sha256": "a0d75c89eb92c7dc4228fb3e4a9468b1bf03de821a5efd9e3f11963e241297ef"
+    },
+    {
+      "repo": "reteps/lrc_kit",
+      "path": "lrc_kit/parser.py",
+      "commit": "1e1c49d2a6a4288e78947affd2ee1ed8510e22e6",
+      "commit_date": "2024-09-06T04:24:49Z",
+      "blob_sha": "e7a033ac02f3b122076e7921b6e30db34807d54d",
+      "url": "https://github.com/reteps/lrc_kit/blob/1e1c49d2a6a4288e78947affd2ee1ed8510e22e6/lrc_kit/parser.py",
+      "local": "lrc_kit/lrc_kit/parser.py",
+      "local_sha256": "3bfc14caf1890fd699f01ae49812c98e059460fdea785e24fac54ffd59ad5960"
+    },
+    {
+      "repo": "reteps/lrc_kit",
+      "path": "lrc_kit/lyrics.py",
+      "commit": "1e1c49d2a6a4288e78947affd2ee1ed8510e22e6",
+      "commit_date": "2024-09-06T04:24:49Z",
+      "blob_sha": "6ca26b537a9d42fbfa8b16bb3451b7ecba29780e",
+      "url": "https://github.com/reteps/lrc_kit/blob/1e1c49d2a6a4288e78947affd2ee1ed8510e22e6/lrc_kit/lyrics.py",
+      "local": "lrc_kit/lrc_kit/lyrics.py",
+      "local_sha256": "a499583dc428d3f21aa50577080f91e251bb2207de3b57ff38c2a04f4e06be29"
+    }
+  ]
+}

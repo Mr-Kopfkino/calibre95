@@ -1,0 +1,186 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Kovid Goyal
+# This file is distributed under the same license as the calibre package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# RERBIN MA, 2022
+# tony shen <anthanny@hotmail.com>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: calibre 7.6.100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-13 15:20+0000\n"
+"PO-Revision-Date: 2020-03-11 12:15+0000\n"
+"Last-Translator: tony shen <anthanny@hotmail.com>, 2024\n"
+"Language-Team: Chinese (China) (https://app.transifex.com/calibre/teams/19337/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../__w/calibre/calibre/manual/drm.rst:5
+msgid "Digital Rights Management (DRM)"
+msgstr "数字版权管理(DRM)"
+
+#: ../../__w/calibre/calibre/manual/drm.rst:7
+msgid ""
+"Digital Rights Management (DRM) is a generic term for access control "
+"technologies that can be used by hardware manufacturers, publishers, "
+"copyright holders and individuals to try to impose limitations on the usage "
+"of digital content and devices. It is also, sometimes, disparagingly "
+"described as Digital Restrictions Management. The term is used to describe "
+"any technology which inhibits uses (legitimate or otherwise) of digital "
+"content that were not desired or foreseen by the content provider. The term "
+"generally doesn't refer to other forms of copy protection which can be "
+"circumvented without modifying the file or device, such as serial numbers or"
+" key-files. It can also refer to restrictions associated with specific "
+"instances of digital works or devices. DRM technologies attempt to control "
+"use of digital media by preventing access, copying or conversion to other "
+"formats by end users. See `Wikipedia "
+"<https://en.wikipedia.org/wiki/Digital_rights_management>`_."
+msgstr ""
+"数字版权管理 (DRM) 是访问控制技术的通用术语，硬件制造商、出版商、版权所有者和个人可以使用该技术来尝试对数字内容和设备的使用施加限制。 "
+"有时，它也被轻蔑地描述为数字限制管理。 该术语用于描述任何禁止使用内容提供商不希望或预见的数字内容（合法或其他方式）的技术。 "
+"该术语通常不指无需修改文件或设备即可规避的其他形式的复制保护，例如序列号或密钥文件。 它还可以指与数字作品或设备的特定实例相关的限制。 DRM "
+"技术试图通过阻止最终用户访问、复制或转换为其他格式来控制数字媒体的使用。参见`维基百科 "
+"<https://en.wikipedia.org/wiki/Digital_rights_management>`_。"
+
+#: ../../__w/calibre/calibre/manual/drm.rst:23
+msgid "What does DRM imply for me personally?"
+msgstr "DRM对我个人意味着什么？"
+
+#: ../../__w/calibre/calibre/manual/drm.rst:25
+msgid ""
+"When you buy an e-book with DRM you don't really own it but have purchased "
+"the permission to use it in a manner dictated to you by the seller. DRM "
+"limits what you can do with e-books you have \"bought\". Often people who "
+"buy books with DRM are unaware of the extent of these restrictions. These "
+"restrictions prevent you from reformatting the e-book to your liking, "
+"including making stylistic changes like adjusting the font sizes, although "
+"there is software that empowers you to do such things for non DRM books. "
+"People are often surprised that an e-book they have bought in a particular "
+"format cannot be converted to another format if the e-book has DRM. So if "
+"you have an Amazon Kindle and buy a book sold by Barnes and Nobles, you "
+"should know that if that e-book has DRM you will not be able to read it on "
+"your Kindle. Notice that I am talking about a book you buy, not steal or "
+"pirate but BUY."
+msgstr ""
+"当您购买带有 DRM 的电子书时，您并不真正拥有它，而是购买了按照卖家指定的方式使用它的许可。 DRM 限制了您可以对“购买”的电子书进行的操作。 "
+"购买带有 DRM 的书籍的人通常不知道这些限制的程度。 "
+"这些限制阻止您根据自己的喜好重新格式化电子书，包括进行风格更改，例如调整字体大小，尽管有软件可以让您对非 DRM 图书执行此类操作。 "
+"人们常常感到惊讶的是，他们购买的特定格式的电子书如果具有 DRM，则无法转换为另一种格式。 因此，如果您拥有亚马逊 Kindle 并购买了 Barnes"
+" and Nobles 销售的书籍，您应该知道，如果该电子书具有 DRM，您将无法在 Kindle 上阅读。 "
+"请注意，我说的是您购买的一本书，不是偷窃或盗版，而是购买。"
+
+#: ../../__w/calibre/calibre/manual/drm.rst:40
+msgid "What does DRM do for authors?"
+msgstr "DRM为作者做了什么？"
+
+#: ../../__w/calibre/calibre/manual/drm.rst:42
+msgid ""
+"Publishers of DRMed e-books argue that the DRM is all for the sake of "
+"authors and to protect their artistic integrity and prevent piracy. But DRM "
+"does NOT prevent piracy. People who want to pirate content or use pirated "
+"content still do it and succeed. The three major DRM schemes for e-books "
+"today are run by Amazon, Adobe and Barnes and Noble and all three DRM "
+"schemes have been cracked. All DRM does is inconvenience legitimate users. "
+"It can be argued that it actually harms authors as people who would have "
+"bought the book choose to find a pirated version as they are not willing to "
+"put up with DRM. Those that would pirate in the absence of DRM do so in its "
+"presence as well. To reiterate, the key point is that DRM *does not prevent "
+"piracy*. So DRM is not only pointless and harmful to buyers of e-books but "
+"also a waste of money."
+msgstr ""
+"DRMed电子书的出版商认为，DRM完全是为了作者的利益，并保护其艺术完整性和防止盗版。 但是DRM不能防止盗版。 "
+"想要盗版内容或使用盗版内容的人仍然可以成功。 当今，电子书的三种主要DRM方案由Amazon，Adobe和Barnes and "
+"Noble运行，并且所有三种DRM方案都已被破解。 DRM所做的一切只是给合法用户带来不便。 "
+"可以说，这实际上损害了作者的利益，因为愿意购买该书的人选择查找盗版，因为他们不愿意忍受DRM。 "
+"那些在没有DRM的情况下也会盗版的人在存在DRM的情况下也会这样做。 重申一下，关键是DRM *不能防止盗版*。 "
+"因此，DRM不仅毫无意义，对电子书的购买者有害，而且浪费金钱。"
+
+#: ../../__w/calibre/calibre/manual/drm.rst:56
+msgid "DRM and freedom"
+msgstr "DRM与自由"
+
+#: ../../__w/calibre/calibre/manual/drm.rst:58
+msgid ""
+"Although digital content can be used to make information as well as creative"
+" works easily available to everyone and empower humanity, this is not in the"
+" interests of some publishers who want to steer people away from this "
+"possibility of freedom simply to maintain their relevance in world "
+"developing so fast that they can't keep up."
+msgstr ""
+"尽管数字内容可以用来让每个人都可以轻松获得信息和创意作品，并赋予人类权力，但这并不符合一些出版商的利益，他们想要引导人们远离这种自由的可能性，仅仅是为了保持他们与世界发展如此之快的相关性，以至于他们跟不上。"
+
+#: ../../__w/calibre/calibre/manual/drm.rst:66
+msgid "Why does calibre not support DRM?"
+msgstr "为什么Calibre不支持DRM？"
+
+#: ../../__w/calibre/calibre/manual/drm.rst:68
+msgid ""
+"calibre is open source software while DRM by its very nature is closed. If "
+"calibre were to support opening or viewing DRM files it could be trivially "
+"modified to be used as a tool for DRM removal which is illegal under today's"
+" laws. Open source software and DRM are a clash of principles. While DRM is "
+"all about controlling the user, open source software is about empowering the"
+" user. The two simply can not coexist."
+msgstr ""
+"calibre 是开源软件，而 DRM 本质上是封闭的。 如果 calibre 支持打开或查看 DRM 文件，则可以对其进行简单修改以用作 DRM "
+"删除工具，这在当今的法律下是非法的。 开源软件和 DRM 是原则上的冲突。 DRM 的核心是控制用户，而开源软件的核心是赋予用户权力。 "
+"两者根本无法共存。"
+
+#: ../../__w/calibre/calibre/manual/drm.rst:77
+msgid "What is calibre's view on content providers?"
+msgstr "Calibre对内容提供商的看法是什么？"
+
+#: ../../__w/calibre/calibre/manual/drm.rst:79
+msgid ""
+"We firmly believe that authors and other content providers should be "
+"compensated for their efforts, but DRM is not the way to go about it. We are"
+" developing this database of DRM-free e-books from various sources to help "
+"you find DRM-free alternatives and to help independent authors and "
+"publishers of DRM-free e-books publicize their content. We hope you will "
+"find this useful and we request that you do not pirate the content made "
+"available to you here."
+msgstr ""
+"我们坚信，作者和其他内容提供商应该为他们的努力得到补偿，但DRM不是解决这一问题的办法。我们正在开发来自各种来源的无DRM电子书数据库，以帮助您找到无DRM的替代方案，并帮助无DRM电子书的独立作者和出版商宣传其内容。我们希望您会发现这是有用的，我们要求您不要盗版这里提供给您的内容。"
+
+#: ../../__w/calibre/calibre/manual/drm.rst:88
+msgid "How can I help fight DRM?"
+msgstr "我该如何帮助对抗DRM？"
+
+#: ../../__w/calibre/calibre/manual/drm.rst:90
+msgid ""
+"As somebody who reads and buys e-books you can help fight DRM. Do not buy "
+"e-books with DRM. There are some publishers who publish DRM-free e-books. "
+"Make an effort to see if they carry the e-book you are looking for. If you "
+"like books by certain independent authors that sell DRM-free e-books and you"
+" can afford it make donations to them. This is money well spent as their "
+"e-books tend to be cheaper (there may be exceptions) than the ones you would"
+" buy from publishers of DRMed books and would probably work on all devices "
+"you own in the future saving you the cost of buying the e-book again. Do not"
+" discourage publishers and authors of DRM-free e-books by pirating their "
+"content. Content providers deserve compensation for their efforts. Do not "
+"punish them for trying to make your reading experience better by making "
+"available DRM-free e-books. In the long run this is detrimental to you.  If "
+"you have bought books from sellers that carry both DRMed as well as DRM-free"
+" books, not knowing if they carry DRM or not make it a point to leave a "
+"comment or review on the website informing future buyers of its DRM status. "
+"Many sellers do not think it important to clearly indicate to their buyers "
+"if an e-book carries DRM or not. `Here "
+"<https://www.defectivebydesign.org/guide/ebooks>`_ you will find a guide to "
+"DRM-free living."
+msgstr ""
+"作为阅读和购买电子书的人，您可以帮助对抗 DRM。 不要购买带有 DRM 的电子书。 有一些出版商出版无 DRM 的电子书。 "
+"尽力看看他们是否有您正在寻找的电子书。 如果您喜欢某些出售无 DRM 电子书的独立作者的书籍，并且您负担得起，请向他们捐款。 "
+"这是一笔值得花的钱，因为他们的电子书往往比您从 DRMed "
+"图书出版商那里购买的电子书更便宜（可能有例外），并且可能会在您将来拥有的所有设备上运行，从而节省您购买电子书的成本。 又是电子书。 "
+"不要通过盗版其内容来阻止无 DRM 电子书的出版商和作者。 内容提供商应该因其努力而得到补偿。 不要因为他们试图通过提供无 DRM "
+"的电子书来改善您的阅读体验而惩罚他们。 从长远来看，这对你是不利的。 如果您从同时带有 DRM 和无 DRM "
+"书籍的卖家处购买了书籍，并且不知道他们是否带有 DRM，请务必在网站上发表评论或评论，告知未来的买家其 DRM 状态。 "
+"许多卖家认为向买家明确表明电子书是否带有 DRM 并不重要。 "
+"`在这里<https://www.defectivebydesign.org/guide/ebooks>`_您将找到无 DRM 生活的指南。"

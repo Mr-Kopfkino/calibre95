@@ -1,0 +1,12 @@
+[
+  {
+    "upstream_path": "css_parser-1.0.10.dist-info/COPYING",
+    "notice_file": "0001-COPYING.txt",
+    "sha256": "0b383d5a63da644f628d99c33976ea6487ed89aaa59f0b3257992deac1171e6b"
+  },
+  {
+    "upstream_path": "css_parser-1.0.10.dist-info/COPYING.LESSER",
+    "notice_file": "0002-COPYING.LESSER.txt",
+    "sha256": "03c570a068086ee577dcd795519ea93462b2ed2fcb6dcc4dfce56a71a2fd6e5a"
+  }
+]

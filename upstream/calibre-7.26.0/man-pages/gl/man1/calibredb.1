@@ -1,0 +1,1048 @@
+.\" Man page generated from reStructuredText.
+.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.TH "CALIBREDB" "1" "febreiro 14, 2025" "7.26.0" "calibre"
+.SH NAME
+calibredb \- calibredb
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb orde [opcións] [argumentos]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+
+.nf
+:comando:\(gacalibredb\(ga
+.fi
+ é a interface de liña de comandos para a base de datos de calibre. Ten
+varios sub\-comandos, documentados a continuación.
+.sp
+
+.nf
+:comando:\(gacalibredb\(ga
+.fi
+ pode usarse para manipular tanto unha base de datos de calibre
+especificada por ruta como un :guilabel:Servidor de contidos de calibre que estea a funcionar na
+the local machine or over the internet. máquina local ou a través de internet. Podes iniciar un :\fIServidor de contidos\fP de calibre utilizando tanto o programa :\fIcalibre\-server\fP
+como desde o programa principal de calibre facendo clic en Conectar/compartir  → 
+Iniciar servidor de contidos\&. Dado que \fBcalibredb\fP pode realizar cambios nas túas
+bibliotecas de calibre, debes configurar a autenticación no servidor primeiro. Hai
+dúas maneiras de facelo:
+.INDENT 0.0
+.INDENT 3.5
+.INDENT 0.0
+.IP \(bu 2
+Se planeas conectarte só a un servidor que se estea a executar no mesmo ordenador,
+podes simplemente usar a opción \fB\-\-enable\-local\-write\fP do Servidor de contidos, para permitir que calquera programa, incluíndo calibredb, que se estea a executar
+no ordenador local poida facer cambios nos teus datos de calibre. Cando executas
+.UNINDENT
+.INDENT 0.0
+.INDENT 3.5
+.INDENT 0.0
+.TP
+.B o servidor desde o programa principal de calibre, esta opción está en
+Preferencias → Compartir a través da rede → Avanzado\&.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.INDENT 0.0
+.IP \(bu 2
+Se queres habilitar o acceso a través de internet, entón debes configurar
+contas de usuario no servidor e usar as opcións \fI\%\-\-username\fP and \fI\%\-\-password\fP
+con \fBcalibredb\fP para darlle acceso. Podes configurar a autenticación de usuarios para \fBcalibre\-server\fP usando a opción \fB\-\-enable\-auth\fP
+e utilizando \fB\-\-manage\-users\fP para crear as contas de usuario.
+Se estás a executar o servidor desde o programa principal de calibre, usa
+Preferencias → Compartir a través da rede → Requirir nome de usuario/contrasinal\&.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.sp
+Para conectarte a un Servidor de contidos en execución, pasa a URL do servidor á opción
+\fI\%\-\-with\-library\fP  consulta a documentación desa opción para detalles e exemplos.
+.INDENT 0.0
+.IP \(bu 2
+\fI\%OPCIÓNS GLOBAIS\fP
+.IP \(bu 2
+\fI\%list\fP
+.IP \(bu 2
+\fI\%add\fP
+.INDENT 2.0
+.IP \(bu 2
+\fI\%ENGADIR DENDE CARTAFOLES\fP
+.UNINDENT
+.IP \(bu 2
+\fI\%remove\fP
+.IP \(bu 2
+\fI\%add_format\fP
+.IP \(bu 2
+\fI\%remove_format\fP
+.IP \(bu 2
+\fI\%show_metadata\fP
+.IP \(bu 2
+\fI\%set_metadata\fP
+.IP \(bu 2
+\fI\%export\fP
+.IP \(bu 2
+\fI\%catalog\fP
+.INDENT 2.0
+.IP \(bu 2
+\fI\%EPUB OPCIÓNS\fP
+.UNINDENT
+.IP \(bu 2
+\fI\%saved_searches\fP
+.IP \(bu 2
+\fI\%add_custom_column\fP
+.IP \(bu 2
+\fI\%custom_columns\fP
+.IP \(bu 2
+\fI\%remove_custom_column\fP
+.IP \(bu 2
+\fI\%set_custom\fP
+.IP \(bu 2
+\fI\%restore_database\fP
+.IP \(bu 2
+\fI\%check_library\fP
+.IP \(bu 2
+\fI\%list_categories\fP
+.IP \(bu 2
+\fI\%backup_metadata\fP
+.IP \(bu 2
+\fI\%clone\fP
+.IP \(bu 2
+\fI\%embed_metadata\fP
+.IP \(bu 2
+\fI\%search\fP
+.IP \(bu 2
+\fI\%fts_index\fP
+.IP \(bu 2
+\fI\%fts_search\fP
+.UNINDENT
+.SH OPCIÓNS GLOBAIS
+.INDENT 0.0
+.TP
+.B \-\-help, \-h
+mostrar esta mensaxe de axuda e saír
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-library\-path, \-\-with\-library
+Camiño á biblioteca calibre. O predeterminado é usar o camiño almacenado na configuración. Tamén pode conectarse a un servidor de contido calibre para realizar accións en bibliotecas remotas. Para facelo, use un URL do formulario: \X'tty: link http://hostname:port/#library_id'\fI\%http://hostname:port/#library_id\fP\X'tty: link', por exemplo, \X'tty: link http://localhost:8080/#mylibrary'\fI\%http://localhost:8080/#mylibrary\fP\X'tty: link'\&. library_id é o ID da biblioteca á que queres conectarte no servidor de contido. Podes usar o valor especial library_id de \- para obter unha lista de ID de biblioteca dispoñibles no servidor. Para obter máis información sobre como configurar o acceso a través dun servidor de contido, consulte \X'tty: link https://manual.calibre-ebook.com/generated/en/calibredb.html'\fI\%https://manual.calibre\-ebook.com/generated/en/calibredb.html\fP\X'tty: link'\&.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-password
+Contrasinal para conectarse a un servidor de contido calibre. Para ler o contrasinal desde a entrada estándar, use o valor especial: <stdin>. Para ler o contrasinal dun ficheiro, use: <f:/path/to/file> (é dicir, <f: seguido da ruta completa ao ficheiro e un final >). Os corchetes angulares anteriores son necesarios, recorda escapar deles ou usar comiñas para o teu shell.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-timeout
+O tempo de espera, en segundos, ao conectarse a unha biblioteca de calibre a través da rede. O valor predeterminado é de dous minutos.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-username
+Nome de usuario para conectarse a un servidor de contido calibre
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-version
+mostrar o número de versión do programa e saír
+.UNINDENT
+.SH LIST
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb list [opcións]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Lista dos libros dispoñíbeis na base de datos do Calibre.
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-ascending
+Ordenar resultados en orde ascendente
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-fields, \-f
+Os campos que se mostrarán cando se listan libros na base de datos. Debe ser unha lista de campos separados por comas. Campos dispoñibles: author_sort, authors, comments, cover, formats, identifiers, isbn, languages, last_modified, pubdate, publisher, rating, series, series_index, size, tags, template, timestamp, title, uuid Predeterminado: %predeterminado. O campo especial «todos» pódese usar para seleccionar todos os campos. Ademais dos campos integrados anteriores, os campos personalizados tamén están dispoñibles como *field_name, por exemplo, para un campo personalizado #rating, use o nome: *rating
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-for\-machine
+Xera saída en formato JSON, que é máis axeitado para a análise de máquinas. Fai que se ignoren as opcións de ancho de liña e separador.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-limit
+O número máximo de resultados para mostrar. Por defecto: todos
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-line\-width, \-w
+A lonxitude máxima das liñas na saída. De modo predeterminado tómase a largura da pantalla.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-prefix
+O prefixo para todas as rutas de ficheiros. Por omisión é a ruta absoluta do cartafol da biblioteca.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-search, \-s
+Filtrar os resultados pola consulta de busca. Para o formato da consulta de busca, véxase a documentación relacionada no Manual de Usuario. O predeterminado e non filtrar.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-separator
+O texto usado para separar campos. Por omisión é un espazo.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-sort\-by
+O campo polo que ordenar os resultados. Podes especificar varios campos separándoos con comas. Campos dispoñibles: author_sort, authors, comments, cover, formats, identifiers, isbn, languages, last_modified, pubdate, publisher, rating, series, series_index, size, tags, template, timestamp, title, uuid Valor predeterminado: id
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-template
+O modelo a executar se «template» está na lista de campos. Teña en conta que os modelos ignóranse ao conectarse a un servidor calibre. Predeterminado: Ningún
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-template_file, \-t
+Ruta a un ficheiro que contén o modelo para executar se «template» está na lista de campos. Predeterminado: Ningún
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-template_heading
+Encabezamento para a columna do modelo. Predeterminado: template. Esta opción é ignorada se a opción \fI\%\-\-for\-machine\fP está definida
+.UNINDENT
+.SH ADD
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb engade [opcións] ficheiro1 ficheiro2 ficheiro3 ...
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Engadir os ficheiros especificados como libros na base de datos. Tamén pode especificar cartafoles, vexa as opcións relacionadas con cartafoles a seguir.
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-authors, \-a
+Establece os autores do(s) libro(s) engadido(s)
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-automerge, \-m
+Se se atopan libros con títulos e autores similares, combine os formatos (arquivos) entrantes automaticamente nos rexistros de libros existentes. Un valor de «ignorar» significa que se descartan os formatos duplicados. Un valor de «sobrescribir» significa que os formatos duplicados na biblioteca se sobrescriben cos ficheiros recén engadidos. Un valor de «new_record» significa que os formatos duplicados colócanse nun novo rexistro de libro.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-cover, \-c
+Camiño ata a portada para usar para o libro engadido
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-duplicates, \-d
+Engade libros á base de datos aínda que xa existan. A comparación realízase en función dos títulos dos libros e dos autores. Teña en conta que a opción \fI\%\-\-automerge\fP ten prioridade.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-empty, \-e
+Engadir libro en branco (sen formato)
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-identifier, \-I
+Establece os identificadores deste libro, p. ex. \-I asin:XXX \-I isbn:YYY
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-isbn, \-i
+Establece o ISBN do(s) libro(s) engadido(s)
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-languages, \-l
+Unha lista de idiomas separados por comas (o mellor é usar códigos de idioma ISO639, aínda que tamén se poden recoñecer algúns nomes de idiomas)
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-series, \-s
+Establece a serie do(s) libro(s) engadido(s)
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-series\-index, \-S
+Establece o número de serie do(s) libro(s) engadido(s)
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-tags, \-T
+Establece as etiquetas do(s) libro(s) engadido(s)
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-title, \-t
+Establece o título do(s) libro(s) engadido(s)
+.UNINDENT
+.SS ENGADIR DENDE CARTAFOLES
+.sp
+Opcións para controlar a adición de libros desde cartafoles. De forma predeterminada, só se engaden ficheiros que teñen extensións de tipos de ficheiros de libros electrónicos coñecidos.
+.INDENT 0.0
+.TP
+.B \-\-add
+Un patrón de nome de ficheiro (glob), os ficheiros que coincidan con este patrón engadiranse ao buscar ficheiros nos cartafoles, aínda que non sexan dun tipo de ficheiro de libro electrónico coñecido. Pódese especificar varias veces para varios patróns.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ignore
+Un paTrón de nome de ficheiro (glob), os ficheiros que coincidan con este patrón ignoraranse ao buscar ficheiros nos cartafoles. Pódese especificar varias veces para varios patróns. Por exemplo: *.pdf ignorará todos os ficheiros PDF
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-one\-book\-per\-directory, \-1
+Supoña que cada cartafol só ten un único libro lóxico e que todos os ficheiros nel son diferentes formatos de libros electrónicos dese libro
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-recurse, \-r
+Procesar cartafoles de forma recursiva
+.UNINDENT
+.SH REMOVE
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb eliminar ids
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Elimina os libros identificados por ID da base de datos. os ids deben ser unha lista separada por comas de números de identificación (podes obter números de identificación usando o comando de busca). Por exemplo, 23,34,57\-85 (ao especificar un intervalo, non se inclúe o último número do intervalo).
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-permanent
+Non use o Papeleira de reciclaxe
+.UNINDENT
+.SH ADD_FORMAT
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb add_format [opcións] id ebook_file
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Engade o libro electrónico en ebook_file aos formatos dispoñibles para o libro lóxico identificado por id. Podes obter a identificación usando o comando de busca. Se o formato xa existe, substitúese, a non ser que se especifique a opción non substituír.
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-as\-extra\-data\-file
+Engade o ficheiro como ficheiro de datos extra ao libro, non como formato de libro electrónico
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-dont\-replace
+Non substitúa o formato se xa existe
+.UNINDENT
+.SH REMOVE_FORMAT
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb remove_format [opcións] id fmt
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Elimina o formato fmt do libro lóxico identificado por id. Podes obter a identificación usando o comando de busca. fmt debería ser unha extensión de ficheiro como LRF ou TXT ou EPUB. Se o libro lóxico non ten fmt dispoñible, non faga nada.
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.SH SHOW_METADATA
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb show_metadata [opcións] id
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Mostra os metadatos almacenados na base de datos calibre para o libro identificado por id.
+id é un número de identificación do comando de busca.
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-as\-opf
+Imprimir os metadatos en formato OPF (XML)
+.UNINDENT
+.SH SET_METADATA
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb set_metadata [opcións] book_id [/path/to/metadata.opf]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Establece os metadatos almacenados na base de datos calibre para o libro identificado por
+book_id do ficheiro OPF metadata.opf. book_id é un número de identificación do libro de
+comando de busca. Podes ter unha idea rápida do formato OPF usando o
+\-\-as\-opf cambia ao comando show_metadata. Tamén pode configurar os metadatos de
+campos individuais coa opción \-\-field. Se usa a opción \-\-field, alí
+non é necesario especificar un ficheiro OPF.
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-field, \-f
+O campo a configurar. O formato é nome_campo:valor, por exemplo: \fI\%\-\-field\fP tags:tag1,tag2. Use \fI\%\-\-list\-fields\fP para obter unha lista de todos os nomes de campo. Podes especificar esta opción varias veces para establecer varios campos. Nota: para os idiomas debes utilizar os códigos de idioma ISO639 (por exemplo, en para inglés, fr para francés, etc.). Para os identificadores, a sintaxe é \fI\%\-\-field\fP identifiers:isbn:XXXX,doi:YYYYY. Para os campos booleanos (si/non) use verdadeiro e falso ou si e non.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-list\-fields, \-l
+Lista os nomes dos campos de metadatos que se poden usar coa opción \fB\-\-campo\fP
+.UNINDENT
+.SH EXPORT
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb export [opcións] ids
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Exporta os libros especificados por ids (unha lista separada por comas) ao sistema de ficheiros.
+A operación de exportación garda todos os formatos do libro, a súa portada e os metadatos (en
+un ficheiro OPF). Tamén se gardan os ficheiros de datos adicionais asociados co libro.
+Podes obter números de identificación do comando de busca.
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-all
+Exportar todos os libros da base de datos, facendo caso omiso da lista de identificacións.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-dont\-asciiize
+Fai que calibre converta todos os caracteres non ingleses en equivalentes en inglés para os nomes dos ficheiros. Isto é útil se se garda nun sistema de ficheiros herdado sen compatibilidade total con nomes de ficheiros Unicode. Se se especifica esta opción desactivase este comportamento.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-dont\-save\-cover
+Normalmente, calibre gardará a portada nun ficheiro separado xunto cos ficheiros reais do libro electrónico. Se se especifica esta opción desactivase este comportamento.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-dont\-save\-extra\-files
+Garda os ficheiros de datos asociados co libro ao gardar o libro Se se especifica esta opción desactivase este comportamento.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-dont\-update\-metadata
+Normalmente Calibre actualizará os metadatos dos ficheiros gardados segundo os datos da biblioteca de Calibre. Fai que o gardado en disco sexa máis lento. Se se especifica esta opción desactivase este comportamento.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-dont\-write\-opf
+Normalmente Calibre escribirá os metadatos nun fichero OPF separado, xunto cos ficheiros de libro electrónico. Se se especifica esta opción desactivase este comportamento.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-formats
+Lista de formatos, separados por comas, para gardar cada libro. Por omisión gárdanse todos os formatos dispoñíbeis.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-progress
+Informar do progreso
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-replace\-whitespace
+Substituír os espazos por suliñados.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-single\-dir
+Exportar todos os libros a un cartafol único
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-template
+O modelo para controlar o nome do ficheiro e a estrutura do cartafol dos ficheiros gardados. O predeterminado é «{author_sort}/{title}/{title} \- {authors}» que gardará os libros nun subcartafol por autor con nomes de ficheiro que conteñan título e autor. Os controis dispoñibles son: {author_sort, authors, id, isbn, languages, last_modified, pubdate, publisher, rating, series, series_index, tags, timestamp, title}
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-timefmt
+O formato no que se mostran as datas. %d \- día, %b \- mes, %m \- número do mes, %Y \- ano. O valor predeterminado é: %b, %Y
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-to\-dir
+Exportar os libros ao cartafol especificado. O valor predeterminado é .
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-to\-lowercase
+Converter as traxectorias a minúsculas.
+.UNINDENT
+.SH CATALOG
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+%pcatálogo rog /ruta/a/destino.(csv|epub|mobi|xml...) [opcións]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Exportar un catálogo no formato especificado pola extensión ruta/a/destino.
+As opcións controlan como se mostran as entradas na saída do catálogo xerado.
+Teña en conta que os distintos formatos de catálogo admiten diferentes conxuntos de opcións. Para
+ver as diferentes opcións, especifique o nome do ficheiro de saída e despois o
+\-\-help opción.
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-ids, \-i
+Lista de identificadores da base de datos, separadas por vírgulas, para o catálogo. Cando se declare, ignorarase \fI\%\-\-search\fP\&. Valor predeterminado: todas
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-search, \-s
+Filtrar los resultados segundo a busca. Para o formato da busca, vexa a documentación relativa a buscas no Manual de usuario. Valor predeterminado: sen filtrado
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-verbose, \-v
+Mostrar información de saída detallada. Útil para a depuración
+.UNINDENT
+.SS EPUB OPCIÓNS
+.INDENT 0.0
+.TP
+.B \-\-catalog\-title
+Título do catálogo xerado usado como título nos metadatos. Valor predeterminado: \fB\(aq\fP%defecto\fB\(aq\fP Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-cross\-reference\-authors
+Crea referencias cruzadas na sección Autores para libros con varios autores. Valor predeterminado: \fB\(aq\fP%defecto\fB\(aq\fP Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-debug\-pipeline
+Garda a saída das diferentes etapas da canalización de conversión no cartafol especificado. Útil se non está seguro en que fase do proceso de conversión se está a producir un erro. Valor predeterminado: \fB\(aq\fP%defecto\fB\(aq\fP Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-exclude\-genre
+Regex que describe etiquetas para excluír como xéneros. Valor predeterminado: «[.+]|^+$» exclúe as etiquetas entre corchetes, por exemplo. «[Proxecto Gutenberg]» e «+», a etiqueta predeterminada para os libros de lectura. Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-exclusion\-rules
+Especifica as regras utilizadas para excluír libros do catálogo xerado. O modelo para unha regra de exclusión é calquera (\fB\(aq\fP<rule name>\fB\(aq\fP,\fB\(aq\fPTags\fB\(aq\fP,\fB\(aq\fP<lista de etiquetas separadas por comas>\fB\(aq\fP) ou (\fB\(aq\fP<rule name>\fB\(aq\fP,\fB\(aq\fP<columna pernonalizada>\fB\(aq\fP,\fB\(aq\fP<patrón>\fB\(aq\fP). Por exemplo: ((\fB\(aq\fPLibros arquivados\fB\(aq\fP,\fB\(aq\fP#status\fB\(aq\fP,\fB\(aq\fPArquivado\fB\(aq\fP),) excluirá un libro cun valor de «Arquivado» na columna personalizada «status» (estado). Cando se definen varias regras, aplicaranse todas. Predeterminado: «((\fB\(aq\fPCatalogs\fB\(aq\fP,\fB\(aq\fPTags\fB\(aq\fP,\fB\(aq\fPCatalog\fB\(aq\fP),)» Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-generate\-authors
+Incluír a sección «Autores» no catálogo. Valor predeterminado: \fB\(aq\fP%defecto\fB\(aq\fP Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-generate\-descriptions
+Incluír a sección «Descricións» no catálogo. Valor predeterminado: \fB\(aq\fP%defecto\fB\(aq\fP Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-generate\-genres
+Incluír a sección «Xéneros» no catálogo. Valor predeterminado: \fB\(aq\fP%defecto\fB\(aq\fP Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-generate\-recently\-added
+Incluír a sección «Engadidos recentemente» no catálogo. Valor predeterminado: \fB\(aq\fP%defecto\fB\(aq\fP Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-generate\-series
+Incluír a sección «Serie» no catálogo. Valor predeterminado: \fB\(aq\fP%defecto\fB\(aq\fP Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-generate\-titles
+Incluír a sección «Títulos» no catálogo. Valor predeterminado: \fB\(aq\fP%defecto\fB\(aq\fP Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-genre\-source\-field
+Campo de orixe para a sección «Xéneros». Valor predeterminado: \fB\(aq\fP%defecto\fB\(aq\fP Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-header\-note\-source\-field
+Campo personalizado que contén texto da nota para inserir na cabeceira descrición. Valor predeterminado: \fB\(aq\fP%defecto\fB\(aq\fP Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-merge\-comments\-rule
+#<custom field>:[antes|despois]:[Verdadeiro|Falso] especificando: <custom field>Campo personalizado que contén notas para combinar cos comentarios [antes|despois] Colocación de notas con respecto aos comentarios [Verdadero|Falso] \- Insírese unha regra horizontal entre as notas e os comentarios Valor predeterminado: \fB\(aq\fP%defecto\fB\(aq\fP Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-output\-profile
+Especifica o perfil de saída. Nalgúns casos, é necesario un perfil de saída para optimizar o catálogo para o dispositivo. Por exemplo, \fB\(aq\fPkindle\fB\(aq\fP ou \fB\(aq\fPkindle_dx\fB\(aq\fP crea unha táboa de contidos estruturada con seccións e artigos. Valor predeterminado: \fB\(aq\fP%defecto\fB\(aq\fP Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-prefix\-rules
+Especifica as regras utilizadas para incluír prefixos que indican libros lidos, elementos da lista de desexos e outros prefixos especificados polo usuario. O modelo dunha regra de prefixo é (\fB\(aq\fP<rule name>\fB\(aq\fP,\fB\(aq\fP<source field>\fB\(aq\fP,\fB\(aq\fP<pattern>\fB\(aq\fP,\fB\(aq\fP<prefix>\fB\(aq\fP). Cando se definen varias regras, utilizarase a primeira regra de coincidencia. Predeterminado: «((\fB\(aq\fPRead books\fB\(aq\fP,\fB\(aq\fPtags\fB\(aq\fP,\fB\(aq\fP+\fB\(aq\fP,\fB\(aq\fP✓\fB\(aq\fP),(\fB\(aq\fPWishlist item\fB\(aq\fP,\fB\(aq\fPtags\fB\(aq\fP,\fB\(aq\fPWishlist\fB\(aq\fP,\fB\(aq\fP×\fB\(aq\fP))» Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-preset
+Use un predefinido con nome creado co creador de catálogos da GUI. Un valor predeterminado especifica todos os axustes para crear un catálogo. Valor predeterminado: \fB\(aq\fP%defecto\fB\(aq\fP Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-thumb\-width
+Indicación de tamaño (en polgadas) para as portadas de libros no catálogo. Rango: 1,0 \- 2,0 Valor predeterminado: \fB\(aq\fP%defecto\fB\(aq\fP Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-use\-existing\-cover
+Substitúe a portada existente ao xerar o catálogo. Valor predeterminado: \fB\(aq\fP%defecto\fB\(aq\fP Aplícase a: formatos de saída AZW3, EPUB, MOBI
+.UNINDENT
+.SH SAVED_SEARCHES
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb saved_searches [opcións] (lista|engadir|eliminar)
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Xestiona as buscas gardadas almacenadas nesta base de datos.
+Se tentas engadir unha consulta cun nome que xa existe, será
+substituído.
+.sp
+Sintaxe para engadir:
+.sp
+calibredb \fBsaved_searches\fP engade search_name search_expression
+.sp
+Sintaxe para eliminar:
+.sp
+calibredb save_searches eliminar search_name
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.SH ADD_CUSTOM_COLUMN
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb add_custom_column [opcións] etiqueta nome tipo\-de\-dato
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Crea un campo personalizado. A «etiqueta» é o nome amigábel  da columna. Non debería
+conter espazos nin vírgulas. O «nome» é o nome do campo que se amosará.
+O «tipo\-de\-dato» pode ser un dos seguintes: bool, comments, composite, datetime, enumeration, float, int, rating, series, text
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-display
+Un dicionario de opcións para personalizar como se interpretarán os datos desta columna. Esta é unha cadea JSON. Para as columnas de enumeración, use \fI\%\-\-display\fP\fB\(dq\fP{\e \fB\(dq\fPenum_values\e \fB\(dq\fP:[\e \fB\(dq\fPval1\e \fB\(dq\fP, \e \fB\(dq\fPval2\e \fB\(dq\fP]}\fB\(dq\fP Hai moitas opcións que poden entrar na variable de visualización. As opcións por tipo de columna son: composto: composite_template, composite_sort, make_category,contains_html, use_decorations datetime: data_format enumeración: valores_enum, cores_enum, use_decorations int, float: formato_número texto: is_names, use_decorations  A mellor forma de atopar combinacións legais é crear unha columna personalizada do tipo apropiado na GUI e despois mirar o OPF de copia de seguridade dun libro (asegúrese de que se creou un novo OPF desde que se engadiu a columna). Verá o JSON para a «visualización» da nova columna no OPF.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-is\-multiple
+Esta columna almacena datos de etiquetas (valores separados por comas). Só se aplica se el tipo de dato é texto.
+.UNINDENT
+.SH CUSTOM_COLUMNS
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb custom_columns [opcións]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Lista de columnas personalizadas dispoñibles. Mostra as etiquetas e os ID das columnas.
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-details, \-d
+Mostrar detalles das columnas.
+.UNINDENT
+.SH REMOVE_CUSTOM_COLUMN
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb remove_custom_column [opcións] etiqueta
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Elimina a columna personalizada identificada pola etiqueta. Podes ver dispoñibles
+columnas co comando custom_columns.
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-force, \-f
+Non pedir confirmación
+.UNINDENT
+.SH SET_CUSTOM
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb set_custom [opcións] valor de id de columna
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Establece o valor dunha columna personalizada para o libro identificado por id.
+Podes obter unha lista de IDs usando o comando de busca.
+Podes obter unha lista de nomes de columnas personalizadas usando custom_columns
+mando.
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-append, \-a
+Se a columna almacena valores múltiplos, engadir os valores especificados aos existentes no canto de substituílos.
+.UNINDENT
+.SH RESTORE_DATABASE
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb restore_database [opcións]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Restaura esta base de datos a partir dos metadatos almacenados nos ficheiros OPF de cada un
+carpeta da biblioteca calibre. Isto é útil se o teu ficheiro metadata.db
+foi corrompido.
+.sp
+AVISO: Este comando rexenera completamente a súa base de datos. Vai perder
+todas as buscas gardadas, categorías de usuarios, plugboards, conversión almacenada por libro
+configuracións e receitas personalizadas. Os metadatos restaurados só serán tan precisos como
+o que se atopa nos ficheiros OPF.
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-really\-do\-it, \-r
+Facer a recuperación. Esta orde no se executará a menos que se especifique esta opción.
+.UNINDENT
+.SH CHECK_LIBRARY
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb check_library [opcións]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Realiza algunhas comprobacións no sistema de ficheiros que contén a biblioteca. O resultado é invalid_titles, extra_titles, invalid_authors, extra_authors, missing_formats, extra_formats, extra_files, missing_covers, extra_covers, failed_folders
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-csv, \-c
+Saída en CSV
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ignore_extensions, \-e
+Lista de extensións para ignorar separadas por vírgulas. Valor predeterminado: todas
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ignore_names, \-n
+Lista de nomes para ignorar separados por vírgulas. Valor predeterminado: todas
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-report, \-r
+Lista de resultados separados por comas Valor predeterminado: all
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-vacuum\-fts\-db
+Aspirar a base de datos de busca de texto completo. Isto pode ser moi lento e consumir memoria, dependendo do tamaño da base de datos.
+.UNINDENT
+.SH LIST_CATEGORIES
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb list_categories [opcións]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Elaborar un informe da información da categoría na base de datos. O
+a información é o equivalente ao que se mostra no navegador de etiquetas.
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-categories, \-r
+Lista separada por comas dos nomes das categorías a consultar. Valor predeterminado: todos
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-csv, \-c
+Saída en CSV
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-dialect
+O tipo de ficheiro CSV que se vai producir. Opcións: excel, excel\-tab, unix
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-item_count, \-i
+Xerar na saída só o número de elementos nunha categoría en vez de cantas veces aparece por elemento na categoría
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-width, \-w
+A lonxitude máxima das liñas na saída. De modo predeterminado tómase a largura da pantalla.
+.UNINDENT
+.SH BACKUP_METADATA
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb backup_metadata [opcións]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Fai unha copia de seguranza dos metadatos almacenados na base de datos en ficheiros OPF individuais de cada un dos
+cartafoles de libros. Isto normalmente ocorre automaticamente, pero pode executalo
+comando para forzar a rexeneración dos ficheiros OPF, coa  \-\-opción todos.
+.sp
+Teña en conta que normalmente non é necesario facelo, xa que se fai unha copia de seguranza dos ficheiros OPF
+automaticamente, cada vez que se cambian os metadatos.
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-all
+Normalmente, este comando só funciona en libros que teñen ficheiros OPF desactualizados. Esta opción fai que funcione en todos os libros.
+.UNINDENT
+.SH CLONE
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb clone ruta/a/novo/biblioteca
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Crea un clon da biblioteca actual. Isto crea unha nova biblioteca baleira que ten todos os elementos
+mesmas columnas personalizadas, bibliotecas virtuais e outras opcións que a biblioteca actual.
+.sp
+A biblioteca clonada non conterá ningún libro. Se queres crear un duplicado completo, incluído
+todos os libros, entón simplemente use as ferramentas do sistema de ficheiros para copiar o cartafol da biblioteca.
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.SH EMBED_METADATA
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb embed_metadata [opcións] book_id
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Actualiza os metadatos dos ficheiros de libros reais almacenados na biblioteca calibre desde
+os metadatos na base de datos calibre. Normalmente, os metadatos só se actualizan cando
+exportando ficheiros desde calibre, este comando é útil se queres que o fagan
+ser actualizado no seu lugar. Teña en conta que os diferentes formatos de ficheiro admiten cantidades diferentes
+de metadatos. Podes usar o valor especial «all» para book_id para actualizar os metadatos
+en todos os libros. Tamén podes especificar moitos ID de libros separados por espazos e intervalos de ID
+separados por guións. Por exemplo: rog \fBembed_metadata\fP 1 2 10\-15 23
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-only\-formats, \-f
+Actualiza só os metadatos en ficheiros do formato especificado. Especifícao varias veces para varios formatos. Por defecto, todos os formatos actualízanse.
+.UNINDENT
+.SH SEARCH
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb search [opcións] expresión de busca
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Busca na biblioteca o termo de busca especificado, devolvendo unha coma separada
+lista de ID de libros que coinciden coa expresión de busca. O formato de saída é útil
+para alimentar outros comandos que aceptan unha lista de IDs como entrada.
+.sp
+A expresión de busca pode ser calquera cousa desde a poderosa consulta de busca de calibre
+idioma, por exemplo: calibredb \fBsearch\fP author:asimov \(aqtitle:\(dqi robot\(dq\(aq
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-limit, \-l
+O número máximo de resultados a devolver. O predeterminado son todos os resultados.
+.UNINDENT
+.SH FTS_INDEX
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb fts_index [opcións] enable/disable/status/reindex
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Controle o proceso de indexación da busca de texto completo.
+.sp
+enable
+Activa a indexación FTS para esta biblioteca
+disable
+Desactiva a indexación FTS para esta biblioteca
+status
+Mostra o estado actual da indexación
+reindex
+Pódese usar para reindexar libros ou
+toda a biblioteca. Para reindexar determinados libros
+especifique os ID do libro como argumentos adicionais despois do
+comando reindex. Se non se especifican ID de libro o
+toda a biblioteca está reindexada.
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-indexing\-speed
+Velocidade de indexación. Utilízao rápido para indexar rápido usando todos os recursos do teu ordenador e lento para indexar menos recursos. Teña en conta que a velocidade restablece a baixa despois de cada invocación.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-wait\-for\-completion
+Agarda ata que todos os libros estean indexados, mostrando o progreso da indexación periodicamente
+.UNINDENT
+.SH FTS_SEARCH
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb fts_search [opcións] expresión de busca
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Fai unha busca de texto completo en toda a biblioteca ou nun subconxunto dela.
+.sp
+Sempre que lle pases argumentos a calibredb que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.INDENT 0.0
+.TP
+.B \-\-do\-not\-match\-on\-related\-words
+Coincide só con palabras exactas non relacionadas. Polo tanto, a corrección non coincidirá coa corrección.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-include\-snippets
+Inclúe fragmentos do texto que rodea cada coincidencia. Teña en conta que isto fai que a busca sexa moito máis lenta.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-indexing\-threshold
+Canto da biblioteca debe estar indexada antes de permitir a busca, como porcentaxe. O valor predeterminado é 90
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-match\-end\-marker
+O marcador usado para indicar o final dunha palabra coincidente dentro dun fragmento
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-match\-start\-marker
+O marcador usado para indicar o inicio dunha palabra coincidente dentro dun fragmento
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-output\-format
+O formato no que se mostrarán os resultados da busca. Ou «texto» para o texto simple ou «json» para a saída JSON.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-restrict\-to
+Restrinxa os libros buscados, xa sexa mediante unha expresión de busca ou identificadores. Por exemplo: ids:1,2,3 para restrinxir mediante ids ou search:tag:foo para restrinxir a libros que teñan a etiqueta foo.
+.UNINDENT
+.SH AUTHOR
+Kovid Goyal
+.SH COPYRIGHT
+Kovid Goyal
+.\" Generated by docutils manpage writer.
+.

@@ -1,0 +1,17 @@
+[
+  {
+    "upstream_path": "sip-6.8.6/LICENSE",
+    "notice_file": "0001-LICENSE.txt",
+    "sha256": "3859cfca971e429d6b79bdfeb1dc9e43aa9592f7295bf28fdd62824097909383"
+  },
+  {
+    "upstream_path": "sip-6.8.6/sipbuild/module/source/12/LICENSE",
+    "notice_file": "0002-LICENSE.txt",
+    "sha256": "3859cfca971e429d6b79bdfeb1dc9e43aa9592f7295bf28fdd62824097909383"
+  },
+  {
+    "upstream_path": "sip-6.8.6/sipbuild/module/source/13/LICENSE",
+    "notice_file": "0003-LICENSE.txt",
+    "sha256": "3859cfca971e429d6b79bdfeb1dc9e43aa9592f7295bf28fdd62824097909383"
+  }
+]

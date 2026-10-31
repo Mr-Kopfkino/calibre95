@@ -1,0 +1,269 @@
+.\" Man page generated from reStructuredText.
+.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.TH "CALIBRE-SERVER" "1" "helmikuuta 14, 2025" "7.26.0" "calibre"
+.SH NAME
+calibre-server \- calibre-server
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibre\-server [options] [path to library folder...]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Käynnistä calibren sisältöpalvelin. Calibre Content \-palvelin esittää
+calibre\-kirjastot internetin kautta. Voit määrittää polun kirjastoon
+kansiot argumentteina \fBcalibre\-server\fP\-komentoon. Jos et määritä mitään polkuja, kaikkia
+kirjastoja, jotka calibren pääohjelma tuntee, käytetään.
+.sp
+Aina kun annat \fBcalibre\-server\fP:lle argumentteja, joissa on välilyöntejä, sulje argumentit lainausmerkkeihin. Esimerkiksi: \(dq/some path/with spaces\(dq
+.SH [VALINNAT]
+.INDENT 0.0
+.TP
+.B \-\-access\-log
+Polku käyttöoikeuslokitiedostoon. Tämä loki sisältää tietoja asiakkaista, jotka muodostavat yhteyden palvelimeen ja tekevät pyyntöjä. Oletusarvoisesti pääsylokia ei tehdä.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ajax\-timeout
+Aika (sekunteina), jonka kuluessa palvelimelta odotetaan vastausta kyselyjä tehtäessä.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-auth\-mode
+Valitse käytettävä todennustyyppi.  Asettaa palvelimen käyttämän HTTP\-todennustilan. Aseta arvoksi \fB\(dq\fPbasic\fB\(dq\fP, jos asetat tämän palvelimen SSL\-välityspalvelimen taakse. Muussa tapauksessa jätä arvoksi \fB\(dq\fPauto\fB\(dq\fP, joka käyttää \fB\(dq\fPbasic\fB\(dq\fP\-tunnistusta, jos SSL on määritetty, muuten se käyttää \fB\(dq\fPdigest\fB\(dq\fP\-tunnistusta.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-auto\-reload
+Lataa palvelin automaattisesti uudelleen, kun lähdekoodi muuttuu. Hyödyllinen kehitystyössä. Myös sammutusaikakatkaisulle kannattaa määrittää pieni arvo.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ban\-after
+Kieltoon liittyvien kirjautumisvirheiden määrä.     Kirjautumishäiriöiden määrä, jonka jälkeen IP\-osoite kielletään
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ban\-for
+Kiellä IP\-osoitteet, joilla on toistuvia kirjautumishäiriöitä.      Kieltää tilapäisesti pääsyn IP\-osoitteilta, joilla on toistuvia kirjautumishäiriöitä määritetyn minuuttimäärän aikana. Hyödyllinen salasanojen arvausyritysten estämiseksi. Jos arvoksi asetetaan nolla, estoja ei aseteta.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-book\-list\-mode
+Valitse kirjaluettelon oletustila.  Aseta oletuskirjaluettelotila, jota käytetään uusille käyttäjille. Yksittäiset käyttäjät voivat ohittaa oletusarvon omissa asetuksissaan. Oletuksena käytetään kansiruutua.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-compress\-min\-size
+Vähimmäiskoko, jonka kohdalla vastauksissa käytetään tiedonpakkausta (tavuina).
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-custom\-list\-template
+Polku JSON\-tiedostoon, joka sisältää mukautetun kirjaluettelotilan mallin. Helpoin tapa luoda tällainen mallitiedosto on siirtyä kohtaan Asetukset\-> Jakaminen verkon kautta\-> Kirjaluettelomalli Calibressä, luoda malli ja viedä se.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-daemonize
+Suorita prosessi taustalla demonina (vain Linux).
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-displayed\-fields
+Rajoita näytettäviä käyttäjän määrittämiä kenttiä.  Pilkulla erotettu luettelo käyttäjän määrittämistä metadatakentistä, jotka sisältöpalvelin näyttää /opds\- ja /mobile\-näkymissä. Jos määrität tämän vaihtoehdon, luettelon ulkopuolisia kenttiä ei näytetä. Esimerkiksi: my_rating,my_tags
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-allow\-socket\-preallocation, \-\-disable\-allow\-socket\-preallocation
+Socketin esivaraus, esimerkiksi systemd:n socket\-aktivoinnilla. Oletusarvoisesti tämä vaihtoehto on käytössä.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-auth, \-\-disable\-auth
+Salasanapohjainen todennus palvelimeen pääsemiseksi.        Normaalisti palvelin on rajoittamaton, joten kuka tahansa voi käyttää sitä. Voit rajoittaa pääsyn ennalta määritettyihin käyttäjiin tällä vaihtoehdolla. Oletuksena tämä vaihtoehto on poistettu käytöstä.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-fallback\-to\-detected\-interface, \-\-disable\-fallback\-to\-detected\-interface
+Palaa automaattisesti havaittuun liitäntään.        Jos palvelin ei jostain syystä pysty sitoutumaan listen_on\-vaihtoehdossa määritettyyn rajapintaan, se yrittää löytää rajapinnan, joka muodostaa yhteyden ulkomaailmaan, ja sitoutuu siihen. Oletusarvoisesti tämä vaihtoehto on käytössä.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-local\-write, \-\-disable\-local\-write
+Salli muutosten tekeminen paikallisille yhteyksille, joita ei ole todennettu.       Jos et ota todennusta käyttöön, palvelin toimii tavallisesti vain lukutilassa, jotta nimettömät käyttäjät eivät voi tehdä muutoksia calibre\-kirjastoihin. Tämän vaihtoehdon avulla kuka tahansa, joka muodostaa yhteyden samalta tietokoneelta, jolla palvelin toimii, voi tehdä muutoksia. Tämä on hyödyllistä, jos haluat käyttää palvelinta ilman todennusta, mutta käyttää calibredb:tä silti muutosten tekemiseen calibre\-kirjastoihin. Huomaa, että tämän vaihtoehdon ottaminen käyttöön tarkoittaa, että mikä tahansa tietokoneella käynnissä oleva ohjelma voi tehdä muutoksia calibre\-kirjastoihin. Oletuksena tämä vaihtoehto on poistettu käytöstä.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-log\-not\-found, \-\-disable\-log\-not\-found
+HTTP 404 (ei löydy) \-pyyntöjen kirjaaminen.         Normaalisti palvelin kirjaa kaikki HTTP\-pyynnöt, jotka koskevat resursseja, joita ei löydy. Tämä voi tuottaa paljon lokiroskapostia, jos palvelimesi on bottien kohteena. Voit poistaa sen käytöstä tällä vaihtoehdolla. Oletusarvoisesti tämä vaihtoehto on käytössä.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-use\-bonjour, \-\-disable\-use\-bonjour
+Ilmoita OPDS\-syötteet BonJourin kautta.     Ilmoita OPDS\-syötteet BonJour\-palvelun kautta, jotta OPDS\-pohjaiset lukusovellukset voivat tunnistaa palvelimen ja muodostaa siihen yhteyden automaattisesti. Oletusarvoisesti tämä vaihtoehto on käytössä.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-use\-sendfile, \-\-disable\-use\-sendfile
+Nollakopiointi tiedoston siirrot lisäävät suorituskykyä.    Tämä käyttää ytimen sisäisiä nollakopiointisiirtoja, kun tiedostoja lähetetään verkon kautta, mikä parantaa suorituskykyä. Se voi kuitenkin aiheuttaa korruptoituneita tiedostojen siirtoja joissakin viallisissa tiedostojärjestelmissä. Jos tiedostojen siirrot ovat korruptoituneita, kytke se pois päältä. Oletusarvoisesti tämä vaihtoehto on käytössä.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-help, \-h
+näytä tämä ohjeviesti ja poistu
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ignored\-fields
+Ohitetut käyttäjän määrittämät metatietokentät.     Pilkulla erotettu luettelo käyttäjän määrittämistä metatietokentistä, joita sisältöpalvelin ei näytä /opds\- ja /mobile\-näkymissä. Esimerkiksi: my_rating,my_tags
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-listen\-on
+Rajapinta, jolla yhteyksiä kuunnellaan.     Oletuksena on kuunnella kaikkia käytettävissä olevia IPv6\- ja IPv4\-rajapintoja. Voit muuttaa tämän esimerkiksi muotoon \fB\(dq\fP127.0.0.1\fB\(dq\fP, jos haluat kuunnella vain IPv4\-yhteyksiä paikallisesta koneesta, tai \fB\(dq\fP0.0.0.0\fB\(dq\fP, jos haluat kuunnella kaikkia saapuvia IPv4\-yhteyksiä.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-log
+Polku palvelimen lokitiedostoon. Tämä loki sisältää palvelimen tietoja ja virheitä, ei käyttöpäiväkirjoja. Oletusarvoisesti se kirjoitetaan stdoutiin.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-manage\-users
+Hallitse tietokantaa käyttäjistä, joilla on oikeus muodostaa yhteys tähän palvelimeen. Voit käyttää sitä automaattisessa tilassa lisäämällä \-\-. Katso lisätietoja osoitteesta calibre\-server \fI\%\-\-manage\-users\fP \fB\-\-\fP help. Katso myös vaihtoehto \fI\%\-\-userdb\fP\&.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-header\-line\-size
+Yksittäisen HTTP\-otsikon enimmäiskoko (KB).
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-job\-time
+Tehtäväprosessien enimmäisaika.     Tehtäväprosessien sallittu enimmäiskesto (minuutteina). Asetetaan nollaan, jos rajoitusta ei ole.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-jobs
+Tehtäväprosessien enimmäismäärä.    Tehtäväprosessit käynnistetään tarpeen mukaan, ja niitä käytetään suuriin tehtäviin, kuten kirjan valmisteluun katselua varten, kirjojen lisäämiseen, muuntamiseen jne. Tavallisesti tällaisten prosessien enimmäismäärä perustuu suorittimen ytimien määrään. Voit hallita sitä tällä asetuksella.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-log\-size
+Lokitiedoston enimmäiskoko (MB).    Palvelimen tuottamien lokitiedostojen enimmäiskoko. Kun loki kasvaa tätä suuremmaksi, se kiertyy automaattisesti. Aseta nollaksi, jos haluat poistaa lokin pyörittämisen käytöstä.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-opds\-items
+Kirjojen enimmäismäärä OPDS\-syötteissä.     Kirjojen enimmäismäärä, jonka palvelin palauttaa yhdessä OPDS\-hankintasyötteessä.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-opds\-ungrouped\-items
+Ryhmittämättömien kohteiden enimmäismäärä OPDS\-syötteissä.  Ryhmittele kohteet kategorioihin, kuten kirjoittaja/tagit alkukirjaimen mukaan, kun kohteita on enemmän kuin tämä määrä. Nollan asettaminen poistaa käytöstä.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-request\-body\-size
+Palvelimelle ladattavien tiedostojen suurin sallittu koko (MB).
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-num\-per\-page
+Yhdellä sivulla näytettävien kirjojen määrä.        Selaimessa yhdellä sivulla näytettävien kirjojen määrä.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-pidfile
+Kirjoita prosessin PID määritettyyn tiedostoon
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-port
+Portti, jossa yhteyksiä kuunnellaan.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-search\-the\-net\-urls
+Polku JSON\-tiedostoon, joka sisältää URL\-osoitteet \fB\(dq\fPEtsi internetistä\fB\(dq\fP \-toimintoa varten. Helpoin tapa luoda tällainen tiedosto on mennä kohtaan Asetukset\-> Jakaminen netin kautta\-> Etsi internetistä Calibressa, luoda URL\-osoitteet ja viedä ne.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-shutdown\-timeout
+Kokonaisaika sekunteina odotettaessa puhdasta sammutusta.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ssl\-certfile
+Polku SSL\-sertifikaattitiedostoon.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ssl\-keyfile
+Polku SSL:n yksityiseen avaintiedostoon.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-timeout
+Aika (sekunteina), jonka jälkeen käyttämätön yhteys suljetaan.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-trusted\-ips
+Salli tiettyjen IP\-osoitteiden ei\-autentikoitujen yhteyksien tehdä muutoksia.       Jos et ota todennusta käyttöön, palvelin toimii tavallisesti vain lukutilassa, jotta nimettömät käyttäjät eivät voi tehdä muutoksia calibre\-kirjastoihin. Tämä vaihtoehto sallii kaikkien määritetyistä IP\-osoitteista tulevien yhteydenottajien tehdä muutoksia. Täytyy olla pilkulla erotettu luettelo osoite\- tai verkkomäärityksistä. Tämä on hyödyllinen, jos haluat käyttää palvelinta ilman todennusta, mutta käyttää calibredb:tä silti muutosten tekemiseen calibre\-kirjastoihin. Huomaa, että tämän vaihtoehdon ottaminen käyttöön tarkoittaa, että kuka tahansa, joka muodostaa yhteyden määritetyistä IP\-osoitteista, voi tehdä muutoksia calibre\-kirjastoihin.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-url\-prefix
+Kaikkiin URL\-osoitteisiin liitettävä etuliite.      Hyödyllinen, jos haluat käyttää tätä palvelinta käänteisen välityspalvelimen takana. Käytä esimerkiksi URL\-osoitteen etuliitteenä /calibre.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-userdb
+Polku todennuksessa käytettävään käyttäjätietokantaan. Tietokanta on SQLite\-tiedosto. Sen luomiseen käytetään \fI\%\-\-manage\-users\fP\&. Voit lukea lisää käyttäjien hallinnasta osoitteessa: \X'tty: link https://manual.calibre-ebook.com/server.html#managing-user-accounts-from-the-command-line-only'\fI\%https://manual.calibre\-ebook.com/server.html#managing\-user\-accounts\-from\-the\-command\-line\-only\fP\X'tty: link'
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-version
+näytä ohjelman versionumero ja poistu
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-worker\-count
+Pyyntöjen käsittelyyn käytettävien työsäikeiden määrä.
+.UNINDENT
+.SH AUTHOR
+Kovid Goyal
+.SH COPYRIGHT
+Kovid Goyal
+.\" Generated by docutils manpage writer.
+.

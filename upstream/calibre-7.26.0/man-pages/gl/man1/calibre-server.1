@@ -1,0 +1,269 @@
+.\" Man page generated from reStructuredText.
+.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.TH "CALIBRE-SERVER" "1" "febreiro 14, 2025" "7.26.0" "calibre"
+.SH NAME
+calibre-server \- calibre-server
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibre\-server [opcións] [ruta ao cartafol da biblioteca...]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Inicia o servidor de contido calibre. O servidor de contido calibre expón o teu
+bibliotecas de calibre en internet. Podes especificar o camiño á biblioteca
+carpetas como argumentos para \fBcalibre\-server\fP\&. Se non especifica ningún camiño, todos os
+utilizaranse bibliotecas que coñece o programa principal calibre.
+.sp
+Sempre que lle pases argumentos a \fBcalibre\-server\fP que teñan espazos neles, pon os argumentos entre comiñas. Por exemplo: «/some path/with spaces»
+.SH [OPCIÓNS]
+.INDENT 0.0
+.TP
+.B \-\-access\-log
+Ruta ao ficheiro de rexistro de acceso. Este rexistro contén información sobre os clientes que se conectan ao servidor e realizan solicitudes. Por defecto, non se realiza ningún rexistro de acceso.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ajax\-timeout
+Tempo (en segundos) para esperar unha resposta do servidor ao facer consultas.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-auth\-mode
+Escolla o tipo de autenticación empregada.  Establece o modo de autenticación HTTP utilizado polo servidor. Establécese como «básico» se está a poñer este servidor detrás dun proxy SSL. En caso contrario, déixao como «auto», que usará «básico» se se configura SSL, se non, utilizará «digest».
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-auto\-reload
+Recarga automaticamente o servidor cando cambia o código fonte. Útil para o desenvolvemento. Tamén debes especificar un valor pequeno para o tempo de espera de apagado.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ban\-after
+Número de erros de inicio de sesión para a prohibición.     O número de erros de inicio de sesión despois dos cales se prohibe un enderezo IP
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ban\-for
+Prohibe os enderezos IP que teñan erros de inicio de sesión repetidos.      Prohibe temporalmente o acceso aos enderezos IP que teñan erros de inicio de sesión repetidos durante o número de minutos especificado. Útil para evitar intentos de adiviñar contrasinais. Se se establece en cero, non se fai ningunha prohibición.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-book\-list\-mode
+Escolla o modo de lista de libros predeterminado.   Establece o modo de lista de libros predeterminado que se utilizará para os novos usuarios. Os usuarios individuais poden anular o valor predeterminado na súa propia configuración. O predeterminado é usar unha reixa de cobertura.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-compress\-min\-size
+Tamaño mínimo para o que as respostas usan compresión de datos (en bytes).
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-custom\-list\-template
+Ruta a un ficheiro JSON que contén un modelo para o modo de lista de libros personalizado. O xeito máis sinxelo de crear un ficheiro de modelo deste tipo é ir a Preferencias\-> Compartir na rede\-> Modelo de lista de libros en calibre, crear o modelo e exportalo.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-daemonize
+Executar o proceso en segundo plano como un daemon (só Linux).
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-displayed\-fields
+Restrinxir campos definidos polo usuario mostrados.         Lista separada por comas de campos de metadatos definidos polo usuario que mostrará o servidor de contido nas vistas /opds e /mobile. Se especifica esta opción, non se mostrarán os campos que non figuren nesta lista. Por exemplo: my_rating,my_tags
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-allow\-socket\-preallocation, \-\-disable\-allow\-socket\-preallocation
+A asignación previa de socket, por exemplo, coa activación de socket systemd. Por defecto, esta opción está activada.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-auth, \-\-disable\-auth
+Autenticación baseada en contrasinal para acceder ao servidor.      Normalmente, o servidor non está restrinxido, permitindo a calquera acceder a el. Pode restrinxir o acceso a usuarios predefinidos con esta opción. Por defecto, esta opción está desactivada.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-fallback\-to\-detected\-interface, \-\-disable\-fallback\-to\-detected\-interface
+Retorno á interface detectada automaticamente.      Se por algún motivo o servidor non pode vincularse á interface especificada na opción listen_on, tentará detectar unha interface que se conecte co mundo exterior e vincularse a ela. Por defecto, esta opción está activada.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-local\-write, \-\-disable\-local\-write
+Permitir que as conexións locais non autenticadas fagan cambios.    Normalmente, se non activas a autenticación, o servidor funciona en modo de só lectura, para non permitir que usuarios anónimos fagan cambios nas túas bibliotecas de calibre. Esta opción permite que calquera persoa que se conecte desde o mesmo ordenador no que se está a executar o servidor faga cambios. Isto é útil se queres executar o servidor sen autenticación pero aínda usa calibredb para facer cambios nas túas bibliotecas de calibre. Teña en conta que activar esta opción significa que calquera programa en execución no ordenador pode facer cambios nas súas bibliotecas de calibre. Por defecto, esta opción está desactivada.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-log\-not\-found, \-\-disable\-log\-not\-found
+Rexistrar solicitudes HTTP 404 (non atopadas).      Normalmente, o servidor rexistra todas as solicitudes HTTP dos recursos que non se atopan. Isto pode xerar moito spam de rexistro, se o teu servidor está dirixido por bots. Use esta opción para desactivalo. Por defecto, esta opción está activada.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-use\-bonjour, \-\-disable\-use\-bonjour
+Anuncia fontes OPDS a través de BonJour.    Anuncia as fontes de OPDS a través do servizo BonJour, para que as aplicacións de lectura baseadas en OPDS poidan detectar e conectarse ao servidor automaticamente. Por defecto, esta opción está activada.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-use\-sendfile, \-\-disable\-use\-sendfile
+Transferencia de ficheiros sen copia para aumentar o rendemento.    Isto usará transferencias no núcleo sen copia cando envíe ficheiros pola rede, aumentando o rendemento. Non obstante, pode causar transferencias de ficheiros danadas nalgúns sistemas de ficheiros rotos. Se experimenta transferencias de ficheiros danadas, desactívaa. Por defecto, esta opción está activada.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-help, \-h
+mostrar esta mensaxe de axuda e saír
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ignored\-fields
+Ignoráronse os campos de metadatos definidos polo usuario.  Lista separada por comas de campos de metadatos definidos polo usuario que o servidor de contido non mostrará nas vistas /opds e /mobile. Por exemplo: my_rating,my_tags
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-listen\-on
+A interface na que escoitar as conexións.   O predeterminado é escoitar en todas as interfaces IPv6 e IPv4 dispoñibles. Podes cambiar isto a, por exemplo, «127.0.0.1» para escoitar só as conexións IPv4 desde a máquina local, ou a «0.0.0.0» para escoitar todas as conexións IPv4 entrantes.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-log
+Ruta ao ficheiro de rexistro para o rexistro do servidor. Este rexistro contén información do servidor e erros, non rexistros de acceso. Por defecto está escrito en stdout.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-manage\-users
+Xestiona a base de datos de usuarios autorizados a conectarse a este servidor. Podes usalo en modo automatizado engadindo un \-\-. Consulte calibre\-server \fI\%\-\-manage\-users\fP \fB\-\-\fP help para obter máis información. Consulte tamén a opción \fI\%\-\-userdb\fP\&.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-header\-line\-size
+Max. size of single HTTP header (in KB).
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-job\-time
+Tempo máximo para procesos laborais.        Cantidade máxima de tempo que se permite executar os procesos de traballo (en minutos). Establece a cero sen límite.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-jobs
+Número máximo de procesos de traballo.      Os procesos de traballo lánzanse segundo sexa necesario e utilízanse para traballos grandes como preparar un libro para ver, engadir libros, converter, etc. Normalmente, o máximo. número de tales procesos baséase no número de núcleos de CPU. Podes controlalo mediante esta configuración.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-log\-size
+Máx. tamaño do ficheiro de rexistro (en MB).        O tamaño máximo dos ficheiros de rexistro xerados polo servidor. Cando o rexistro se fai máis grande que este tamaño, rótase automaticamente. Establécese en cero para desactivar a rotación do rexistro.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-opds\-items
+Número máximo de libros en fontes OPDS.     O número máximo de libros que devolverá o servidor nun único feed de adquisición de OPDS.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-opds\-ungrouped\-items
+Número máximo de elementos sen agrupar nas fontes de OPDS.  Agrupa elementos en categorías como autor/etiquetas pola primeira letra cando haxa máis de este número de elementos. Establece a cero para desactivar.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-request\-body\-size
+Máx. tamaño permitido para os ficheiros cargados no servidor (en MB).
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-num\-per\-page
+Número de libros para mostrar nunha soa páxina.     O número de libros que se mostrarán nunha única páxina do navegador.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-pidfile
+Escribir o PID de proceso no ficheiro especificado
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-port
+O porto no que escoitar as conexións.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-search\-the\-net\-urls
+Ruta a un ficheiro JSON que contén URL para a función «Buscar en Internet». O xeito máis sinxelo de crear un ficheiro deste tipo é ir a Preferencias\-> Compartir na rede\->Buscar en internet con calibre, crear os URL e exportalos.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-shutdown\-timeout
+Tempo total en segundos para esperar o apagado limpo.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ssl\-certfile
+Ruta ao ficheiro do certificado SSL.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ssl\-keyfile
+Ruta ao ficheiro de chave privada SSL.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-timeout
+Tempo (en segundos) despois do cal se pecha unha conexión inactiva.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-trusted\-ips
+Permitir que as conexións non autenticadas de enderezos IP específicos fagan cambios.       Normalmente, se non activas a autenticación, o servidor funciona en modo de só lectura, para non permitir que usuarios anónimos fagan cambios nas túas bibliotecas de calibre. Esta opción permite que calquera persoa que se conecte desde os enderezos IP especificados faga cambios. Debe ser unha lista separada por comas de enderezos ou especificacións de rede. Isto é útil se queres executar o servidor sen autenticación pero aínda usa calibredb para facer cambios nas túas bibliotecas de calibre. Ten en conta que activar esta opción significa que calquera persoa que se conecte desde os enderezos IP especificados pode facer cambios nas túas bibliotecas de calibre.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-url\-prefix
+Un prefixo para antepoñer todos os URL.     Útil se desexa executar este servidor detrás dun proxy inverso. Por exemplo, use /calibre como prefixo de URL.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-userdb
+Ruta á base de datos de usuarios para usar para a autenticación. A base de datos é un ficheiro SQLite. Para crealo use \fI\%\-\-manage\-users\fP\&. Podes ler máis sobre como xestionar usuarios en: \X'tty: link https://manual.calibre-ebook.com/server.html#managing-user-accounts-from-the-command-line-only'\fI\%https://manual.calibre\-ebook.com/server.html#managing\-user\-accounts\-from\-the\-command\-line\-only\fP\X'tty: link'
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-version
+mostrar o número de versión do programa e saír
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-worker\-count
+Número de fíos de traballo empregados para procesar as solicitudes.
+.UNINDENT
+.SH AUTHOR
+Kovid Goyal
+.SH COPYRIGHT
+Kovid Goyal
+.\" Generated by docutils manpage writer.
+.

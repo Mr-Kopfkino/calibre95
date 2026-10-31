@@ -1,0 +1,27 @@
+[
+  {
+    "upstream_path": "openjpeg-2.5.0/LICENSE",
+    "notice_file": "0001-LICENSE.txt",
+    "sha256": "a6af136f3e15038a666b61f376612a07d9a4e48cb7c01adbf3e33b3f14ab49b6"
+  },
+  {
+    "upstream_path": "openjpeg-2.5.0/src/bin/wx/OPJViewer/source/license.txt",
+    "notice_file": "0002-license.txt.txt",
+    "sha256": "8081c33f6953950dcf424aa844714658b73ada0fcaea16e4487f5fa07ef0960d"
+  },
+  {
+    "upstream_path": "openjpeg-2.5.0/thirdparty/astyle/LICENSE.md",
+    "notice_file": "0003-LICENSE.md.txt",
+    "sha256": "2e8480e753b7a1d100c80920f4250b1bc9f93a18c6a5953c42b11445218cd0fb"
+  },
+  {
+    "upstream_path": "openjpeg-2.5.0/thirdparty/liblcms2/COPYING",
+    "notice_file": "0004-COPYING.txt",
+    "sha256": "c725daac91a9259ce5e195683c0eeb797d345035c36ac5ba114c9fa80e11639a"
+  },
+  {
+    "upstream_path": "openjpeg-2.5.0/thirdparty/libpng/LICENSE",
+    "notice_file": "0005-LICENSE.txt",
+    "sha256": "f01bdeecb7ce7a5ab73b1bcc4d381b73448ce672286a10fb6c946f880fc936e9"
+  }
+]

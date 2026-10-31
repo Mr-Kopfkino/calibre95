@@ -1,0 +1,27 @@
+[
+  {
+    "upstream_path": "webencodings/__init__.py",
+    "notice_file": "0001-header-notice.txt",
+    "sha256": "6d2beb3a4642164cb070eb4850025777f4eab6d7703739e5c1bafa2f76771cf7"
+  },
+  {
+    "upstream_path": "webencodings/mklabels.py",
+    "notice_file": "0002-header-notice.txt",
+    "sha256": "94a22c3b8aab6230468a59d1d7a2285ce835bace10cb1f3273f2e680e7c71dce"
+  },
+  {
+    "upstream_path": "webencodings/x_user_defined.py",
+    "notice_file": "0003-header-notice.txt",
+    "sha256": "23853e0922827687aed94147b62e977ed0d538860b1fd6f2a06da7f63bd45531"
+  },
+  {
+    "upstream_path": "webencodings/tests.py",
+    "notice_file": "0004-header-notice.txt",
+    "sha256": "0612cb6dd30f0b1654b1fad82ee4a6e6798752982bdb7de46373153a918422a8"
+  },
+  {
+    "upstream_path": "webencodings/labels.py",
+    "notice_file": "0005-header-notice.txt",
+    "sha256": "74683fc0e6d7eb37085c88d14adf5b46dee83b3148b748ea392cf20eceff5a52"
+  }
+]

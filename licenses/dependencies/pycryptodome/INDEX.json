@@ -1,0 +1,32 @@
+[
+  {
+    "upstream_path": "pycryptodome-3.19.0/Doc/LEGAL/COPYRIGHT.pycrypto",
+    "notice_file": "0001-COPYRIGHT.pycrypto.txt",
+    "sha256": "8e563c767164faa0831a333b57d23d4311cf566eb1b15d93250f4606be4eb549"
+  },
+  {
+    "upstream_path": "pycryptodome-3.19.0/Doc/LEGAL/copy/LICENSE.libtom",
+    "notice_file": "0002-LICENSE.libtom.txt",
+    "sha256": "10c41e1aaf84bd3546d1ff7ef89454817744fd2c18cdd80a137e802095448016"
+  },
+  {
+    "upstream_path": "pycryptodome-3.19.0/Doc/LEGAL/copy/LICENSE.orig",
+    "notice_file": "0003-LICENSE.orig.txt",
+    "sha256": "96f9a25274a59843715a26986e4a2427c312a1d86b9207f26fcafcea47a417fe"
+  },
+  {
+    "upstream_path": "pycryptodome-3.19.0/Doc/LEGAL/copy/LICENSE.python-2.2",
+    "notice_file": "0004-LICENSE.python-2.2.txt",
+    "sha256": "253a271c681cd4b3f9503659fe754ee305efe68ebb6e8733b7f436d73845a32c"
+  },
+  {
+    "upstream_path": "pycryptodome-3.19.0/Doc/src/license.rst",
+    "notice_file": "0005-license.rst.txt",
+    "sha256": "90f7f2fe5827666516bc10bd27036491290d77662818eace211e007422f59d02"
+  },
+  {
+    "upstream_path": "pycryptodome-3.19.0/LICENSE.rst",
+    "notice_file": "0006-LICENSE.rst.txt",
+    "sha256": "4e04660d77c1c64e89d79537919fb8240fa21484a7e3db29f358b2c7f84ea073"
+  }
+]

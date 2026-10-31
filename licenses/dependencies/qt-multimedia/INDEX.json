@@ -1,0 +1,37 @@
+[
+  {
+    "upstream_path": "qtmultimedia-everywhere-src-6.7.2/examples/multimedia/spectrum/3rdparty/fftreal/license.txt",
+    "notice_file": "0001-license.txt.txt",
+    "sha256": "c1d75c15db4409bcbb182180d582f410a263dc9a631cd546b256e95f1da42165"
+  },
+  {
+    "upstream_path": "qtmultimedia-everywhere-src-6.7.2/src/3rdparty/eigen/COPYING.BSD",
+    "notice_file": "0002-COPYING.BSD.txt",
+    "sha256": "85da7c29c2d2f2e6b3116b1219584cb513474cab797b3312a779be4c2181e51e"
+  },
+  {
+    "upstream_path": "qtmultimedia-everywhere-src-6.7.2/src/3rdparty/eigen/COPYING.MPL2",
+    "notice_file": "0003-COPYING.MPL2.txt",
+    "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85"
+  },
+  {
+    "upstream_path": "qtmultimedia-everywhere-src-6.7.2/src/3rdparty/eigen/COPYING.README",
+    "notice_file": "0004-COPYING.README.txt",
+    "sha256": "c83230b770f17ef1386ea1fd3681271dd98aa93646bdbfb5bff3a1b7050fff9d"
+  },
+  {
+    "upstream_path": "qtmultimedia-everywhere-src-6.7.2/src/3rdparty/pffft/LICENSE",
+    "notice_file": "0005-LICENSE.txt",
+    "sha256": "a46200592eb193853527250da098e6bb0c75424e7a2c7db8da526c4f301c3d88"
+  },
+  {
+    "upstream_path": "qtmultimedia-everywhere-src-6.7.2/src/3rdparty/resonance-audio/LICENSE",
+    "notice_file": "0006-LICENSE.txt",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "upstream_path": "qtmultimedia-everywhere-src-6.7.2/src/3rdparty/resonance-audio/third_party/SADIE_hrtf_database/LICENSE",
+    "notice_file": "0007-LICENSE.txt",
+    "sha256": "48b2d5072817ba4cf7c2ee7af788434d001f43d36ef05e0ce5b76d7cf7262b50"
+  }
+]

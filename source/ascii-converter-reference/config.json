@@ -1,0 +1,21 @@
+{
+    "ascii_character_set": "M@N%W$E#RK&FXYI*l]}1/+i>\"!~';,`:.",
+    "resize_ratio": 1,
+    "bit_number": 8,
+    "image_path": "",
+    "video_path": "",
+    "video_frames_interval": null,
+    "show_convert_percentages": true,
+    "video_frame_rate": 24,
+    "font_path": "",
+    "font_size": 6,
+    "image_width_ratio": 1,
+    "image_height_ratio": 1,
+    "colored_image": false,
+    "ascii_image_mode": "L",
+    "colored_ascii_image_mode": "RGB",
+    "ascii_image_init_bg_color": "white",
+    "ascii_image_character_color": "black",
+    "background_image": "resources/background.png",
+    "language": "English"
+}

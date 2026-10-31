@@ -1,0 +1,269 @@
+.\" Man page generated from reStructuredText.
+.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.TH "CALIBRE-SERVER" "1" "Şubat 14, 2025" "7.26.0" "calibre"
+.SH NAME
+calibre-server \- calibre-server
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibre\-server [seçenekler] [kitaplık klasörü yolu...]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Calibre İçerik sunucusunu başlatın. Calibre İçerik sunucusu,
+calibre kitaplıklarınızı internet üzerinden gösterir. Kitaplık klasörlerine
+giden yolu \fBcalibre\-server\fP argümanı olarak belirtebilirsiniz. Herhangi bir yol belirtmezseniz, ana calibre programının
+bildiği tüm kütüphaneler kullanılacaktır.
+.sp
+Whenever you pass arguments to \fBcalibre\-server\fP that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.SH [SEÇENEKLER]
+.INDENT 0.0
+.TP
+.B \-\-access\-log
+Erişim günlüğü dosyasının yolu. Bu günlük, sunucuya bağlanan ve istekte bulunan istemciler hakkında bilgi içerir. Varsayılan olarak erişim kaydı yapılmaz.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ajax\-timeout
+Sorgu yaparken sunucudan yanıt bekleme süresi (saniye cinsinden).
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-auth\-mode
+Choose the type of authentication used.     Sunucu tarafından kullanılan HTTP kimlik doğrulama modunu ayarlayın. Bu sunucuyu bir SSL proxy arkasına yerleştiriyorsanız \fB\(dq\fPtemel\fB\(dq\fP olarak ayarlayın. Aksi takdirde, bu ayarı \fB\(dq\fPotomatik\fB\(dq\fP olarak bırakın ki bu şekilde SSL ayarlanmışsa \fB\(dq\fPtemel\fB\(dq\fP kullanılacaktır, diğer türlü \fB\(dq\fPdigest (sindirme)\fB\(dq\fP yöntemi kullanacaktır.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-auto\-reload
+Kaynak kod değiştiğinde sunucuyu otomatik olarak tekrar yükle. Geliştirme için faydalıdır. Kapatma sırasındaki zaman aşımı için küçük bir değer de belirlemelisiniz.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ban\-after
+Number of login failures for ban.   The number of login failures after which an IP address is banned
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ban\-for
+Ban IP addresses that have repeated login failures.         Temporarily bans access for IP addresses that have repeated login failures for the specified number of minutes. Useful to prevent attempts at guessing passwords. If set to zero, no banning is done.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-book\-list\-mode
+Choose the default book list mode.  Set the default book list mode that will be used for new users. Individual users can override the default in their own settings. The default is to use a cover grid.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-compress\-min\-size
+Minimum size for which responses use data compression (in bytes).
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-custom\-list\-template
+Path to a JSON file containing a template for the custom book list mode. The easiest way to create such a template file is to go to Preferences\-> Sharing over the net\-> Book list template in calibre, create the template and export it.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-daemonize
+Run process in background as a daemon (Linux only).
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-displayed\-fields
+Restrict displayed user\-defined fields.     /opds ve /mobile görünümlerinde İçerik sunucusu tarafından görüntülenmeyecek kullanıcı tanımlı üstveri alanlarının virgülle ayrılmış listesi. Bu seçeneği belirtirseniz, bu listede olmayan alanlar görüntülenmeyecektir. Örneğin: my_rating,my_tags
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-allow\-socket\-preallocation, \-\-disable\-allow\-socket\-preallocation
+Socket pre\-allocation, for example, with systemd socket activation. By default, this option is enabled.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-auth, \-\-disable\-auth
+Sunucuya erişmek için parola tabanlı kimlik doğrulama.      Normalde, sunucu sınırsızdır ve herkesin erişmesine izin verir. Bu seçenek ile erişimi, önceden tanımlanmış kullanıcılara erişim verecek şekilde kısıtlayabilirsiniz. By default, this option is disabled.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-fallback\-to\-detected\-interface, \-\-disable\-fallback\-to\-detected\-interface
+Fallback to auto\-detected interface.        Sunucu herhangi bir nedenle listen_on seçeneğinde belirtilen arayüze bağlanamıyorsa, dış dünyaya bağlanan bir arayüzü tespit etmeye ve ona bağlanmaya çalışacaktır. By default, this option is enabled.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-local\-write, \-\-disable\-local\-write
+Allow un\-authenticated local connections to make changes.   Normalde, kimlik doğrulamayı açmazsanız, sunucu salt okunur modda çalışır, böylece isimsiz kullanıcıların calibre kitaplıklarınızda değişiklik yapmasına izin verilmez. Bu seçenek, sunucunun çalıştığı bilgisayardan bağlanan herkesin değişiklik yapmasına izin verir. Bu, sunucuyu kimlik doğrulama olmadan çalıştırmak, ancak yine de calibre kitaplıklarınızda değişiklik yapmak için calibredb\fB\(aq\fPyi kullanmak istiyorsanız kullanışlıdır. Bu seçeneği açmanın, bilgisayarda çalışan herhangi bir programın calibre kitaplıklarınızda değişiklik yapabileceği anlamına geldiğini unutmayın. By default, this option is disabled.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-log\-not\-found, \-\-disable\-log\-not\-found
+Log HTTP 404 (Not Found) requests.  Normalde sunucu, bulunmayan kaynaklar için tüm HTTP isteklerini günlüğe kaydeder. Sunucunuz botlar tarafından hedefleniyorsa, bu çok sayıda günlük spam\fB\(aq\fPı oluşturabilir. Kapatmak için bu seçeneği kullanın. By default, this option is enabled.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-use\-bonjour, \-\-disable\-use\-bonjour
+Advertise OPDS feeds via BonJour.   OPDS beslemelerini BonJour hizmeti aracılığıyla tanıtın, böylece OPDS tabanlı okuma uygulamaları sunucuyu otomatik olarak algılayabilir ve sunucuya bağlanabilir. By default, this option is enabled.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-enable\-use\-sendfile, \-\-disable\-use\-sendfile
+Zero copy file transfers for increased performance.         This will use zero\-copy in\-kernel transfers when sending files over the network, increasing performance. However, it can cause corrupted file transfers on some broken filesystems. If you experience corrupted file transfers, turn it off. By default, this option is enabled.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-help, \-h
+bu yardım iletisini göster ve çık
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ignored\-fields
+Ignored user\-defined metadata fields.       /opds ve /mobile görünümlerinde İçerik sunucusu tarafından görüntülenmeyecek kullanıcı tanımlı üstveri alanlarının virgülle ayrılmış listesi. Örneğin: my_rating,my_tags
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-listen\-on
+The interface on which to listen for connections.   The default is to listen on all available IPv6 and IPv4 interfaces. You can change this to, for example, \fB\(dq\fP127.0.0.1\fB\(dq\fP to only listen for IPv4 connections from the local machine, or to \fB\(dq\fP0.0.0.0\fB\(dq\fP to listen to all incoming IPv4 connections.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-log
+Sunucu günlüğü için günlük dosyasının yolu. Bu günlük, erişim günlüklerini değil, sunucu bilgilerini ve hataları içerir. Varsayılan olarak stdout\fB\(aq\fPa yazılır.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-manage\-users
+Bu sunucuya bağlanmasına izin verilen kullanıcıların veritabanını yönetin. Bir \fB\-\-\fP ekleyerek otomatik modda kullanabilirsiniz. Ayrıntılar için calibre\-server \fI\%\-\-manage\-users\fP \fB\-\-\fP help konusuna bakın. Ayrıca bkz. \fI\%\-\-userdb\fP seçeneği.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-header\-line\-size
+Max. size of single HTTP header (in KB).
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-job\-time
+Maximum time for worker processes.  Maximum amount of time worker processes are allowed to run (in minutes). Set to zero for no limit.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-jobs
+Maximum number of worker processes.         Worker processes are launched as needed and used for large jobs such as preparing a book for viewing, adding books, converting, etc. Normally, the max. number of such processes is based on the number of CPU cores. You can control it by this setting.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-log\-size
+Max. log file size (in MB).         Sunucu tarafından oluşturulan günlük dosyalarının maksimum boyutu. Günlük bu boyuttan daha büyük olduğunda, otomatik olarak eski kayıtların üzerine yazmaya başlar. Eski kayıtların üzerine yazılmasını devre dışı bırakmak için sıfıra ayarlayın.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-opds\-items
+Maximum number of books in OPDS feeds.      Sunucunun tek bir OPDS edinme akışında döndüreceği maksimum kitap sayısı.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-opds\-ungrouped\-items
+Maximum number of ungrouped items in OPDS feeds.    Group items in categories such as author/tags by first letter when there are more than this number of items. Set to zero to disable.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-max\-request\-body\-size
+Sunucuya yüklenen dosyalar için izin verilen maksimum boyut (MB olarak).
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-num\-per\-page
+Number of books to show in a single page.   The number of books to show in a single page in the browser.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-pidfile
+Süreç kimliğini belirtilen dosyaya yaz
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-port
+The port on which to listen for connections.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-search\-the\-net\-urls
+Path to a JSON file containing URLs for the \fB\(dq\fPSearch the internet\fB\(dq\fP feature. The easiest way to create such a file is to go to Preferences\-> Sharing over the net\->Search the internet in calibre, create the URLs and export them.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-shutdown\-timeout
+Total time in seconds to wait for clean shutdown.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ssl\-certfile
+Path to the SSL certificate file.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ssl\-keyfile
+Path to the SSL private key file.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-timeout
+Time (in seconds) after which an idle connection is closed.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-trusted\-ips
+Allow un\-authenticated connections from specific IP addresses to make changes.      Normalde, kimlik doğrulamayı açmazsanız, sunucu salt okunur modda çalışır, böylece isimsiz kullanıcıların calibre kitaplıklarınızda değişiklik yapmasına izin verilmez. Bu seçenek, belirtilen IP adreslerinden bağlanan herkesin değişiklik yapmasına izin verir. Virgülle ayrılmış bir adres veya ağ özellikleri listesi olmalıdır. Bu, sunucuyu kimlik doğrulama olmadan çalıştırmak, ancak yine de calibre kitaplıklarınızda değişiklik yapmak için calibredb\fB\(aq\fPyi kullanmak istiyorsanız kullanışlıdır. Bu seçeneği açmanın, belirtilen IP adreslerinden bağlanan herkesin calibre kitaplıklarınızda değişiklik yapabileceği anlamına geldiğini unutmayın.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-url\-prefix
+A prefix to prepend to all URLs.    Bu sunucuyu bir ters proxy arkasında çalıştırmak istiyorsanız kullanışlıdır. Örneğin URL öneki olarak /calibre kullanın.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-userdb
+Path to the user database to use for authentication. The database is a SQLite file. To create it use \fI\%\-\-manage\-users\fP\&. You can read more about managing users at: \X'tty: link https://manual.calibre-ebook.com/tr/server.html#managing-user-accounts-from-the-command-line-only'\fI\%https://manual.calibre\-ebook.com/tr/server.html#managing\-user\-accounts\-from\-the\-command\-line\-only\fP\X'tty: link'
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-version
+programın sürüm numarasını göster ve çık
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-worker\-count
+Number of worker threads used to process requests.
+.UNINDENT
+.SH AUTHOR
+Kovid Goyal
+.SH COPYRIGHT
+Kovid Goyal
+.\" Generated by docutils manpage writer.
+.

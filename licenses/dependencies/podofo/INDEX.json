@@ -1,0 +1,42 @@
+[
+  {
+    "upstream_path": "podofo-f7797f620f151475d05c87c1fab3db20b2f00c0e/3rdparty/numerics/LICENSE",
+    "notice_file": "0001-LICENSE.txt",
+    "sha256": "f39990be10c25ff71636f71c665ed3aef31718ba23e56ef33a7516b3cdf77cea"
+  },
+  {
+    "upstream_path": "podofo-f7797f620f151475d05c87c1fab3db20b2f00c0e/3rdparty/pdfium/LICENSE",
+    "notice_file": "0002-LICENSE.txt",
+    "sha256": "1fe9dea718fbd75cf149adaf4d8a22a4335604d964ddb76d1b45383dec8668c9"
+  },
+  {
+    "upstream_path": "podofo-f7797f620f151475d05c87c1fab3db20b2f00c0e/COPYING",
+    "notice_file": "0003-COPYING.txt",
+    "sha256": "c340cbee4974bb96019e782f2279df016c92fb1e7f5299347e779d9acedbb991"
+  },
+  {
+    "upstream_path": "podofo-f7797f620f151475d05c87c1fab3db20b2f00c0e/examples/COPYING",
+    "notice_file": "0004-COPYING.txt",
+    "sha256": "11c4a8b414a534365f02da7dad9dc3e471d35b15ed31df9d4006fb2a144c4443"
+  },
+  {
+    "upstream_path": "podofo-f7797f620f151475d05c87c1fab3db20b2f00c0e/examples/COPYING.exception",
+    "notice_file": "0005-COPYING.exception.txt",
+    "sha256": "5bb6e3c95be0041f46028329b0ca61a39ca04f62a95973b137b93ecfc91539be"
+  },
+  {
+    "upstream_path": "podofo-f7797f620f151475d05c87c1fab3db20b2f00c0e/test/COPYING",
+    "notice_file": "0006-COPYING.txt",
+    "sha256": "11c4a8b414a534365f02da7dad9dc3e471d35b15ed31df9d4006fb2a144c4443"
+  },
+  {
+    "upstream_path": "podofo-f7797f620f151475d05c87c1fab3db20b2f00c0e/test/COPYING.exception",
+    "notice_file": "0007-COPYING.exception.txt",
+    "sha256": "5bb6e3c95be0041f46028329b0ca61a39ca04f62a95973b137b93ecfc91539be"
+  },
+  {
+    "upstream_path": "podofo-f7797f620f151475d05c87c1fab3db20b2f00c0e/tools/COPYING",
+    "notice_file": "0008-COPYING.txt",
+    "sha256": "204d8eff92f95aac4df6c8122bc1505f468f3a901e5a4cc08940e0ede1938994"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "upstream_path": "zlib-1.3.1/LICENSE",
+    "notice_file": "0001-LICENSE.txt",
+    "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243"
+  },
+  {
+    "upstream_path": "zlib-1.3.1/contrib/dotzlib/LICENSE_1_0.txt",
+    "notice_file": "0002-LICENSE_1_0.txt.txt",
+    "sha256": "36266a8fd073568394cb81cdb2b124f7fdae2c64c1a7ed09db34b4d22efa2951"
+  }
+]

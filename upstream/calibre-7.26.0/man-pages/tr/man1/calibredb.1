@@ -1,0 +1,1012 @@
+.\" Man page generated from reStructuredText.
+.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.TH "CALIBREDB" "1" "Şubat 14, 2025" "7.26.0" "calibre"
+.SH NAME
+calibredb \- calibredb
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb komut [seçenekler] [değişkenler]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+\fBcalibredb\fP calibre veritabanına giden komut satırı arayüzüdür. Aşağıda belgelenen
+birkaç alt komutu vardır.
+.INDENT 0.0
+.INDENT 3.5
+\fBcalibredb\fP, yola göre belirtilen calibre veritabanını
+.UNINDENT
+.UNINDENT
+.sp
+veya yerel makinede veya internet üzerinden. Bir calibre
+İçerik sunucusu\(ganu :command:\(gacalibre\-server
+programını kullanarak veya ana calibre programında Bağlan/paylaş  → 
+İçerik sunucusunu Başlat seçeneğine tıklayarak başlatabilirsiniz. \fBcalibredb\fP calibre kitaplıklarınızda değişiklik yapabildiğinden, önce sunucuda kimlik doğrulamayı ayarlamanız gerekir. Bunu yapmanın
+.INDENT 0.0
+.TP
+.B iki yolu vardır:
+.INDENT 7.0
+.IP \(bu 2
+Yalnızca aynı bilgisayarda çalışan bir sunucuya bağlanmayı planlıyorsan
+.UNINDENT
+.UNINDENT
+.sp
+calibredb dahil olmak üzere yerel bilgisayarda çalışan herhangi bir programın calibre verilerinizde değişiklik yapmasına izin vermek için içerik sunucusunun \fB\-\-enable\-local\-write\(aq\(aq seçeneğini kullanabilirsin. Sunucuyu ana calibre programından çalıştırırken, bu seçenek şu şekildedir:guilabel:\(gaTercihler\->Ağ üzerinden paylaşım\->Gelişmiş\(ga.
+* İnternet üzerinden erişimi etkinleştirmek istiyorsanız, kurulum yapmalısınız
+sunucudaki kullanıcı hesaplarını kullanın ve erişim vermek için :option:\(ga\-\-username\(ga ve :option:\(ga\-\-password\(ga
+seçeneklerini :command:\(gacalibredb\(ga için kullanın. Kullanıcı hesaplarını oluşturmak için \(ga\(ga\-\-enable\-auth\(ga\fP
+seçeneğini kullanarak ve \fB\-\-manage\-users\fP seçeneğini kullanarak \fBcalibre\-server\fP için kullanıcı kimlik doğrulamasını ayarlayabilirsiniz.
+sunucuyu ana calibre programından çalıştırırken,
+Tercihler → Ağ üzerinden paylaşım → Kullanıcı adı/şifre iste seçeneğini kullanın.
+.sp
+Çalışan bir İçerik sunucusuna bağlanmak için sunucunun URL\(aqsini şuraya iletin: option:\fI\-\-with\-library\fP seçeneği, ayrıntılar ve örnekler için
+o seçeneğin belgelerine bakın.
+.INDENT 0.0
+.IP \(bu 2
+\fI\%GENEL SEÇENEKLER\fP
+.IP \(bu 2
+\fI\%list\fP
+.IP \(bu 2
+\fI\%add\fP
+.INDENT 2.0
+.IP \(bu 2
+\fI\%KLASÖRLERDEN EKLE\fP
+.UNINDENT
+.IP \(bu 2
+\fI\%remove\fP
+.IP \(bu 2
+\fI\%add_format\fP
+.IP \(bu 2
+\fI\%remove_format\fP
+.IP \(bu 2
+\fI\%show_metadata\fP
+.IP \(bu 2
+\fI\%set_metadata\fP
+.IP \(bu 2
+\fI\%export\fP
+.IP \(bu 2
+\fI\%catalog\fP
+.INDENT 2.0
+.IP \(bu 2
+\fI\%EPUB SEÇENEKLER\fP
+.UNINDENT
+.IP \(bu 2
+\fI\%saved_searches\fP
+.IP \(bu 2
+\fI\%add_custom_column\fP
+.IP \(bu 2
+\fI\%custom_columns\fP
+.IP \(bu 2
+\fI\%remove_custom_column\fP
+.IP \(bu 2
+\fI\%set_custom\fP
+.IP \(bu 2
+\fI\%restore_database\fP
+.IP \(bu 2
+\fI\%check_library\fP
+.IP \(bu 2
+\fI\%list_categories\fP
+.IP \(bu 2
+\fI\%backup_metadata\fP
+.IP \(bu 2
+\fI\%clone\fP
+.IP \(bu 2
+\fI\%embed_metadata\fP
+.IP \(bu 2
+\fI\%search\fP
+.IP \(bu 2
+\fI\%fts_index\fP
+.IP \(bu 2
+\fI\%fts_search\fP
+.UNINDENT
+.SH GENEL SEÇENEKLER
+.INDENT 0.0
+.TP
+.B \-\-help, \-h
+bu yardım iletisini göster ve çık
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-library\-path, \-\-with\-library
+Calibre kitaplığının yolu. Varsayılan, ayarlarda saklanan yolu kullanmaktır. Uzak kitaplıklarda eylemler gerçekleştirmek için bir calibre İçerik sunucusuna da bağlanabilirsiniz. Bunu yapmak için şu biçimde bir URL kullanın: \X'tty: link http:/'\fI\%http:/\fP\X'tty: link'/sunucuadı:port/#kitaplık_no örneğin, \X'tty: link http://localhost:8080/#mylibrary'\fI\%http://localhost:8080/#mylibrary\fP\X'tty: link'\&.kitaplık_no, İçerik sunucusunda bağlanmak istediğiniz kitaplığın kitaplık kimliğidir. Sunucuda bulunan kitaplık kimliklerinin bir listesini almak için \-\fB\(aq\fPnin özel kimlik numarası değerini kullanabilirsiniz. Bir İçerik sunucusu üzerinden erişimin nasıl kurulacağıyla ilgili ayrıntılar için bakınız \X'tty: link https://manual.calibre-ebook.com/tr/generated/tr/calibredb.html'\fI\%https://manual.calibre\-ebook.com/tr/generated/tr/calibredb.html\fP\X'tty: link'\&.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-password
+Calibre İçerik sunucusuna bağlanmak için parola. Parolayı standart girdiden okumak için özel değeri kullanın: <stdin>. Parolayı bir dosyadan okumak için şunu kullanın: <f:/path/to/file> (ör. <f: ardından dosyanın tam yolu ve sonunda >). Yukarıdaki köşeli parantezler gereklidir, bunlardan kaçmayı unutmayın veya kabuğunuz için tırnak işaretleri kullanın.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-timeout
+Ağ üzerinden bir calibre kitaplığına bağlanırken saniye cinsinden zaman aşımı. Varsayılan iki dakikadır.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-username
+Calibre içerik sunucusuna bağlanmak için kullanıcı adı
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-version
+programın sürüm numarasını göster ve çık
+.UNINDENT
+.SH LIST
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb list [seçenekler]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Calibre veritabanındaki kullanılabilir kitapları listele.
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-ascending
+Sonuçları artan şekilde sırala
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-fields, \-f
+Veritabanındaki kitaplar listelenirken görüntülenecek alanlar. Alanların virgülle ayrılmış bir listesi olmalıdır. Erişilebilir alanlar: author_sort, authors, comments, cover, formats, identifiers, isbn, languages, last_modified, pubdate, publisher, rating, series, series_index, size, tags, template, timestamp, title, uuid Öntanımlı: title,authors. \fB\(dq\fPTümü\fB\(dq\fP özel alanı tüm alanları seçmek için kullanılabilir. Yukarıdaki tümleşik alanlara ek olarak, *alan_adı şeklinde kişisel alanlara da erişilebilir. Mesela, #onaylama kişisel alanı için şu ismi kullanın: *onaylama
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-for\-machine
+Makine ayrıştırması için daha uygun olan JSON biçiminde çıktı üret. Satır genişliği ve ayraç seçeneklerinin yok sayılmasına neden olur.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-limit
+Gösterilecek en fazla sonuç sayısı. Varsayılan: tümü
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-line\-width, \-w
+Girdideki bir satırın en fazla genişliği. Varsayılanı ekranın boyutunu algılamaktır.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-prefix
+Tüm dosya yolları için önek. Varsayılan kitaplık dizininin mutlak yoludur.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-search, \-s
+Sonuçları arama sorgusuna göre süzün. Arama sorgusunun biçimi için lütfen Kullanıcı Kılavuzundaki ilgili belgelendirmeye bakın. Varsayılan olarak süzme işlemi yapılmaz.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-separator
+Alanları ayırmak için kullanılan karakter dizisi. Varsayılan olarak boşluk karakteridir.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-sort\-by
+Sonuçları sıralamak için kullanılacak alan Birden fazla alanı virgülle ayırarak belirtebilirsiniz. Kullanılabilir alanlar: author_sort, authors, comments, cover, formats, identifiers, isbn, languages, last_modified, pubdate, publisher, rating, series, series_index, size, tags, template, timestamp, title, uuid Varsayılan: id
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-template
+The template to run if \fB\(dq\fPtemplate\fB\(dq\fP is in the field list. Note that templates are ignored while connecting to a calibre server. Default: None
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-template_file, \-t
+Alan listesinde \fB\(dq\fPtemplate\fB\(dq\fP varsa çalıştırılacak şablonu içeren dosyanın yolu. Varsayılan: Yok
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-template_heading
+Şablon sütununu için başlık. Varsayılan: template. \fI\%\-\-for\-machine\fP seçeneği ayarlanmışsa bu seçenek göz ardı edilir
+.UNINDENT
+.SH ADD
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+%p rog add [seçenekler] dosya1 dosya2 dosya3 ... Belirtilen dosyaları veritabanına kitap olarak ekleyin. Ayrıca klasörleri de belirtebilirsiniz, klasörlerle ilgili aşağıdaki seçeneklere bakınız.
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-authors, \-a
+Eklenen kitap(lar)ın yazarlarını ayarla
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-automerge, \-m
+Benzer başlıklara ve yazarlara sahip kitaplar bulunursa, gelen formatları (dosyaları) otomatik olarak mevcut kitap kayıtlarıyla birleştirin. \fB\(dq\fPignore\fB\(dq\fP değeri, yinelenen biçimlerin atıldığı anlamına gelir. \fB\(dq\fPoverwrite\fB\(dq\fP değeri, yeni eklenen dosyalarla kitaplıktaki yinelenen biçimlerin üzerine yazılacağı anlamına gelir. \fB\(dq\fPnew_record\fB\(dq\fP değeri, yinelenen biçimlerin yeni bir kitap kaydına yerleştirildiği anlamına gelir.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-cover, \-c
+Eklenen kitap için kullanılacak kapağın yolu
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-duplicates, \-d
+Zaten var olsalar bile veritabanına kitap ekleyin. Karşılaştırma kitap adları ve yazarlara göre yapılmıştır. \fI\%\-\-automerge\fP seçeneğinin öncelikli olduğunu unutmayın.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-empty, \-e
+Boş bir kitap ekle (biçimi olmayan bir kitap)
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-identifier, \-I
+Bu kitap için tanımlayıcılar ekleyin, e.g. \-I asin:XXX \-I isbn:YYY
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-isbn, \-i
+Eklenen kitap(lar)ın ISBN\fB\(aq\fPlerini ayarla
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-languages, \-l
+Virgülle ayrılmış dillerin listesi (bazı dil isimleri anlaşılamayacağı için en iyisi ISO639 dil kodlarını kullanmak olacaktır)
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-series, \-s
+Eklenen kitap(lar)ın serilerini ayarla
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-series\-index, \-S
+Eklenen kitap(lar)ın seri numaralarını ayarla
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-tags, \-T
+Eklenen kitap(lar)ın etiketlerini ayarla
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-title, \-t
+Eklenen kitapların adlarını ayarla
+.UNINDENT
+.SS KLASÖRLERDEN EKLE
+.sp
+Klasörlerden kitap eklemeyi kontrol etme seçenekleri. Varsayılan olarak yalnızca bilinen e\-kitap dosya türlerinin uzantılarına sahip dosyalar eklenir.
+.INDENT 0.0
+.TP
+.B \-\-add
+Bilinen bir e\-kitap dosyası türünde olmasalar bile, dosyalar için klasörler taranırken bir dosya adı (glob) kalıbı, bu kalıpla eşleşen dosyalar eklenecektir. Birden çok desen için birden çok kez belirtilebilir.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ignore
+Bir dosya adı (glob) kalıbı, dosyalar için klasörler taranırken bu kalıpla eşleşen dosyalar yok sayılır. Birden çok desen için birden çok kez belirtilebilir. Örneğin: *.pdf, tüm PDF dosyalarını yoksayar
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-one\-book\-per\-directory, \-1
+Her klasörün yalnızca tek bir mantıksal kitabı olduğunu ve o klasör içindeki tüm dosyaların o kitabın farklı e\-kitap biçimleri olduğunu varsay
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-recurse, \-r
+Klasörleri, alt klasörleri ile birlikte işle
+.UNINDENT
+.SH REMOVE
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb kimlikleri kaldır
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Kimlikleri ile belirtilen kitapları veri tabanından sil. Kimlikler, kimlik numaralarının virgülle ayrılmış listesi olmalıdır (arama komutuyla kimlik numaralarını alabilirsiniz). Örneğin, 23,34,57\-85 (aralık belirtirken, aralıkta son numara dahil edilmez).
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-permanent
+Geri Dönüşüm Kutusu kullanmayın
+.UNINDENT
+.SH ADD_FORMAT
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb add_format [seçenekler] id e\-kitap_file
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+e\-kitap_file\(aqndaki e\-kitabı kimliği ile tanımlanan mantıksal kitap için kullanılabilir biçime ekle. Arama komutunu kullanarak kimlik alabilirsiniz. Biçim zaten mevcutsa, yer değiştirme seçeneği belirtilmediği takdirde yer değiştirilir.
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-as\-extra\-data\-file
+Dosyayı ekstra bir veri dosyası olarak kitaba ekle, bir ekitap formatı değildir
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-dont\-replace
+Mevcut biçimi değiştirmeyin
+.UNINDENT
+.SH REMOVE_FORMAT
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb remove_format [seçenekler] id fmt
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+id ile tanımlanan mantıksal kitaptan fmt biçimini kaldır. Arama komutunu kullanarak id numarasını alabilirsiniz. fmt LRF veya TXT veya EPUB gibi bir dosya uzantısı olmalıdır. Mantıksal kitabın kullanılabilir fmt\(aqsi yoksa, hiçbir şey yapma.
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.SH SHOW_METADATA
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb show_metadata [seçenekler] id
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+id ile tanımlanan kitap için Calibre veri tabanında kayıtlı metadata\(aqyı göster.
+id, arama komutuyla gelen id numarasıdır.
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-as\-opf
+Üstbilgiyi OPF formunda yazdır (XML)
+.UNINDENT
+.SH SET_METADATA
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb set_metadata [seçenekler] kitap_kimlik_no [/yol/üstveri.opf]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+OPF dosyası üstveri.opf\(aqtan kitap_kimlik_no tarafından tanımlanan kitap için calibre veritabanında saklanan üstverileri ayarlayın.
+kitap_kimlik_no, search komutundan bir kitap kimlik numarasıdır.
+show_metadata komutunda \-\-as\-opf parametresini kullanarak OPF formatı hakkında
+hızlı bir fikir edinebilirsiniz.
+Ayrıca \-\-field seçeneğiyle bireysel alanların üstverilerini de ayarlayabilirsiniz. \-\-field seçeneğini kullanırsanız, bir OPF dosyası belirtmenize gerek yoktur.
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-field, \-f
+Ayarlanacak alan. Biçimi alan_ismi:değer şeklindedir, örneğin: \fI\%\-\-field\fP etiketler:etiket1,etiket2. Tüm alan isimlerinin listesini almak için \fI\%\-\-list\-fields\fP kullanın. Birden çok alan ayarlamak için bu seçeneği birden fazla kere kullanabilirsiniz. Not: Diller için ISO639 dil kodlarını kullanmalısınız (örn. İngilizce için en, Fransızca için fr ve benzeri). Tanımlayıcılar için, söz dizimi \fI\%\-\-field\fP identifiers:isbn:XXXX,doi:YYYYY şeklindedir. Bool (evet/hayır) değerler için true ve false veya yes veya no kullanın.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-list\-fields, \-l
+\fI\%\-\-field\fP seçeneğiyle kullanılabilecek metadata alan isimlerini listeleyin
+.UNINDENT
+.SH EXPORT
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb export [seçenekler] kimlik numaraları
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Kimlik numaraları ile belirtilen kitapları (virgülle ayrılmış bir liste) dosya sistemine aktarın.
+Dışa aktarma işlemi kitabın tüm formatlarını, kapağını ve meta verilerini (bir
+OPF dosyasında) kaydeder. Kitapla ilişkili tüm ekstra veri dosyaları da kaydedilir.
+Kimlik numaralarını arama komutundan alabilirsiniz.
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-all
+Kimlik listesine bakmadan tüm kitapları dışa aktar.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-dont\-asciiize
+Have calibre convert all non English characters into English equivalents for the file names. This is useful if saving to a legacy filesystem without full support for Unicode filenames. Bu anahtar bu davranışı kapatacaktır.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-dont\-save\-cover
+Normally, calibre will save the cover in a separate file along with the actual e\-book files. Bu anahtar bu davranışı kapatacaktır.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-dont\-save\-extra\-files
+Save any data files associated with the book when saving the book Bu anahtar bu davranışı kapatacaktır.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-dont\-update\-metadata
+Normal olarak Calibre üst veriyi Calibre kitaplığındaki kaydedilmiş dosyalardan günceller. Diske kaydetmeyi yavaşlatır. Bu anahtar bu davranışı kapatacaktır.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-dont\-write\-opf
+Normal olarak Calibre üst veriyi gerçek e\-kitap dosyalarının yanına ayrı bir OPF dosyasına yazar. Bu anahtar bu davranışı kapatacaktır.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-formats
+Kitapların kaydedileceği biçimlerin virgülle ayrılmış listesi. Varsayılan olarak tüm biçimlerde kaydedilir.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-progress
+Rapor durumu
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-replace\-whitespace
+Boşlukları alt çizgi ile değiştir.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-single\-dir
+Tüm kitapları tek bir klasöre aktarın
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-template
+The template to control the filename and folder structure of the saved files. Default is \fB\(dq\fP{author_sort}/{title}/{title} \- {authors}\fB\(dq\fP which will save books into a per\-author subfolder with filenames containing title and author. Available controls are: {author_sort, authors, id, isbn, languages, last_modified, pubdate, publisher, rating, series, series_index, tags, timestamp, title}
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-timefmt
+Tarihlerin görüntüleneceği biçim. %d \- gün, %b \- ay, %m \- ay numarası, %Y \- yıl. Varsayılan: %b, %Y
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-to\-dir
+Kitapları belirtilen dizine aktarın. Varsayılan .
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-to\-lowercase
+Yolları küçük harflere dönüştür.
+.UNINDENT
+.SH CATALOG
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb catalog /path/to/destination.(csv|epub|mobi|xml...) [seçenekler]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Bir kataloğu, hedef uzantısı tarafından belirtilen biçimde dışa aktarın.
+Seçenekler girdilerin, elde edilen katolog çıktısında nasıl gösterileceğini kontrol eder.
+Farklı katalog biçimlerinin farklı seçenek gruplarını desteklediğini unutmayın.
+Farklı seçenekleri görmek için çıktı dosyasının adını ve ardından
+\-\-help seçeneğini belirtin.
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-ids, \-i
+Kataloglanacak veritabanı kimliklerinin virgülle ayrılmış listesi. Kullanılırsa, \fI\%\-\-search\fP yok sayılır. Varsayılan: all
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-search, \-s
+Sonuçları arama sorgusuna göre sırala. Arama sorgusu biçimi için, lütfen Kullanıcı Kılavuzundaki aramayla ilgili belgeye bakın. Varsayılan: filtre yok
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-verbose, \-v
+Ayrıntılı çıktı bilgisi göster. Hata ayıklamada faydalıdır
+.UNINDENT
+.SS EPUB SEÇENEKLER
+.INDENT 0.0
+.TP
+.B \-\-catalog\-title
+Title of generated catalog used as title in metadata. Default: \fB\(aq\fPMy Books\fB\(aq\fP Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-cross\-reference\-authors
+Create cross\-references in Authors section for books with multiple authors. Default: \fB\(aq\fPFalse\fB\(aq\fP Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-debug\-pipeline
+Save the output from different stages of the conversion pipeline to the specified folder. Useful if you are unsure at which stage of the conversion process a bug is occurring. Default: \fB\(aq\fPNone\fB\(aq\fP Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-exclude\-genre
+Regex describing tags to exclude as genres. Default: \fB\(aq\fP[.+]|^+$\fB\(aq\fP excludes bracketed tags, e.g. \fB\(aq\fP[Project Gutenberg]\fB\(aq\fP, and \fB\(aq\fP+\fB\(aq\fP, the default tag for read books. Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-exclusion\-rules
+Specifies the rules used to exclude books from the generated catalog. The model for an exclusion rule is either (\fB\(aq\fP<rule name>\fB\(aq\fP,\fB\(aq\fPTags\fB\(aq\fP,\fB\(aq\fP<comma\-separated list of tags>\fB\(aq\fP) or (\fB\(aq\fP<rule name>\fB\(aq\fP,\fB\(aq\fP<custom column>\fB\(aq\fP,\fB\(aq\fP<pattern>\fB\(aq\fP). For example: ((\fB\(aq\fPArchived books\fB\(aq\fP,\fB\(aq\fP#status\fB\(aq\fP,\fB\(aq\fPArchived\fB\(aq\fP),) will exclude a book with a value of \fB\(aq\fPArchived\fB\(aq\fP in the custom column \fB\(aq\fPstatus\fB\(aq\fP\&. When multiple rules are defined, all rules will be applied. Default:  \fB\(dq\fP((\fB\(aq\fPCatalogs\fB\(aq\fP,\fB\(aq\fPTags\fB\(aq\fP,\fB\(aq\fPCatalog\fB\(aq\fP),)\fB\(dq\fP Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-generate\-authors
+Include \fB\(aq\fPAuthors\fB\(aq\fP section in catalog. Default: \fB\(aq\fPFalse\fB\(aq\fP Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-generate\-descriptions
+Include \fB\(aq\fPDescriptions\fB\(aq\fP section in catalog. Default: \fB\(aq\fPFalse\fB\(aq\fP Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-generate\-genres
+Include \fB\(aq\fPGenres\fB\(aq\fP section in catalog. Default: \fB\(aq\fPFalse\fB\(aq\fP Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-generate\-recently\-added
+Include \fB\(aq\fPRecently Added\fB\(aq\fP section in catalog. Default: \fB\(aq\fPFalse\fB\(aq\fP Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-generate\-series
+Include \fB\(aq\fPSeries\fB\(aq\fP section in catalog. Default: \fB\(aq\fPFalse\fB\(aq\fP Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-generate\-titles
+Include \fB\(aq\fPTitles\fB\(aq\fP section in catalog. Default: \fB\(aq\fPFalse\fB\(aq\fP Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-genre\-source\-field
+Source field for \fB\(aq\fPGenres\fB\(aq\fP section. Default: \fB\(aq\fPEtiketler\fB\(aq\fP Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-header\-note\-source\-field
+Custom field containing note text to insert in Description header. Default: \fB\(aq\fP\fB\(aq\fP Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-merge\-comments\-rule
+#<custom field>:[before|after]:[True|False] specifying:  <custom field> Custom field containing notes to merge with comments  [before|after] Placement of notes with respect to comments  [True|False] \- A horizontal rule is inserted between notes and comments Default: \fB\(aq\fP::\fB\(aq\fP Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-output\-profile
+Specifies the output profile. In some cases, an output profile is required to optimize the catalog for the device. For example, \fB\(aq\fPkindle\fB\(aq\fP or \fB\(aq\fPkindle_dx\fB\(aq\fP creates a structured Table of Contents with Sections and Articles. Default: \fB\(aq\fPNone\fB\(aq\fP Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-prefix\-rules
+Specifies the rules used to include prefixes indicating read books, wishlist items and other user\-specified prefixes. The model for a prefix rule is (\fB\(aq\fP<rule name>\fB\(aq\fP,\fB\(aq\fP<source field>\fB\(aq\fP,\fB\(aq\fP<pattern>\fB\(aq\fP,\fB\(aq\fP<prefix>\fB\(aq\fP). When multiple rules are defined, the first matching rule will be used. Default: \fB\(dq\fP((\fB\(aq\fPRead books\fB\(aq\fP,\fB\(aq\fPtags\fB\(aq\fP,\fB\(aq\fP+\fB\(aq\fP,\fB\(aq\fP✓\fB\(aq\fP),(\fB\(aq\fPWishlist item\fB\(aq\fP,\fB\(aq\fPtags\fB\(aq\fP,\fB\(aq\fPWishlist\fB\(aq\fP,\fB\(aq\fP×\fB\(aq\fP))\fB\(dq\fP Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-preset
+Use a named preset created with the GUI catalog builder. A preset specifies all settings for building a catalog. Default: \fB\(aq\fPNone\fB\(aq\fP Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-thumb\-width
+Size hint (in inches) for book covers in catalog. Range: 1.0 \- 2.0 Default: \fB\(aq\fP1.0\fB\(aq\fP Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-use\-existing\-cover
+Replace existing cover when generating the catalog. Default: \fB\(aq\fPFalse\fB\(aq\fP Applies to: AZW3, EPUB, MOBI output formats
+.UNINDENT
+.SH SAVED_SEARCHES
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb saved_searches [seçenekler] (list|add|remove)
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Bu veritabanında saklanan kayıtlı aramaları yönetin.
+Zaten var olan bir ada sahip bir sorgu eklemeye çalışırsanız, bu sorgu değiştirilecektir.
+.sp
+Ekleme için sözdizimi :calibredb \fBsaved_searches\fP add search_name search_expression
+.sp
+Kaldırmak için sözdizimi: calibredb \fBsaved_searches\fP remove search_name
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.SH ADD_CUSTOM_COLUMN
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb add_custom_column [seçenekler] etiket isim veritürü
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Bir özel sütun oluştur. etiket sütunun makinenin anlayacağı ismidir. Boşluk veya sütun içermemelidir. name sütunun kullanıcı dostu ismidir.
+veritürü şunlardan biridir: bool, comments, composite, datetime, enumeration, float, int, rating, series, text
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-display
+Bu sütundaki verinin nasıl yorumlanacağının özelleştirilmesi için seçenekler sözlüğü. Bu bir JSON  karater dizisidir. Sıralama sütunları için, \fI\%\-\-display\fP\fB\(dq\fP{\e \fB\(dq\fPenum_values\e \fB\(dq\fP:[\e \fB\(dq\fPval1\e \fB\(dq\fP, \e \fB\(dq\fPval2\e \fB\(dq\fP]}\fB\(dq\fP  kullanındisplay değişkenine verilebilecek bir çok seçenek vardır. Sütun türüne göre seçenekler: composite: composite_template, composite_sort, make_category,contains_html, use_decorations datetime: date_format enumeration: enum_values, enum_colors, use_decorations int, float: number_format text: is_names, use_decorations  Uygun kombinasyonlar bulmanın en iyi yolu grafik arayüzden uygun türde bir özel sütun oluşturmak ardından kitap için OPF yedeğine bakmaktır (Sütun eklendikten sonra yeni bir OPF oluştuğundan emin olun). OPF\fB\(aq\fPde yeni sütun için \fB\(dq\fPdisplay\fB\(dq\fP JSON\fB\(aq\fPunu göreceksiniz.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-is\-multiple
+Bu sütun etiket benzeri verileri (virgülle ayrılmış değerleri) içerir. Sadece veri tipi metin olduğunda uygulanır.
+.UNINDENT
+.SH CUSTOM_COLUMNS
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb özel_sütunlar [seçenekler]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Kullanılabilir özel sütunları listele. Sütun etiketlerini ve kimliklerini gösterir.
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-details, \-d
+Her sütun için ayrıntıları göster.
+.UNINDENT
+.SH REMOVE_CUSTOM_COLUMN
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb remove_custom_column [seçenekler] etiket
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Etiket tarafından belirlenmiş kişisel sütunu kaldır. Kullanılabilir sütunları
+custom_columns komutuyla görebilirsiniz.
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-force, \-f
+Onaylama sorma
+.UNINDENT
+.SH SET_CUSTOM
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb set_custom [seçenekler] sütun kimlik değeri
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Kimlik numarası tarafından tanımlanan kitap için özel bir sütunun değerini ayarlayın.
+search komutunu kullanarak kimliklerin bir listesini alabilirsiniz.
+Özel sütun adlarının bir listesiniise custom_columnskomutu ile alabilrsiniz.
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-append, \-a
+Sütun birden çok değer saklıyorsa, belirtilen değerleri üzerine yazmak yerine mevcut olanlara ekleyin.
+.UNINDENT
+.SH RESTORE_DATABASE
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb restore_database [seçenekler]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Bu veritabanını calibre kitaplığının herklasöründeki OPF
+dosyalarında saklanan üstverilerden geri yükleyin. Bu, metadata.db dosyanız
+bozuksa kullanışlıdır.
+.sp
+UYARI: Bu komut, veritabanınızı tamamen yeniden oluşturur. Kaydedilmiş tüm aramaları,
+kullanıcı kategorilerini, santralleri, kitap başına kaydedilen dönüştürme ayarlarını ve özel tarifleri
+kaybedeceksiniz. Geri yüklenen üstveri, yalnızca OPF dosyalarında
+bulunanlar kadar doğru olacaktır.
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-really\-do\-it, \-r
+Kurtarmayı gerçekleştir. Komut bu seçeneği seçmediğinizde çalışmayacaktır.
+.UNINDENT
+.SH CHECK_LIBRARY
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb check_library [seçenekler]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Bir kitaplığı temsil eden dosya sisteminde bazı kontroller gerçekleştirir. Raporlar: invalid_titles, extra_titles, invalid_authors, extra_authors, missing_formats, extra_formats, extra_files, missing_covers, extra_covers, failed_folders
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-csv, \-c
+CSV biçiminde çıktı
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ignore_extensions, \-e
+Yoksayılacak eklentilerin virgülle ayrılmış listesi. Varsayılan: tümü
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-ignore_names, \-n
+Yoksayılacak isimlerin virgülle ayrılmış listesi. Default: tümü
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-report, \-r
+Raporların virgülle ayrılmış listesi. Varsayılan: tümü
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-vacuum\-fts\-db
+Tam metin arama veri tabanını boşaltın. Bu, veri tabanının boyutuna bağlı olarak çok yavaş ve bellek açısından yoğun olabilir.
+.UNINDENT
+.SH LIST_CATEGORIES
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb list_categories [seçenekler]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Veritabanındaki kategori bilgilerinin bir raporunu oluşturur.
+Bilgi, etiket tarayıcısında gösterilene eşdeğerdir.
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-categories, \-r
+Virgülle ayrılmış aranacak kategori isimleri listesi. Öntanımlı: tümü
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-csv, \-c
+CSV biçiminde çıktı
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-dialect
+Üretilecek CSV dosyası türü. Seçilebilecekler: excel, excel\-tab, unix
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-item_count, \-i
+Kategori içindeki öğe başına sayı yerine kategori içindeki öğe sayısını çıktıla
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-width, \-w
+Girdideki bir satırın en fazla genişliği. Varsayılanı ekranın boyutunu algılamaktır.
+.UNINDENT
+.SH BACKUP_METADATA
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb backup_metadata [seçenekler]
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Veritabanında depolanan üstverileri her bir kitap klasöründeki ayrı OPF dosyalarına yedekleyin. Bu normalde otomatik olarak gerçekleşir, ancak \-\-all
+seçeneğiyle OPF dosyalarının yeniden oluşturulmasını zorlamak için bukomutu çalıştırabilirsiniz.
+.sp
+Not: her üstveri değişikliğinde OPF dosyaları otomatik olarak yedeklendiğinden
+normalde bunu yapmanıza gerek yoktur
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-all
+Normal olarak bu komut sadece tarihi geçmiş OPF dosyaları içeren kitaplarda çalışır. Bu seçenek onu tüm kitaplarda çalıştırır.
+.UNINDENT
+.SH CLONE
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb clone path/to/new/library
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Geçerli kitaplığın bir kopyasını oluştur. Bu, geçerli kitaplıkla aynı özel sütunlara, Sanal kitaplıklara ve diğer ayarlara sahip
+yeni, boş bir kitaplık oluşturur.
+.sp
+Çoğaltılan kitaplık kitap içermez. Tüm kitaplar dahil tam bir kopya oluşturmak istiyorsanız,
+kitaplık klasörünü kopyalamak için dosya sistemi aracınızı kullanınız.
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.SH EMBED_METADATA
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb embed_metadata [seçenekler] kitap_kimliği
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Calibre kitaplığında saklanan asıl kitap sayfalarını Calibre veri tabanındaki metadata
+ile güncelle.  Normalde, metadata yalnızca Calibre\(aqden dışa aktarım
+yapılırken güncellenir, bu komut dosyaları olduğu gibi değiştirmek istiyorsanız
+faydalıdır. Değişik dosya biçimlerinin değişik miktarda metadata desteklediğini
+unutmayın. kitap_kimliği için özel bir değer olan \(aqall\(aq kullanarak tüm kitaplarda
+metadata güncelleyebilirsiniz. Ayrıca birden çok kitap kimliğini boşluklarla ayırarak
+ve kimlik aralıklarını tire ile ayırarak belirtebilirsiniz. Örneğin:
+calibredb \fBembed_metadata\fP 1 2 10\-15 23
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-only\-formats, \-f
+Sadece belirtilen biçimlerdeki dosyaların üstbilgilerini güncelle. Birden çok biçim için birden çok defa tanımlama yapmanız gerekir. Varsayılan olarak tüm biçimler güncellenir.
+.UNINDENT
+.SH SEARCH
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb search [seçenekler] arama ifadesi
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Belirtilen arama terimini kitaplıkta arayın ve arama ifadesiyle eşleşen kitap kimlik numaralarının virgülle ayrılmışlistesini döndürün. Çıktı biçimibir kimlik numarası listesini girdi olarak kabul eden diğer komutları beslemek için kullanışlıdır.
+.sp
+Arama ifadesi calibre\(aqnin güçlü arama sorgusudilindeki herhangi bir şey olabilir, örneğin: calibredb \fBsearch\fP author:asimov \(aqtitle:\(dqi robot\(dq\(aq
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-limit, \-l
+Azami döndürülecek sonuç sayısı. Varsayılan tüm sonuçlardır.
+.UNINDENT
+.SH FTS_INDEX
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb fts_index [seçenekler] enable/disable/status/reindex
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Tam metin arama indeksleme işlemini kontrol edin.
+.sp
+enable Bu kitaplık için FTS indekslemeyi açar
+disable Bu kitaplık için FTS dizini indekslemeyi kapatır
+status Geçerli dizin oluşturma durumunu gösterir
+reindex Belirli kitapları veya tüm kitaplığı yeniden dizinlemek için kullanılabilir.
+Belirli kitapları yeniden indekslemek için
+kitap kimliklerini reindex komutundan sonra ek argümanlar olarak belirtin.
+Hiçbir kitap kimliği belirtilmezse tüm kitaplık yeniden indekslenir.
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-indexing\-speed
+İndeksleme hızı. Tüm bilgisayar kaynaklarınızı kullanarak hızlı indeksleme için hızlı, daha az kaynak yoğun indeksleme için yavaş kullanın. Her çalıştırmadan sonra hızın yavaşlamak için sıfırlandığını unutmayın.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-wait\-for\-completion
+Tüm kitaplar indekslenene kadar bekleyin, indeksleme ilerlemesini periyodik olarak gösterin
+.UNINDENT
+.SH FTS_SEARCH
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.EX
+calibredb fts_search [seçenekler] arama ifadesi
+.EE
+.UNINDENT
+.UNINDENT
+.sp
+Kitaplığın tamamında veya bir alt kümesinde tam metin araması yapın.
+.sp
+Whenever you pass arguments to calibredb that have spaces in them, enclose the arguments in quotation marks. For example: \(dq/some path/with spaces\(dq
+.INDENT 0.0
+.TP
+.B \-\-do\-not\-match\-on\-related\-words
+İlgili kelimelerle değil, yalnızca tam kelimelerle eşleştirin. Yani düzeltmek, düzeltme ile eşleşmeyecektir.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-include\-snippets
+Her eşleşmeyi çevreleyen metnin parçacıklarını ekleyin. Not bu aramayı çok daha yavaş hale getirir.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-indexing\-threshold
+Aramaya izin verilmeden önce, yüzde olarak kitaplığın ne kadarının dizine eklenmesi gerektiği. Varsayılanlar 90\fB\(aq\fPdır
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-match\-end\-marker
+Bu işaretçi eşleşen bir parçacığın içindeki eşleşen bir kelimenin sonunu belirtmek için kullanılır
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-match\-start\-marker
+Bu işaretçi bir parçacığın içindeki eşleşen bir kelimenin başlangıcını belirtmek için kullanılır
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-output\-format
+Arama sonuçlarının çıktı biçimi, düz metin için \fB\(dq\fPtext\fB\(dq\fP veya JSON çıktısı için \fB\(dq\fPjson\fB\(dq\fP şeklindedir.
+.UNINDENT
+.INDENT 0.0
+.TP
+.B \-\-restrict\-to
+Bir arama ifadesi veya kimlik numaraları kullanarak aranan kitapları kısıtlayın. Örneğin: kimlik numaralarına göre kısıtlamak için ids:1,2,3 veya foo etiketine sahip kitaplara göre kısıtlamak için search:tag:foo.
+.UNINDENT
+.SH AUTHOR
+Kovid Goyal
+.SH COPYRIGHT
+Kovid Goyal
+.\" Generated by docutils manpage writer.
+.

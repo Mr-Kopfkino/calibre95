@@ -1,0 +1,17 @@
+# User data and locally generated output
+Data/
+runtime/
+dist/
+build/
+__pycache__/
+*.py[cod]
+*.log
+*.retro-backup
+*.obj
+*.pdb
+*.exp
+*.lib
+app/native/*.dll
+calibre95.exe
+/calibre95-*.zip
+/dependency-sources/

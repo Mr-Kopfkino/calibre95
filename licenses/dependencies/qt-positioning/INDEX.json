@@ -1,0 +1,17 @@
+[
+  {
+    "upstream_path": "qtpositioning-everywhere-src-6.7.2/src/3rdparty/clip2tri/LICENSE",
+    "notice_file": "0001-LICENSE.txt",
+    "sha256": "4f03032b43817e39a77e291cd57aefb4c8159957ca522f4f1cdcac8db5e563aa"
+  },
+  {
+    "upstream_path": "qtpositioning-everywhere-src-6.7.2/src/3rdparty/clipper/LICENSE",
+    "notice_file": "0002-LICENSE.txt",
+    "sha256": "eca9b9180a47709678f85448d1f447f503ac86e1b3543c4bf0a3879a715fb802"
+  },
+  {
+    "upstream_path": "qtpositioning-everywhere-src-6.7.2/src/3rdparty/poly2tri/LICENSE",
+    "notice_file": "0003-LICENSE.txt",
+    "sha256": "a4d34b9e99a7f11d095ba330da5a4723ec00b019ae1ba42cba46ad1d89902c4e"
+  }
+]
